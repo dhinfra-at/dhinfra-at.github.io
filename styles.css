@@ -53,6 +53,18 @@ p {
     }
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center; /* Align logos horizontally center */
+    gap: 20px; /* Provides space between logos */
+    margin-bottom: 20px; /* Space between logos and copyright text */
+}
+
+.logo-container img {
+    height: 50px; /* Adjust as per your needs */
+    width: auto;
+}
+
 /* Medium devices (landscape tablets) */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     h1, h2, h3 {
