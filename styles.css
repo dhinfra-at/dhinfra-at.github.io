@@ -41,6 +41,19 @@ p {
     padding: 10px;
 }
 
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Align logos horizontally center */
+    gap: 20px; /* Provides space between logos */
+    margin-bottom: 20px; /* Space between logos and copyright text */
+}
+
+.logo-container img {
+    height: 40px; /* Adjust as per your needs */
+    width: auto;
+}
+
 /* Responsive Media Queries */
 /* Small devices (portrait tablets and phones) */
 @media only screen and (max-width: 600px) {
@@ -51,18 +64,6 @@ p {
     h1, h2, h3 {
         font-size: 1.5em; /* Adjusting the size for smaller screens */
     }
-}
-
-.logo-container {
-    display: flex;
-    justify-content: center; /* Align logos horizontally center */
-    gap: 20px; /* Provides space between logos */
-    margin-bottom: 20px; /* Space between logos and copyright text */
-}
-
-.logo-container img {
-    height: 20px; /* Adjust as per your needs */
-    width: auto;
 }
 
 /* Medium devices (landscape tablets) */
