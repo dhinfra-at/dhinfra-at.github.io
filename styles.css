@@ -6,46 +6,91 @@ body, h1, h2, h3, p {
 body {
     font-family: 'Arial', sans-serif; /* Use a web-safe font stack */
     line-height: 1.6;
-    background-color: #f5f5f5;
+    background-color: #fff;
     color: #333;
-    padding: 20px;
+    
 }
 
+
+/* navbar */
+
+.navbar{
+    background-color: #ffffff ;
+    padding-left: 50px;
+    border-bottom: 1px solid #000;
+   
+}
+.navbar-brand {
+    padding-right: 40px;
+}
+.nav-item{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 90%;
+}
+
+/* main */
 .container {
-    max-width: 1200px; /* Can be adjusted to fit your design needs */
+   /* max-width: 1200px; /\* Can be adjusted to fit your design needs *\/*/
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #000;
 }
 
-h1, h2, h3 {
-    font-weight: 600;
-    margin-bottom: 20px;
+
+
+/* header */
+.headerdiv {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    height: 50%;
+}
+
+.headerp {
+    padding: 3rem;
+    margin-bottom: 2rem;
+}
+
+
+
+.headerrow > div > p {
+margin-top: 2rem;
+}
+
+
+section{
+    height: 100vh;
+}
+
+
+h2, h2, h3 {
+    font-weight: 500;
     color: #222;
+    margin-bottom: 20px;
 }
 
 p {
     margin-bottom: 20px;
 }
 
-/* Flexbox grid example for flexibility */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -10px; /* Counteract the .col padding */
-}
 
-.col {
-    flex: 1;
-    padding: 10px;
-}
 
+footer {
+background-color: #fff;
+position: fixed;
+  left: 0;
+   bottom: 0;
+   width: 100%;
+   padding: 20px;
+}
 
 .logo-container {
     display: flex;
     justify-content: center; /* Align logos horizontally center */
-    gap: 20px; /* Provides space between logos */
+    padding-top: 20px;
+    gap: 30px; /* Provides space between logos */
     margin-bottom: 20px; /* Space between logos and copyright text */
 }
 
@@ -54,28 +99,4 @@ p {
     width: auto;
 }
 
-/* Responsive Media Queries */
-/* Small devices (portrait tablets and phones) */
-@media only screen and (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
-    
-    h1, h2, h3 {
-        font-size: 1.5em; /* Adjusting the size for smaller screens */
-    }
-}
 
-/* Medium devices (landscape tablets) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    h1, h2, h3 {
-        font-size: 2em;
-    }
-}
-
-/* Large devices (desktops) */
-@media only screen and (min-width: 1025px) {
-    .row {
-        justify-content: space-between;
-    }
-}
