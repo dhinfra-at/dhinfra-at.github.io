@@ -99,4 +99,7 @@ position: fixed;
     width: auto;
 }
 
-
+.download{
+    text-decoration: none !Important;
+    font-size: 120%;
+}
