@@ -15,6 +15,10 @@ title: DHInfra.at
 # Your name to show in the footer
 author: DHInfra.at
 
+# Add these lines near the top of your config file, after the title and author sections
+url: "https://dhinfra.at"   # Your domain, with https
+enforce_ssl: dhinfra.at     # Your domain, without https
+
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################

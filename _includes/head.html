@@ -2,6 +2,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Force HTTPS -->
+  <script type="text/javascript">
+    var host = "dhinfra.at";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+      window.location.protocol = "https";
+  </script>
+
+  <!-- Canonical link -->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+
   {% capture pagetitle %}
     {%- if page.share-title -%}
       {{ page.share-title | strip_html | xml_escape }}
