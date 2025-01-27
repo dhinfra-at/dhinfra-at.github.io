@@ -17,15 +17,15 @@ subtitle: DHInfra.at Hardware and Software
 
 | Resource | KFUG | PLUS | UWK | UniAK | LFUI | TUW | ÖNB | ÖAW | UniVie |
 |------|------|------|-----|--------|-----|-----|-----|-----|--------|
-| [Capture](/capture) | ✓ | | | | <span style="color: #0066cc">★</span> | <span style="color: #0066cc">★</span> | | | |
-| [Repos](/repos) | ✓ | ★ | ★ | | | | ✓ | ✓ | |
-| [ML](/ml) | ★ |  | ★ | ★ | | <span style="color: #0066cc">✓</span> |  | | |
-| [IaaS](/iaas) | ✓ | <span style="color: #0066cc">★</span> | | | | | | | |
-| [FOSS](/foss) | ★ | ✓ |  | ✓ | ✓ |  | ✓ | ✓ | ✓ |
+| [Capture](/capture) | (✓) | | | | ★ | ★ | | | |
+| [Repos](/repos) | (✓) | (★) | (★) | | | | (✓) | (✓) | |
+| [ML](/ml) | (★) |  | (★) | (★) | | ✓ |  | | |
+| [IaaS](/iaas) | (✓) | ★ | | | | | | | |
+| [FOSS](/foss) | (★) | (✓) |  | (✓) | (✓) |  | (✓) | (✓) | (✓) |
 
 **Legend**:  
 ★ - Core contributor; ✓ - Supporting contributor  
-<span style="color: #0066cc">★</span> / <span style="color: #0066cc">✓</span> - Content available on component page
+(★/✓) - Content not yet available on component page
 
 
 
