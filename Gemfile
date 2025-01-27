@@ -15,7 +15,3 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
 end
 
-group :development do
-  gem 'appraisal'
-end
-
