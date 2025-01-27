@@ -314,6 +314,7 @@ plugins:
 
 include:
   - _pages
+  - assets/data
 
 defaults:
   - scope:
