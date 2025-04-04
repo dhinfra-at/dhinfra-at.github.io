@@ -4,6 +4,50 @@ title: DHInfra.at
 subtitle: Digital Humanities Infrastructure in Austria
 ---
 
+<style>
+  .card {
+    height: 100%;
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #0A2472;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .card-text {
+    margin-bottom: 1rem;
+  }
+  .btn-primary {
+    margin-top: auto;
+    color: white;
+    background-color: #004567;
+    border: 1px solid #003854;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+  }
+  .btn-primary:hover, 
+  .btn-primary:focus {
+    color: white;
+    background-color: #005c89;
+    border-color: #004567;
+    text-decoration: none;
+  }
+</style>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <div class="row">
   <div class="col-lg-8 col-md-10 mx-auto">
     <h2>Welcome to DHInfra.at</h2>
@@ -12,18 +56,20 @@ subtitle: Digital Humanities Infrastructure in Austria
     <p>DHInfra.at connects tools, resources, and infrastructure across Austrian institutions to strengthen digital humanities research. We provide a collaborative network for sharing specialized equipment, software solutions, and technical expertise.</p>
     
     <div class="row mt-4">
-      <div class="col-md-6">
-        <div class="card mb-4">
+      <div class="col-md-6 mb-4">
+        <div class="card">
           <div class="card-body">
+            <i class="fas fa-server card-icon"></i>
             <h4 class="card-title">Existing Resources</h4>
             <p class="card-text">Discover available digital humanities resources already implemented by our partners.</p>
             <a href="/resources" class="btn btn-primary">Browse Resources</a>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card mb-4">
+      <div class="col-md-6 mb-4">
+        <div class="card">
           <div class="card-body">
+            <i class="fas fa-drafting-compass card-icon"></i>
             <h4 class="card-title">Planned Infrastructure</h4>
             <p class="card-text">Learn about our upcoming infrastructure initiatives and development plans.</p>
             <a href="/infrastructure" class="btn btn-primary">Explore Infrastructure</a>
@@ -33,18 +79,20 @@ subtitle: Digital Humanities Infrastructure in Austria
     </div>
     
     <div class="row">
-      <div class="col-md-6">
-        <div class="card mb-4">
+      <div class="col-md-6 mb-4">
+        <div class="card">
           <div class="card-body">
+            <i class="fas fa-university card-icon"></i>
             <h4 class="card-title">Partner Institutions</h4>
             <p class="card-text">Meet our network of participating institutions from across Austria.</p>
             <a href="/partners" class="btn btn-primary">View Partners</a>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card mb-4">
+      <div class="col-md-6 mb-4">
+        <div class="card">
           <div class="card-body">
+            <i class="fas fa-newspaper card-icon"></i>
             <h4 class="card-title">News & Use Cases</h4>
             <p class="card-text">Read our latest updates and explore real-world applications.</p>
             <a href="/blog" class="btn btn-primary">Visit Blog</a>
