@@ -24,12 +24,14 @@ enforce_ssl: dhinfra.at     # Your domain, without https
 ###############################################
 
 navbar-links:
-  Blog: "/"  # Empty string means root URL (/)
+  Home: "/"
   About: "about"
+  Blog: "blog"
   Partners: "partners"
   Governance: "governance"
   Infrastructure: "infrastructure"
   Resources:
+    - Overview: "resources"
     - Data Capture: "capture"
     - Repositories: "repos"
     - Machine Learning: "ml"
