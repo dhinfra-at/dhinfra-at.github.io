@@ -118,7 +118,7 @@ subtitle: DHInfra.at Consortium Members
   </div>
   <div class="col-md-9">
     <p><strong>Austrian Center for Digital Humanities and Cultural Heritage</strong></p>
-    <p>Contact: <a href="mailto:dh@plus.ac.at">dh@plus.ac.at</a></p>
+    <p>Contact: <a href="mailto:acdh-ch-office@oeaw.ac.at">acdh-ch-office@oeaw.ac.at</a></p>
   </div>
 </div>
 
