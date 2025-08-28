@@ -165,6 +165,9 @@
   <meta name="twitter:image" content="{{ img | absolute_url }}">
   {% endif %}
 
+  <!-- Favicon -->
+  <link rel="icon" href="{{ '/assets/img/dhinfra-logo.svg' | relative_url }}" type="image/svg+xml">
+
   {% include matomo.html %}
 
   {% if page.comments and site.staticman.repository and site.staticman.branch %}
