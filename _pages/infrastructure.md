@@ -18,13 +18,15 @@ subtitle: Upcoming DHInfra.at Development Initiatives
 
 This page outlines the planned infrastructure developments within the DHInfra.at consortium. For information about existing resources already available through our partners, please see the [Existing Resources](/resources) page.
 
+Our new specialized GPU cluster is now installed and in a closed testing phase! **[Read the announcement here.](/2025-08-28-graz-gpu-cluster-install/)** Other infrastructure components are in various stages of planning and implementation.
+
 <h2 id="resource-categories">Resource Categories</h2>
 
 DHInfra.at is developing infrastructure in the following key areas:
 
 - **[Data Capture and Enhanced Image Sensing (Capture)](/capture)**: Mobile scan robots and multispectral cameras
 - **[Repositories (Repos)](/repos)**: Multi-site Ceph-based systems for curated specialized repositories
-- **[Machine Learning (ML)](/ml)**: GPU clusters and nodes for experimental training and serving mid- to large-scale ML models
+- **[Machine Learning (ML)](/ml)**: Specialized GPU cluster for training and serving mid- to large-scale ML models is now installed.
 - **[Infrastructure as a Service (IaaS)](/iaas)**: Cluster for project-specific database applications
 - **[Free and Open Source Software (FOSS)](/foss)**: Coordinating and sub-contracting domain-specific software development
 
@@ -36,7 +38,7 @@ The table below shows the planned contributions from each partner institution to
 |------|------|------|-----|--------|-----|-----|-----|-----|--------|
 | [Capture](/capture) | (✓) | | | | ★ | ★ | | | |
 | [Repos](/repos) | (✓) | (★) | (★) | | | | (✓) | (✓) | |
-| [ML](/ml) | (★) |  | (★) | (★) | | ✓ |  | | |
+| [ML](/ml) | ★ |  | (★) | (★) | | ✓ |  | | |
 | [IaaS](/iaas) | (✓) | ★ | | | | | | | |
 | [FOSS](/foss) | (★) | (✓) |  | (✓) | (✓) |  | (✓) | (✓) | (✓) |
 
