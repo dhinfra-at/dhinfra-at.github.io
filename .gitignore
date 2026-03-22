@@ -1,0 +1,21 @@
+# custom
+/data/
+
+# project
+_site
+.sass-cache
+.vagrant
+<<<<<<< HEAD
+=======
+vendor/
+.bundle/
+>>>>>>> 335cd982f7865dac09e3e4f44077b7a3f17b110e
+
+# general
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+Gemfile.lock
+
+beautiful-jekyll-theme-*.gem
