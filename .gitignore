@@ -1,21 +1,24 @@
-# custom
-/data/
+# build output
+dist/
+.output/
 
-# project
-_site
-.sass-cache
-.vagrant
-<<<<<<< HEAD
-=======
-vendor/
-.bundle/
->>>>>>> 335cd982f7865dac09e3e4f44077b7a3f17b110e
+# dependencies
+node_modules/
 
-# general
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
 .DS_Store
-Thumbs.db
-ehthumbs.db
 
-Gemfile.lock
+pnpm-lock.yaml
 
-beautiful-jekyll-theme-*.gem
+.astro

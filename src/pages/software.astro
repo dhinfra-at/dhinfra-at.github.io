@@ -1,0 +1,129 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'Open Source Software',
+};
+
+const prose =
+  'mx-auto max-w-4xl px-4 py-12 sm:px-6 [&_h2]:scroll-mt-24 [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mt-6 [&_h3]:text-lg [&_h3]:font-semibold [&_p]:mt-3 [&_section]:border-t [&_section]:border-gray-100 [&_section]:py-10 dark:[&_section]:border-slate-800 [&_a]:text-primary hover:[&_a]:underline [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1 [&_table]:my-4 [&_table]:w-full [&_table]:max-w-xl [&_table]:text-sm [&_th]:border-b [&_th]:border-gray-200 [&_th]:py-2 [&_th]:pr-4 [&_th]:text-left [&_td]:border-b [&_td]:border-gray-100 [&_td]:py-2 [&_td]:pr-4 dark:[&_th]:border-slate-700 dark:[&_td]:border-slate-800';
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Open Source Software"
+    title="Free and open-source DH tools"
+    subtitle="Three Digital Humanities tools we invested in — clearer documentation, easier setup, and active development. Depending on your use case, they run on our cluster and elsewhere."
+  />
+
+  <div class={prose}>
+    <!-- Intro: the software journey -->
+    <section class="!border-t-0 !pt-0">
+      <p>
+        The work followed a path of needs assessment, evaluation, expert workshops, and development. Per-tool working
+        papers and an overarching evaluation paper are due from Q2 2026. Below: what each tool is, what we changed, and
+        where to find it.
+      </p>
+    </section>
+
+    <!-- QLever -->
+    <section id="qlever">
+      <h2>QLever</h2>
+      <p>
+        An efficient SPARQL engine for querying very large knowledge graphs (such as Wikidata) — over 100 billion
+        triples on a single standard machine, with markedly faster responses than most alternatives.
+      </p>
+
+      <h3>What we improved</h3>
+      <table>
+        <thead><tr><th>Before</th><th>After (DHInfra)</th></tr></thead>
+        <tbody>
+          <tr><td>Steep entry barrier for new users</td><td>Quickstart &amp; step-by-step guides</td></tr>
+          <tr><td>Docs scattered, patchy, partly outdated</td><td>Fresh, unified docs (continually expanded)</td></tr>
+          <tr><td>No standardized, reusable examples</td><td>Ready-to-use, versioned Qleverfiles</td></tr>
+        </tbody>
+      </table>
+
+      <ul>
+        <li>
+          <strong>Documentation</strong> — completely rebuilt at
+          <a href="https://docs.qlever.dev/" target="_blank" rel="noopener noreferrer">docs.qlever.dev</a> (since late
+          2025, continually expanded): quickstart, Qleverfile reference, troubleshooting.
+        </li>
+        <li>
+          <strong>Use cases</strong> — unified Qleverfiles (24 commits since Dec 2025), publicly provided via pull
+          request (<code>qlever setup-config</code>); overview with dataset size, resources and live demos at
+          <a href="https://docs.qlever.dev/use-cases/" target="_blank" rel="noopener noreferrer"
+            >docs.qlever.dev/use-cases</a
+          >.
+        </li>
+        <li>
+          <strong>Deployment</strong> — official packages for Debian / Ubuntu / macOS (since 21 Jan 2026); Docker images
+          (QLever UI &amp; Petrimaps); reproducible and tested before every release.
+        </li>
+      </ul>
+    </section>
+
+    <!-- liiive.now -->
+    <section id="liiive">
+      <h2>liiive.now</h2>
+      <p>
+        Real-time collaborative image annotation built on IIIF — annotate together, live, in the browser.
+        <a href="https://github.com/rsimon/liiive" target="_blank" rel="noopener noreferrer">github.com/rsimon/liiive</a>
+        (MIT licence).
+      </p>
+
+      <h3>Two ways to run it</h3>
+      <ul>
+        <li><strong>Hosted</strong> — no installation, instantly usable; ideal for teaching and demos.</li>
+        <li>
+          <strong>Self-hosted</strong> — your own server / VPS (institution or cloud) for full control over your data.
+        </li>
+      </ul>
+
+      <h3>What it does</h3>
+      <ul>
+        <li>Real-time collaboration with shared navigation and live cursor tracking</li>
+        <li>Comments and threads on annotations</li>
+        <li>IIIF API support and annotation export</li>
+        <li>Anonymous sessions via a shared link — no login required</li>
+      </ul>
+
+      <h3>Under the hood</h3>
+      <p>
+        Browser-based web app · real-time sync over WebSockets · Supabase database · IIIF Image &amp; Presentation API ·
+        self-hostable. Typical uses: manuscript analysis and source annotation in DH, seminars and group work in
+        teaching, and curatorial collaboration in cultural institutions.
+      </p>
+    </section>
+
+    <!-- Zellij -->
+    <section id="zellij">
+      <h2>Zellij</h2>
+      <p>
+        An open-source system for documenting and managing semantic data models. A new release named
+        <strong>pletka</strong> is out, with more to be published soon.
+      </p>
+
+      <h3>What the new release brings</h3>
+      <ul>
+        <li>
+          <strong>Pluggable storage backend</strong> on an open-source relational database, with project versioning —
+          store new and existing projects, keep multiple versions of a project, and create, delete or select the
+          current version.
+        </li>
+        <li>
+          <strong>A modern, web-based Admin Dashboard</strong> — register and manage organizations and users; create and
+          manage projects, models, collections and fields; reuse libraries of patterns; and generate, publish and share
+          new patterns.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Back to overview -->
+  <div class="mx-auto max-w-4xl px-4 pb-12 sm:px-6">
+    <a class="text-primary hover:underline" href="/resources">&larr; Back to all resources</a>
+  </div>
+</Layout>

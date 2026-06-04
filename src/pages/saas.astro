@@ -1,0 +1,86 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'SaaS / IaaS & storage',
+};
+
+const prose =
+  'mx-auto max-w-4xl px-4 py-12 sm:px-6 [&_h2]:scroll-mt-24 [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mt-6 [&_h3]:text-lg [&_h3]:font-semibold [&_p]:mt-3 [&_section]:border-t [&_section]:border-gray-100 [&_section]:py-10 dark:[&_section]:border-slate-800 [&_a]:text-primary hover:[&_a]:underline [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1';
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="SaaS / IaaS & storage"
+    title="Servers, services and project storage"
+    subtitle="A high-performance server environment for development and testing, plus short and mid-term project storage — a complement to your own institution's infrastructure."
+  />
+
+  <div class={prose}>
+    <!-- SaaS / IaaS -->
+    <section class="!border-t-0 !pt-0">
+      <h2>SaaS / IaaS (University of Salzburg)</h2>
+      <p>
+        A high-performance server environment (around 18 Supermicro systems) offering:
+      </p>
+      <ul>
+        <li>Database-as-a-Service</li>
+        <li>Test-and-development Infrastructure-as-a-Service</li>
+        <li>Project-specific virtual machines (Proxmox, provisioned via Ansible)</li>
+        <li>CI / git-runners for research-software development</li>
+      </ul>
+      <p>
+        Long-term hosting ties up sysadmin maintenance, so we have to be conservative about it: treat this as a
+        <strong>development-first</strong> environment — for development, testing and prototyping — and only selectively
+        for production. Many Austrian institutions can also offer VMs and dev environments, so check with your home
+        institution as well.
+      </p>
+      <p>Contact: <a href="mailto:science.plus@plus.ac.at">science.plus@plus.ac.at</a> (University of Salzburg).</p>
+      <p>
+        <a
+          href="https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/database-research-cluster_3914"
+          target="_blank"
+          rel="noopener noreferrer">Entry in the federal research-infrastructure database &rarr;</a
+        >
+      </p>
+    </section>
+
+    <!-- Storage -->
+    <section id="storage">
+      <h2>Project storage — not a long-term repository</h2>
+      <p>
+        We are <strong>not</strong> a long-term research-data repository. In Krems, large-scale resources (Ceph) are
+        available for short and mid-term project storage.
+      </p>
+      <p>
+        For long-term curation we defer to established services such as ARCHE, GAMS and Phaidra and to working groups
+        like Forschungsdaten Österreich — and, where useful, help integrate our infrastructure with your repository (for
+        example running LLM API functionality alongside it).
+      </p>
+    </section>
+
+    <!-- See it in use -->
+    <section id="use-cases">
+      <h2>See it in use</h2>
+      <p>The University of Salzburg documents its DHInfra.at test cases on the DH Salzburg blog:</p>
+      <ul>
+        <li>
+          <a href="https://dhsalzburg.hypotheses.org/6876" target="_blank" rel="noopener noreferrer"
+            >A GitLab + CI/CD repository</a
+          > for the Literaturarchiv Salzburg and Stefan Zweig digitisation holdings.
+        </li>
+        <li>
+          <a href="https://dhsalzburg.hypotheses.org/7128" target="_blank" rel="noopener noreferrer"
+            >Proxmox VMs powering DH use cases</a
+          > such as “Managing Maximilian” and “Pangloss”.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Back to overview -->
+  <div class="mx-auto max-w-4xl px-4 pb-12 sm:px-6">
+    <a class="text-primary hover:underline" href="/resources">&larr; Back to all resources</a>
+  </div>
+</Layout>

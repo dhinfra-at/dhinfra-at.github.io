@@ -1,0 +1,165 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import ResourceCards from '~/components/ResourceCards.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'DHInfra.at — Digital Humanities Infrastructure in Austria',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero ************************** -->
+
+  <Hero
+    actions={[
+      { variant: 'primary', text: 'Explore resources', href: '/resources' },
+      { text: 'Open for collaboration', href: '/contact' },
+    ]}
+  >
+    <Fragment slot="title"> Shared infrastructure for Digital Humanities in Austria </Fragment>
+
+    <Fragment slot="subtitle">
+      We pool compute, digitization, development services, and open-source software across Austrian institutions &mdash;
+      so DH projects that lack resources or skills can still get the job done. A
+      <span class="font-semibold">CLARIAH-AT</span> initiative.
+    </Fragment>
+  </Hero>
+
+  <!-- Final event announcement *****
+       Anchor mirrors the old site so /#presentation2026-06-08 resolves identically after cutover. -->
+
+  <section id="presentation2026-06-08" class="scroll-mt-24 px-4 md:px-6 mx-auto max-w-5xl">
+    <div
+      class="relative overflow-hidden rounded-2xl border border-primary/30 bg-blue-50 dark:bg-slate-900/40 p-6 sm:p-9 mt-4 mb-10 sm:mb-12"
+    >
+      <div class="absolute inset-y-0 left-0 w-1.5 bg-primary"></div>
+
+      <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 mb-4">
+        <span class="inline-flex h-2.5 w-2.5 rounded-full bg-primary"></span>
+        <span class="text-sm font-semibold uppercase tracking-wide text-primary">Final event &middot; 8 June 2026</span>
+      </div>
+
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl md:text-4xl mb-3">
+        Presenting the Results of DHInfra.at
+      </h2>
+      <p class="text-lg text-muted max-w-3xl mb-6">
+        Digital Humanities Infrastructure in Austria &mdash; on <strong>8 June 2026, 10:00&ndash;12:00 (CEST)</strong> we
+        present the results of the project. Come and listen! The event is held remotely and in German.
+      </p>
+
+      <div class="grid gap-6 sm:grid-cols-2 mb-6">
+        <div>
+          <p class="flex items-center gap-2 font-semibold mb-2">
+            <Icon name="tabler:list-details" class="w-5 h-5 text-primary" /> Programme
+          </p>
+          <ul class="list-disc list-outside ml-5 text-muted space-y-1">
+            <li>Welcome</li>
+            <li>
+              Presentation of the working groups:
+              <ul class="list-[circle] list-outside ml-5 mt-1 space-y-1">
+                <li>Digitization infrastructure</li>
+                <li>Free and Open Source Software</li>
+                <li>Repositories, Machine Learning, Software as a Service</li>
+              </ul>
+            </li>
+            <li>Conclusion and discussion</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col items-start gap-3 sm:justify-center">
+          <a
+            class="btn-primary inline-flex items-center gap-2"
+            href="https://uni-graz.zoom.us/j/68775113047?pwd=kS6bTACvCnRVEHAlTp9oEXKXlcQJ5C.1"
+            target="_blank"
+            rel="noopener noreferrer"><Icon name="tabler:video" class="w-5 h-5" /> Join via Zoom</a
+          >
+          <span class="text-sm text-muted">Hosted on Zoom@Uni&#8209;Graz &middot; no registration required</span>
+        </div>
+      </div>
+
+      <p class="text-xs text-muted">
+        Data protection declarations:
+        <a
+          class="underline hover:text-primary"
+          href="https://static.uni-graz.at/fileadmin/_files/_uniit/datenschutz/zoom/zoom_Datenschutzerklaerung_Gaeste.pdf"
+          target="_blank"
+          rel="noopener noreferrer">Zoom@Uni&#8209;Graz (guests)</a
+        >
+        and
+        <a
+          class="underline hover:text-primary"
+          href="https://static.uni-graz.at/fileadmin/_files/_uniit/datenschutz/zoom/zoom_Datenschutzerklaerung_registrierte_NutzerInnen.pdf"
+          target="_blank"
+          rel="noopener noreferrer">general Uni Graz</a
+        >.
+      </p>
+    </div>
+  </section>
+
+  <!-- Positioning note ************* -->
+
+  <Note
+    title="What we do:"
+    description="More compute, easier access, and better support for digital humanities — democratizing infrastructure for all."
+  />
+
+  <!-- Resource compartments ******* -->
+
+  <section id="resources" class="mx-auto max-w-5xl px-4 py-12 sm:px-6 md:py-16">
+    <div class="mb-8 text-center">
+      <p class="text-base font-semibold uppercase tracking-wide text-primary">Resources</p>
+      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl">What DHInfra.at offers</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-muted">
+        Distinct infrastructure parts, contributed by partners across Austria. Open each one for details and contacts.
+      </p>
+    </div>
+    <ResourceCards />
+  </section>
+
+  <!-- Project stats *************** -->
+
+  <Stats
+    title="The DHInfra.at consortium"
+    stats={[
+      { title: 'Institutions', amount: '9' },
+      { title: 'Working groups', amount: '4' },
+      { title: 'Members', amount: '50+' },
+      { title: 'Associates', amount: '100+' },
+    ]}
+  />
+
+  <!-- Latest use cases *********** -->
+
+  <BlogLatestPosts
+    title="Use cases & news"
+    information={`Real projects on our infrastructure, announcements, and reports from across the consortium.`}
+  />
+
+  <!-- Collaboration CTA ********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get in touch',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">Lacking resources or skills for your DH project?</Fragment>
+
+    <Fragment slot="subtitle">
+      We are open to project collaborations and happy to help in joint projects. Contact us and we will try to find the
+      best solution for your idea.
+    </Fragment>
+  </CallToAction>
+</Layout>

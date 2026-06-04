@@ -1,0 +1,153 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Note from '~/components/widgets/Note.astro';
+
+const metadata = {
+  title: 'Governance',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Governance"
+    title="How DHInfra.at is run"
+    subtitle="We are developing a governance framework for shared Digital Humanities infrastructure across Austrian institutions — to be implemented with the start of regular operations."
+  />
+
+  <!-- Key focus areas -->
+
+  <Features3
+    title="Key focus areas"
+    columns={2}
+    items={[
+      {
+        title: 'Decision-making',
+        description: 'Clear processes for infrastructure decisions and strategic planning across partners.',
+        icon: 'tabler:gavel',
+      },
+      {
+        title: 'Resource allocation',
+        description:
+          'Fair-use policies and transparent allocation for computational resources, especially high-demand GPU infrastructure.',
+        icon: 'tabler:scale',
+      },
+      {
+        title: 'Support structure',
+        description: 'A multi-level support system that draws on expertise across partner institutions.',
+        icon: 'tabler:lifebuoy',
+      },
+      {
+        title: 'Financial model',
+        description:
+          'A sustainable model succeeding the dedicated project funding — considering both base contributions and usage-based components.',
+        icon: 'tabler:coin',
+      },
+    ]}
+  />
+
+  <!-- Funding & cost model -->
+
+  <Content
+    id="funding"
+    title="Funding & cost model"
+    items={[
+      {
+        title: 'In-kind today',
+        description:
+          'Partner institutions contribute what they own — hosting, electricity, cooling, compute and staff time — and share capacity fairly across the consortium. There are no usage fees at the point of use right now.',
+      },
+      {
+        title: 'First-come, first-served for now',
+        description:
+          'While capacity is ample, access is granted on a first-come, first-served basis. We do track usage from the start — for operational reasons — so the instruments for accounting are in place, but we are not charging for it today.',
+      },
+      {
+        title: 'Towards a sustainable model',
+        description:
+          'We are looking carefully at the real costs of running the infrastructure — total cost of ownership, actual and expected usage, and long-term sustainability. Turning that into a durable financial model (base contributions and possible usage-based components) is part of the governance follow-up project.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      The dedicated project funding (2023&ndash;2026) covered building the infrastructure. Keeping it running afterwards
+      needs a model that is fair and sustainable for all partners — this is being worked out cautiously.
+    </Fragment>
+  </Content>
+
+  <!-- CLARIAH Helpdesk -->
+
+  <Content
+    id="helpdesk"
+    isReversed
+    title="The CLARIAH Helpdesk"
+    items={[
+      {
+        title: 'A single point of contact',
+        description: 'The first stop for researchers asking about infrastructure access and use.',
+      },
+      {
+        title: 'Coordination',
+        description: 'Routes specialized requests to the right partner institution.',
+      },
+      {
+        title: 'Connected to Europe',
+        description: 'Integrated with the broader European CLARIAH support network.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      A central part of our support structure is a dedicated DHInfra helpdesk, planned as part of a larger CLARIAH
+      helpdesk initiative.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Roadmap -->
+
+  <Steps
+    title="Roadmap"
+    tagline="Timeline"
+    items={[
+      {
+        title: 'GPU cluster installed',
+        description: 'Hardware delivered and racked at the University of Graz. (Aug 2025)',
+        icon: 'tabler:circle-check',
+      },
+      {
+        title: 'Closed testing phase',
+        description: 'Internal testing within the consortium. (Sep–Dec 2025)',
+        icon: 'tabler:circle-check',
+      },
+      {
+        title: 'Scheduling & identity operational',
+        description: 'GPU job scheduling with accounting and SSO testing in place. (Q1 2026)',
+        icon: 'tabler:circle-check',
+      },
+      {
+        title: 'LLM & embedding API operational',
+        description:
+          'OpenAI-compatible LLM and embedding endpoints in service with project API keys, rolling out alongside cluster access. (Q1–Q2 2026)',
+        icon: 'tabler:circle-check',
+      },
+      {
+        title: 'Partner access rollout',
+        description: 'Access opening to DHInfra.at and CLARIAH-AT partners. (Q2 2026, in progress)',
+        icon: 'tabler:progress',
+      },
+      {
+        title: 'Wider CLARIAH-AT access & helpdesk',
+        description: 'Broader access and the launch of the DHInfra helpdesk. (from Q3 2026)',
+        icon: 'tabler:flag',
+      },
+    ]}
+  />
+
+  <Note title="Note:" description="This roadmap is a draft and will be updated as the framework develops." />
+  <!-- TODO B6: confirm roadmap dates + add public-safe IdP/SP roadmap and Graz<->Krems identity interlinking. -->
+</Layout>
