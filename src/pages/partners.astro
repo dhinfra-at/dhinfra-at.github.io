@@ -1,0 +1,134 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'Partners',
+};
+
+const partners = [
+  {
+    id: 'kfug',
+    abbr: 'KFUG',
+    name: 'University of Graz',
+    lead: true,
+    logo: '/images/partners/graz.jpg',
+    detail: 'Department of Digital Humanities, Department of Mathematics and Scientific Computing, IT-Services',
+    contactName: 'Walter Scholger',
+    email: 'walter.scholger@uni-graz.at',
+  },
+  {
+    id: 'tuw',
+    abbr: 'TUW',
+    name: 'TU Wien',
+    logo: '/images/partners/tuw.png',
+    detail: 'Institute of Visual Computing & Human-Centered Technology — Computer Vision Lab',
+    contactName: 'Florian Kleber',
+    email: 'kleber@cvl.tuwien.ac.at',
+  },
+  {
+    id: 'plus',
+    abbr: 'PLUS',
+    name: 'University of Salzburg',
+    logo: '/images/partners/salzburg.png',
+    detail: '',
+    contactName: 'Karoline Döring',
+    email: 'karolinedominika.doering@plus.ac.at',
+  },
+  {
+    id: 'lfui',
+    abbr: 'LFUI',
+    name: 'University of Innsbruck',
+    logo: '/images/partners/innsbruck.png',
+    detail: 'Digitisation and Digital Preservation',
+    contactName: 'Günter Mühlberger',
+    email: 'guenter.muehlberger@uibk.ac.at',
+  },
+  {
+    id: 'uwk',
+    abbr: 'UWK',
+    name: 'University for Continuing Education Krems',
+    logo: '/images/partners/krems.png',
+    detail: 'Department for Arts and Cultural Studies',
+    contactName: 'Anja Grebe',
+    email: 'anja.grebe@donau-uni.ac.at',
+  },
+  {
+    id: 'uniak',
+    abbr: 'UniAK',
+    name: 'University of Applied Arts Vienna',
+    logo: '/images/partners/angewandte.png',
+    detail: 'IT & Digitisation Department',
+    contactName: 'Stefan Bedek',
+    email: 'itd-pk@uni-ak.ac.at',
+  },
+  {
+    id: 'univie',
+    abbr: 'UniVie',
+    name: 'University of Vienna',
+    logo: '/images/partners/univie.png',
+    detail: '',
+    contactName: 'Thomas Wallnig',
+    email: 'thomas.wallnig@univie.ac.at',
+  },
+  {
+    id: 'onb',
+    abbr: 'ÖNB',
+    name: 'Austrian National Library',
+    logo: '/images/partners/onb.png',
+    detail: '',
+    contactName: 'Christoph Steindl',
+    email: 'labs@onb.ac.at',
+  },
+  {
+    id: 'oeaw',
+    abbr: 'ÖAW',
+    name: 'Austrian Academy of Sciences',
+    logo: '/images/partners/oeaw.png',
+    detail: 'Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH)',
+    contactName: 'Matej Ďurčo',
+    email: 'acdh-ch-office@oeaw.ac.at',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Partners"
+    title="The DHInfra.at consortium"
+    subtitle="Nine institutions from across Austria, coordinated by the University of Graz. DHInfra.at is heavily carried by CLARIAH-AT."
+  />
+
+  <section class="px-4 py-8 sm:px-6 mx-auto max-w-6xl">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        partners.map((p) => (
+          <div
+            id={p.id}
+            class="flex scroll-mt-24 flex-col rounded-lg border border-gray-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900"
+          >
+            <div class="mb-4 flex h-16 items-center">
+              <img src={p.logo} alt={p.name} class="max-h-16 max-w-[180px] object-contain" loading="lazy" />
+            </div>
+            <div class="flex items-center justify-between gap-2">
+              <p class="text-sm font-medium text-primary">{p.abbr}</p>
+              {p.lead && (
+                <span class="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">
+                  Lead partner
+                </span>
+              )}
+            </div>
+            <h2 class="text-lg font-bold">{p.name}</h2>
+            {p.detail && <p class="mt-1 text-sm text-muted">{p.detail}</p>}
+            <div class="mt-auto pt-4 text-sm">
+              {p.contactName && <p>{p.contactName}</p>}
+              <a class="text-primary hover:underline" href={`mailto:${p.email}`}>
+                {p.email}
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>
