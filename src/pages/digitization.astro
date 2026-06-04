@@ -1,0 +1,94 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'Digitization',
+};
+
+const prose =
+  'mx-auto max-w-4xl px-4 py-12 sm:px-6 [&_h2]:scroll-mt-24 [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mt-6 [&_h3]:text-lg [&_h3]:font-semibold [&_p]:mt-3 [&_section]:border-t [&_section]:border-gray-100 [&_section]:py-10 dark:[&_section]:border-slate-800 [&_a]:text-primary hover:[&_a]:underline [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1';
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Digitization"
+    title="Capturing cultural-heritage material"
+    subtitle="Two multispectral camera systems and a scanning robot, each suited to different sources — available on request and often loaned to partner projects."
+  />
+
+  <div class={prose}>
+    <!-- Multispectral imaging -->
+    <section class="!border-t-0 !pt-0">
+      <h2>Multispectral imaging (TU Wien)</h2>
+      <p>
+        Two distinct multispectral imaging (MSI) systems from the TU Wien Computer Vision Lab, for recovering text and
+        detail invisible to the naked eye — palimpsests, underwriting, faded or damaged sources.
+      </p>
+
+      <h3>XpeCAM</h3>
+      <p>
+        A portable, filter-based MSI system (350–1200 nm, 30 filters) that needs no darkroom — for manuscripts,
+        paintings, palimpsests and underwriting detection.
+        <a href="https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/xpecam_5829" target="_blank" rel="noopener noreferrer"
+          >Entry in the federal research-infrastructure database &rarr;</a
+        >
+      </p>
+
+      <h3>MISHA</h3>
+      <p>
+        An open-source MSI system optimized for flat archive materials (manuscripts, books) — highly portable and quick
+        to set up on site.
+        <a
+          href="https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/misha-open-source-msi-system-rochester-institute-of-technology_5830"
+          target="_blank"
+          rel="noopener noreferrer">Entry in the federal research-infrastructure database &rarr;</a
+        >
+      </p>
+      <p>
+        <a href="/2026-05-13-misha-cetinje-charters"
+          >See how a borrowed MISHA system recovered faded text on medieval charters &rarr;</a
+        >
+      </p>
+
+      <p>
+        Available upon request. Contact: Florian Kleber, TU Wien Computer Vision Lab —
+        <a href="mailto:kleber@cvl.tuwien.ac.at">kleber@cvl.tuwien.ac.at</a>.
+      </p>
+    </section>
+
+    <!-- Robotic scanning -->
+    <section id="robotic-scanning">
+      <h2>Robotic scanning (University of Innsbruck)</h2>
+      <p>
+        A prototype robotic scanner for fragile loose-leaf collections that conventional feed scanners cannot handle —
+        proven on 400,000 registration cards from the Tyrolean State Archive at over 99% success, running largely
+        unattended.
+      </p>
+      <p>
+        Contact: Günter Mühlberger, University of Innsbruck —
+        <a href="mailto:guenter.muehlberger@uibk.ac.at">guenter.muehlberger@uibk.ac.at</a>.
+      </p>
+    </section>
+
+    <!-- Borrowable inference GPUs -->
+    <section id="inference-gpus">
+      <h2>Borrowable inference GPUs</h2>
+      <p>
+        Currently two NVIDIA DGX Spark units — compact desktop AI supercomputers that can be borrowed, often together
+        with the digitization equipment, to test inference tasks on site (for example combining a model with a capture
+        workflow). Detailed specifications to follow.
+      </p>
+      <p>
+        Contact: Günter Mühlberger, University of Innsbruck (who also coordinates the digitization equipment) —
+        <a href="mailto:guenter.muehlberger@uibk.ac.at">guenter.muehlberger@uibk.ac.at</a>.
+      </p>
+    </section>
+
+  </div>
+
+  <!-- Back to overview -->
+  <div class="mx-auto max-w-4xl px-4 pb-12 sm:px-6">
+    <a class="text-primary hover:underline" href="/resources">&larr; Back to all resources</a>
+  </div>
+</Layout>

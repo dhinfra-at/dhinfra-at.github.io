@@ -1,0 +1,190 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import Note from '~/components/widgets/Note.astro';
+
+const metadata = {
+  title: 'GPU & LLM Cluster',
+};
+
+const hardware = [
+  { gpu: '12× NVIDIA H200', mem: '141 GB each', use: 'Large-model training, SOTA LLM serving' },
+  { gpu: '11× NVIDIA RTX PRO 6000', mem: '96 GB each', use: 'Medium training, notebooks, model serving' },
+  { gpu: '4× NVIDIA L40S', mem: '48 GB each', use: 'Embeddings, lightweight inference, courses' },
+];
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="GPU & LLM Cluster"
+    title="High-performance compute, built for Digital Humanities"
+    subtitle="Scale up what already runs on your laptop. Train and fine-tune models, run interactive GPU notebooks, and call a hosted OpenAI-compatible LLM and embedding API — without leaving the academic network."
+  />
+
+  <!-- What you can do & how you get in -->
+
+  <Features3
+    title="What you can do — and how you get in"
+    subtitle="Three entry points, from a raw shell to a one-line API call. Pick the one that fits how you work."
+    columns={3}
+    items={[
+      {
+        title: 'Shell & SLURM',
+        description:
+          'SSH in to run batch training and multi-GPU / multi-node fine-tuning over InfiniBand, bring your own containers (Apptainer), and use project storage. Full control for power users.',
+        icon: 'tabler:terminal-2',
+      },
+      {
+        title: 'JupyterHub notebooks',
+        description:
+          'Log in through the browser with single sign-on, pick your resources, and your GPU-backed notebook runs as a scheduled job — no terminal required.',
+        icon: 'tabler:notebook',
+      },
+      {
+        title: 'LLM & embedding API',
+        description:
+          'Call OpenAI-compatible LLM and embedding endpoints with a project key over HTTPS — for chat, RAG and semantic search. No cluster account needed.',
+        icon: 'tabler:api',
+      },
+    ]}
+  />
+
+  <!-- How it differs from HPC -->
+
+  <Content
+    isReversed
+    title="How it differs from generic HPC"
+    items={[
+      {
+        title: 'Interactive & API access',
+        description: 'Not batch-only. Notebooks and hosted APIs alongside SLURM — we try to outperform generic HPC for DH needs.',
+      },
+      {
+        title: 'Hosted model APIs',
+        description: 'A ready LLM and embedding API with project keys — something a classic HPC allocation does not give you.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      DHInfra.at is DH-first and privacy-respecting: Digital Humanities have priority, and we do not expose, sell, or
+      train models on your data. More on <a class="text-primary hover:underline" href="/about">what we are</a>.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Part of a larger ecosystem -->
+
+  <section class="mx-auto max-w-4xl px-4 py-12 sm:px-6 md:py-16">
+    <h2 class="text-2xl font-bold">Part of Austria's HPC ecosystem</h2>
+    <p class="mt-3 text-muted">
+      DHInfra.at is one piece of a wider landscape, and we would rather connect to it than reinvent it. Austria already
+      has excellent shared supercomputing through <a class="text-primary hover:underline" href="https://asc.ac.at/"
+        >Austrian Scientific Computing (ASC)</a
+      > and the Vienna Scientific Cluster (VSC), and most major universities — including ours — hold partnerships that make
+      these systems available to their researchers, often at no cost. Where your work fits there, we are happy to point you
+      to it.
+    </p>
+    <p class="mt-3 text-muted">
+      The skills carry over. If you are comfortable with a SLURM batch job or a JupyterHub session on one cluster, you are
+      most of the way to using ours — and to using national and European systems. So for the fundamentals we gladly lean on
+      the training material and events these centres already maintain, and focus our own effort on what is specific to
+      DHInfra.at: interactive, DH-first, API-driven use.
+    </p>
+    <p class="mt-3 text-muted">
+      We are in close contact with these partners in any case. <a
+        class="text-primary hover:underline"
+        href="https://eurocc-austria.at/">EuroCC Austria</a
+      > and ASC have lent their expertise to the planning of our cluster and to parts of its operation (for example
+      authentication), and we try to give something back by acting as a low-threshold, DH-oriented entry point into this
+      ecosystem.
+    </p>
+    <ul class="mt-5 space-y-1 text-sm">
+      <li>
+        <a class="text-primary hover:underline" href="https://docs.asc.ac.at/first_steps/hpc_intro.html"
+          >ASC — getting started with HPC</a
+        >
+      </li>
+      <li>
+        <a class="text-primary hover:underline" href="https://events.asc.ac.at/">ASC training events</a>
+      </li>
+      <li><a class="text-primary hover:underline" href="https://eurocc-austria.at/">EuroCC Austria</a></li>
+      <li>
+        <a class="text-primary hover:underline" href="https://hpc-wiki.uni-graz.at/">University of Graz HPC</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Hardware at a glance -->
+
+  <section class="mx-auto max-w-4xl px-4 py-12 sm:px-6 md:py-16">
+    <h2 class="text-2xl font-bold">Hardware at a glance</h2>
+    <p class="mt-3 text-muted">
+      The cluster at the University of Graz, with a closely related system in Krems. Figures are indicative.
+    </p>
+    <div class="mt-6 overflow-x-auto">
+      <table class="w-full border-collapse text-left text-sm">
+        <thead>
+          <tr class="border-b border-gray-200 dark:border-slate-700">
+            <th class="py-2 pr-4 font-semibold">GPUs</th>
+            <th class="py-2 pr-4 font-semibold">Memory</th>
+            <th class="py-2 font-semibold">Typical use</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            hardware.map((row) => (
+              <tr class="border-b border-gray-100 dark:border-slate-800">
+                <td class="py-2 pr-4 font-medium">{row.gpu}</td>
+                <td class="py-2 pr-4">{row.mem}</td>
+                <td class="py-2">{row.use}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-muted">
+      Storage is tiered: very fast NVMe right next to the GPUs (served over RDMA InfiniBand) to keep training and
+      inference efficient, plus larger, slower capacity for everything else — including data staging and short- to
+      mid-term project storage. Across the sites that is at least 100 TB of fast and 500 TB of slower storage. Everything
+      runs on the Austrian academic network (ACOnet).
+    </p>
+    <p class="mt-4 text-sm">
+      <a
+        class="text-primary hover:underline"
+        href="https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/gpu-cluster-for-digital-humanities_6267"
+        target="_blank"
+        rel="noopener noreferrer">Entry in the federal research-infrastructure database &rarr;</a
+      >
+    </p>
+  </section>
+
+  <!-- Getting access -->
+
+  <Content
+    title="Getting access"
+    items={[
+      {
+        title: '1. Authenticate',
+        description: 'Log in with your university credentials over the academic network (ACOnet single sign-on).',
+      },
+      {
+        title: '2. Apply for a project',
+        description: 'Submit a short project application — research, course, thesis, event, or exploratory use.',
+      },
+      {
+        title: '3. Get approved',
+        description: 'On approval, SSH, the SLURM scheduler, storage and the model APIs are unlocked for your project.',
+      },
+    ]}
+  />
+
+  <Note
+    title="Access:"
+    description="Rolling out to DHInfra.at and CLARIAH-AT partners, with wider access following. The self-service application portal opens later — for now, get in touch and we will help you get started. See Governance for the full roadmap."
+  />
+</Layout>

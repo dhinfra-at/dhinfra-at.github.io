@@ -1,0 +1,142 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+
+const metadata = {
+  title: 'About',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="About"
+    title="Who we are"
+    subtitle="DHInfra.at is a CLARIAH-AT initiative developing shared infrastructure for digitally supported research in the humanities — bridging cultural-heritage digitization, research workflows, specialized software, and HPC/ML for large datasets."
+  />
+
+  <!-- What we are -->
+
+  <Features3
+    title="What we are"
+    columns={3}
+    items={[
+      {
+        title: 'A close community',
+        description:
+          'We know our users and stay in direct contact — our developers work alongside the people using the infrastructure.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'DH-first',
+        description:
+          'Digital Humanities have priority here. No systematic disadvantage behind large STEM jobs on generic HPC.',
+        icon: 'tabler:books',
+      },
+      {
+        title: 'Service-oriented',
+        description: 'We try to outperform generic HPC for DH needs, with interactive and API access, not batch-only.',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Shared in kind',
+        description:
+          'Partners pool hosting, power and compute and share capacity fairly, with no usage fees at the point of use today.',
+        icon: 'tabler:building-community',
+      },
+      {
+        title: 'Privacy-respecting',
+        description: 'We do not expose, sell, or train models on your data.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Federated',
+        description:
+          'A single point of entry and helpdesk, a catalogue of services, and shared workflows and documentation.',
+        icon: 'tabler:affiliate',
+      },
+    ]}
+  />
+
+  <!-- What we are not -->
+
+  <Content
+    title="What we are not"
+    items={[
+      {
+        title: 'Not a cloud provider',
+        description: 'We offer cloud-like services, but not a fully streamlined commercial cloud experience.',
+      },
+      {
+        title: 'Not a long-term repository',
+        description:
+          'We do not host research data for the long term. We support short and mid-term project storage and integration with existing repositories such as ARCHE, GAMS and Phaidra, and point you to good data-management practice.',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Funding / context -->
+
+  <Content
+    isReversed
+    title="Funding & context"
+    items={[
+      {
+        title: 'CLARIAH-AT',
+        description:
+          'DHInfra.at is part of CLARIAH-AT, responsible for the long-term integration and sustainability (Verstetigung) of digital research infrastructure in Austria.',
+      },
+      {
+        title: 'BMBWF, 2023–2026',
+        description:
+          'Funded under "(Digitale) Forschungsinfrastruktur" by the Bundesministerium für Bildung, Wissenschaft und Forschung. This is an infrastructure project, not a research-centred one.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      See our <a class="text-primary hover:underline" href="/governance">governance</a> for how the consortium is run, and
+      the
+      <a class="text-primary hover:underline" href="/imprint">imprint</a> for funding details.
+    </Fragment>
+  </Content>
+
+  <!-- Project timeline -->
+
+  <Steps
+    title="How we got here"
+    tagline="Project timeline"
+    items={[
+      {
+        title: '2023 — Forming the consortium',
+        description:
+          'Working groups take shape, the consortium contract is signed, and shared governance principles are drafted together with CLARIAH-AT.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: '2024 — Requirements & preparation',
+        description:
+          'Requirements engineering across institutions, training, and hardware and software research — including the groundwork for an EU-wide procurement.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: '2025 — Building the infrastructure',
+        description:
+          'Open-source software investment, governance drafts, and the acquisition and setup of the clusters, with the first test cases. An early plan for distributed storage at one site was re-evaluated; we chose to invest where it helps projects most — short and mid-term project storage and compute, plus integration with established repositories — rather than building long-term archival storage ourselves.',
+        icon: 'tabler:building-cog',
+      },
+      {
+        title: '2026 — Integration & launch',
+        description:
+          'Translating further requirements into day-to-day operations, validated through workshops such as DHd2026, with regular public operations targeted for mid-2026 and a short follow-up phase through the end of the year.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+</Layout>

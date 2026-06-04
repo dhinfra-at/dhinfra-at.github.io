@@ -1,0 +1,33 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Contact"
+    title="Get in touch"
+    subtitle="For almost anything — a project idea, access to the cluster, a question about our resources — write to dhinfra@uni-graz.at and we will point you to the right person."
+  />
+
+  <!-- Primary contact -->
+
+  <div class="relative z-10 mx-auto -mt-4 mb-8 max-w-3xl px-4 text-center sm:px-6">
+    <a
+      class="btn-primary inline-flex items-center gap-2 text-lg"
+      href="mailto:dhinfra@uni-graz.at"
+      aria-label="Email dhinfra@uni-graz.at"
+    >
+      dhinfra@uni-graz.at
+    </a>
+    <p class="mt-6 text-muted">
+      Looking for a specific area? Each <a class="text-primary hover:underline" href="/resources">Resources</a> section
+      lists its own contact, and the <a class="text-primary hover:underline" href="/partners">Partners</a> page lists the
+      institutional representatives. When in doubt, the address above reaches the whole team.
+    </p>
+  </div>
+</Layout>
