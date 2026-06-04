@@ -1,0 +1,78 @@
+---
+import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
+
+import Layout from '~/layouts/PageLayout.astro';
+import BlogList from '~/components/blog/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import Pagination from '~/components/blog/Pagination.astro';
+// import PostTags from "~/components/blog/Tags.astro";
+
+import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
+
+export const prerender = true;
+
+export const getStaticPaths = (async ({ paginate }) => {
+  return await getStaticPathsBlogList({ paginate });
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { page } = Astro.props as Props;
+const currentPage = page.currentPage ?? 1;
+
+// const allCategories = await findCategories();
+// const allTags = await findTags();
+
+const metadata = {
+  title: `Use Cases & News${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  robots: {
+    index: blogListRobots?.index && currentPage === 1,
+    follow: blogListRobots?.follow,
+  },
+  openGraph: {
+    type: 'blog',
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline
+      subtitle="Real projects on our infrastructure, announcements, and reports from across the DHInfra.at consortium."
+    >
+      Use Cases & News
+    </Headline>
+    {
+      currentPage === 1 && (
+        <div class="mb-12 rounded-lg border border-gray-200 bg-blue-50/40 px-5 py-6 dark:border-slate-700 dark:bg-slate-800/30">
+          <p class="text-sm font-semibold uppercase tracking-wide text-primary">Already in use</p>
+          <h2 class="mt-1 text-xl font-bold tracking-tight dark:text-white">Projects building on DHInfra.at</h2>
+          <p class="mt-2 max-w-2xl text-sm text-muted">
+            A selection of research projects already working with our infrastructure — several are featured below, or
+            will be soon.
+          </p>
+          <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+            {[
+              'Historical Job Ads',
+              'Austrian Newspapers Online',
+              'Unlocking the Schematismus',
+              'From Digital to Distant Diplomatics',
+              'Managing Maximilian',
+              'Aldersbach Abbey account books',
+            ].map((p) => (
+              <li class="rounded-full border border-gray-200 bg-white px-3 py-1 dark:border-slate-600 dark:bg-slate-900">
+                {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+    <BlogList posts={page.data} />
+    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+    <!--
+      <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
+      <PostTags tags={allTags}  title="Search by Tags:" />
+    -->
+  </section>
+</Layout>
