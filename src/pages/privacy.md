@@ -34,8 +34,9 @@ We have no control over, and take no responsibility for, the data practices of e
 ## The DHInfra.at platform is separate
 
 This website is **not** the operational DHInfra.at platform (the compute cluster, login, and
-console). Access to the platform requires authentication and is governed by its own terms and data
-protection arrangements, provided to users during onboarding.
+console). Access to the platform requires federated authentication and is governed by its own
+[Privacy Notice for Federated Login](/privacy-notice), which describes how personal data is processed
+when you sign in via ACOnet/eduID or eduGAIN.
 
 ## Your rights and contact
 
