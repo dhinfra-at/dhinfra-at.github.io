@@ -7,7 +7,6 @@ import ResourceCards from '~/components/ResourceCards.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import { Icon } from 'astro-icon/components';
 
 const metadata = {
   title: 'DHInfra.at — Digital Humanities Infrastructure in Austria',
@@ -24,85 +23,19 @@ const metadata = {
       { text: 'Open for collaboration', href: '/contact' },
     ]}
   >
-    <Fragment slot="title"> Shared infrastructure for Digital Humanities in Austria </Fragment>
+    <Fragment slot="title">
+      Shared infrastructure for<br class="hidden sm:inline" /> Digital Humanities in Austria
+    </Fragment>
 
     <Fragment slot="subtitle">
-      We pool compute, digitization, development services, and open-source software across Austrian institutions &mdash;
-      so DH projects that lack resources or skills can still get the job done. A
+      We pool <span class="whitespace-nowrap">compute</span>,
+      <span class="whitespace-nowrap">development services</span>,
+      <span class="whitespace-nowrap">digitization</span>, and
+      <span class="whitespace-nowrap">open-source software</span> across Austrian institutions &mdash; so DH projects
+      that lack resources or skills can still get the job done. A
       <span class="font-semibold">CLARIAH-AT</span> initiative.
     </Fragment>
   </Hero>
-
-  <!-- Final event announcement *****
-       Anchor mirrors the old site so /#presentation2026-06-08 resolves identically after cutover. -->
-
-  <section id="presentation2026-06-08" class="scroll-mt-24 px-4 md:px-6 mx-auto max-w-5xl">
-    <div
-      class="relative overflow-hidden rounded-2xl border border-primary/30 bg-blue-50 dark:bg-slate-900/40 p-6 sm:p-9 mt-4 mb-10 sm:mb-12"
-    >
-      <div class="absolute inset-y-0 left-0 w-1.5 bg-primary"></div>
-
-      <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 mb-4">
-        <span class="inline-flex h-2.5 w-2.5 rounded-full bg-primary"></span>
-        <span class="text-sm font-semibold uppercase tracking-wide text-primary">Final event &middot; 8 June 2026</span>
-      </div>
-
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl md:text-4xl mb-3">
-        Presenting the Results of DHInfra.at
-      </h2>
-      <p class="text-lg text-muted max-w-3xl mb-6">
-        Digital Humanities Infrastructure in Austria &mdash; on <strong>8 June 2026, 10:00&ndash;12:00 (CEST)</strong> we
-        present the results of the project. Come and listen! The event is held remotely and in German.
-      </p>
-
-      <div class="grid gap-6 sm:grid-cols-2 mb-6">
-        <div>
-          <p class="flex items-center gap-2 font-semibold mb-2">
-            <Icon name="tabler:list-details" class="w-5 h-5 text-primary" /> Programme
-          </p>
-          <ul class="list-disc list-outside ml-5 text-muted space-y-1">
-            <li>Welcome</li>
-            <li>
-              Presentation of the working groups:
-              <ul class="list-[circle] list-outside ml-5 mt-1 space-y-1">
-                <li>Digitization infrastructure</li>
-                <li>Free and Open Source Software</li>
-                <li>Repositories, Machine Learning, Software as a Service</li>
-              </ul>
-            </li>
-            <li>Conclusion and discussion</li>
-          </ul>
-        </div>
-
-        <div class="flex flex-col items-start gap-3 sm:justify-center">
-          <a
-            class="btn-primary inline-flex items-center gap-2"
-            href="https://uni-graz.zoom.us/j/68775113047?pwd=kS6bTACvCnRVEHAlTp9oEXKXlcQJ5C.1"
-            target="_blank"
-            rel="noopener noreferrer"><Icon name="tabler:video" class="w-5 h-5" /> Join via Zoom</a
-          >
-          <span class="text-sm text-muted">Hosted on Zoom@Uni&#8209;Graz &middot; no registration required</span>
-        </div>
-      </div>
-
-      <p class="text-xs text-muted">
-        Data protection declarations:
-        <a
-          class="underline hover:text-primary"
-          href="https://static.uni-graz.at/fileadmin/_files/_uniit/datenschutz/zoom/zoom_Datenschutzerklaerung_Gaeste.pdf"
-          target="_blank"
-          rel="noopener noreferrer">Zoom@Uni&#8209;Graz (guests)</a
-        >
-        and
-        <a
-          class="underline hover:text-primary"
-          href="https://static.uni-graz.at/fileadmin/_files/_uniit/datenschutz/zoom/zoom_Datenschutzerklaerung_registrierte_NutzerInnen.pdf"
-          target="_blank"
-          rel="noopener noreferrer">general Uni Graz</a
-        >.
-      </p>
-    </div>
-  </section>
 
   <!-- Positioning note ************* -->
 
