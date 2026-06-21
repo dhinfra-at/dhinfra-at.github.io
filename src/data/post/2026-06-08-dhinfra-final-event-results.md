@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-06-21T09:00:00Z
+publishDate: 2026-06-08T12:00:00Z
 title: "Three and a half years of DHInfra.at: results, and the handover to regular operations"
 excerpt: On 8 June 2026 DHInfra.at presented the results of three and a half years of building shared DH infrastructure across Austria. As the project closes at the end of June, a CLARIAH-AT follow-up takes over the rollout into live operations.
 image: ~/assets/images/dhinfra-og.png
@@ -15,7 +15,7 @@ tags:
 author: DHInfra.at
 ---
 
-On **8 June 2026** DHInfra.at held its closing event and presented what three and a half years of work have produced. This post is a written summary — a current report as the project reaches its end at the close of June, and the work moves from a funded project into regular operations.
+Today, at our closing event, we presented the results of three and a half years of work. This post is a written summary of what we showed — a snapshot as DHInfra.at reaches the end of its funding this month and the work moves from a project into regular operations.
 
 ## DHInfra.at by the numbers
 
@@ -53,7 +53,7 @@ Three DH tools received sustained investment — clearer documentation, easier s
 
 ## Where things stand now
 
-As of the end of June 2026, **almost all of the planned infrastructure building blocks are already heavily in use.** The GPU cluster and the LLM/embedding APIs are on the verge of rollout to CLARIAH-AT partners, and the governance core — operating concepts, a sustainable business model, and a helpdesk approach — is in place. The dhinfra.at site itself is being relaunched as the internal test phase ends.
+Right now, **almost all of the planned infrastructure building blocks are already heavily in use.** The GPU cluster and the LLM/embedding APIs are on the verge of rollout to CLARIAH-AT partners, and the governance core — operating concepts, a sustainable business model, and a helpdesk approach — is in place. The dhinfra.at site itself is being relaunched as the internal test phase ends.
 
 ## What comes next
 
