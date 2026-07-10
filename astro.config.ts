@@ -28,6 +28,9 @@ export default defineConfig({
 
   // Forward old Beautiful-Jekyll URLs to their AstroWind equivalents.
   redirects: {
+    // The website's own notice moved /privacy -> /privacy-notice; the federated-login
+    // notice moved /privacy-notice -> /federation-privacy-notice.
+    '/privacy': '/privacy-notice',
     '/infrastructure': '/resources',
     '/ml': '/gpu-cluster',
     '/capture': '/digitization',
