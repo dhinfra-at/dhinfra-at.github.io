@@ -1,0 +1,302 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import { projects, outputs, type OutputType } from '~/data/impact';
+
+const metadata = {
+  title: 'Impact',
+};
+
+const prose =
+  'mx-auto max-w-5xl px-4 py-12 sm:px-6 [&_h2]:scroll-mt-24 [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mt-6 [&_h3]:text-lg [&_h3]:font-semibold [&_p]:mt-3 [&_section]:border-t [&_section]:border-gray-100 [&_section]:py-10 dark:[&_section]:border-slate-800 [&_a]:text-primary [&_a]:hover:underline [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1 [&_table]:my-4 [&_table]:w-full [&_table]:text-sm [&_th]:border-b [&_th]:border-gray-200 [&_th]:py-2 [&_th]:pr-4 [&_th]:text-left [&_th]:align-top [&_td]:border-b [&_td]:border-gray-100 [&_td]:py-2 [&_td]:pr-4 [&_td]:align-top dark:[&_th]:border-slate-700 dark:[&_td]:border-slate-800';
+
+// Only confirmed rows are ever shown (see the disclosure rule in data/impact.ts).
+// For now the projects list is GPU & LLM cluster use only. Courses (kind
+// 'course') and workshops are shown under Events, not Projects or Outputs.
+const visibleProjects = projects.filter(
+  (e) => e.listingConfirmed && e.kind !== 'course' && e.infrastructure === 'gpu-cluster'
+);
+const visibleCourses = projects.filter((e) => e.listingConfirmed && e.kind === 'course');
+const visibleOutputs = outputs.filter((e) => e.listingConfirmed);
+const visibleWorkshops = visibleOutputs.filter((o) => o.type === 'workshop');
+
+// Outputs are scholarly results produced with the cluster. Software lives under
+// Resources (funded, not built on the cluster); workshops/teaching are Events.
+const outputGroups: { type: OutputType; heading: string }[] = [
+  { type: 'publication', heading: 'Publications' },
+  { type: 'talk', heading: 'Talks & conference contributions' },
+  { type: 'dataset', heading: 'Datasets & models' },
+];
+
+const statusLabel: Record<string, string> = {
+  published: 'published',
+  accepted: 'accepted for publication',
+  'in-press': 'in press',
+  'under-review': 'under review',
+  'in-preparation': 'in preparation',
+  planned: 'planned',
+};
+
+const isExternal = (href: string) => href.startsWith('http');
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Impact" title="Projects and Outputs on DHinfra" />
+
+  <div class={prose}>
+    <!-- Projects registry -->
+    {
+      visibleProjects.length > 0 && (
+        <section class="!border-t-0 !pt-0">
+          <h2>Projects building on DHinfra</h2>
+          <p class="text-sm text-muted">
+            For now this lists projects using the <strong>GPU &amp; LLM cluster</strong>. A curated subset; each row links
+            to the project website, a blog entry where available, and the funding body.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Project</th>
+                <th>Links</th>
+              </tr>
+            </thead>
+            <tbody>
+              {visibleProjects.map((e) => {
+                const funderLabel = e.funder
+                  ? `${e.funder.agency}${e.funder.co ? `/${e.funder.co}` : ''}${e.funder.grantId ? ` ${e.funder.grantId}` : ''}`
+                  : null;
+                const hasLink = e.link || e.useCaseHref || (e.funder && e.funder.url);
+                return (
+                  <tr>
+                    <td>
+                      {e.title}
+                      {/* A person is named only where we hold consent. */}
+                      {e.pi && e.consent && <div class="text-xs text-muted">{e.pi}</div>}
+                    </td>
+                    <td>
+                      {[
+                        e.link && (
+                          <a href={e.link} target="_blank" rel="noopener noreferrer">
+                            Website
+                          </a>
+                        ),
+                        e.useCaseHref && <a href={e.useCaseHref}>Blog entry</a>,
+                        funderLabel && e.funder?.url && (
+                          <a href={e.funder.url} target="_blank" rel="noopener noreferrer">
+                            {funderLabel}
+                          </a>
+                        ),
+                      ]
+                        .filter(Boolean)
+                        .map((node, i) => (
+                          <>
+                            {i > 0 && <span> · </span>}
+                            {node}
+                          </>
+                        ))}
+                      {!hasLink && '—'}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </section>
+      )
+    }
+
+    <!-- Outputs registry -->
+    {
+      visibleOutputs.length > 0 && (
+        <section>
+          <h2>Outputs</h2>
+          {outputGroups.map(({ type, heading }) => {
+            const items = visibleOutputs.filter((o) => o.type === type);
+            if (items.length === 0) return null;
+            return (
+              <div class="mt-6">
+                <h3>{heading}</h3>
+                <ul class="!list-none !pl-0 divide-y divide-gray-100 dark:divide-slate-800">
+                  {items.map((o) => (
+                    <li class="py-5">
+                      <div class="font-medium">
+                        {o.link ? (
+                          <a href={o.link} target={isExternal(o.link) ? '_blank' : undefined} rel={isExternal(o.link) ? 'noopener noreferrer' : undefined}>
+                            {o.title}
+                          </a>
+                        ) : (
+                          o.title
+                        )}
+                        {o.status && (
+                          <span class="ml-2 rounded bg-gray-100 px-2 py-0.5 text-xs font-normal text-muted dark:bg-slate-800">
+                            {statusLabel[o.status]}
+                          </span>
+                        )}
+                      </div>
+                      {/* `relatedProject` is captured but not shown — it needs a real
+                          link to the project row, which waits for the table view. */}
+                      <div class="mt-1.5 text-sm text-muted">
+                        {o.authors && <span>{o.authors}. </span>}
+                        {o.venue && <span>{o.venue}. </span>}
+                        {o.date && <span>{o.date}. </span>}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </section>
+      )
+    }
+
+    <!-- Events: workshops & teaching on the cluster -->
+    {
+      (visibleWorkshops.length > 0 || visibleCourses.length > 0) && (
+        <section>
+          <h2>Events</h2>
+          <p class="text-sm text-muted">Workshops and university teaching that made use of the GPU &amp; LLM cluster.</p>
+
+          {visibleWorkshops.length > 0 && (
+            <div class="mt-6">
+              <h3>Workshops</h3>
+              <ul class="!list-none !pl-0 divide-y divide-gray-100 dark:divide-slate-800">
+                {visibleWorkshops.map((o) => (
+                  <li class="py-5">
+                    <div class="font-medium">
+                      {o.link ? (
+                        <a href={o.link} target={isExternal(o.link) ? '_blank' : undefined} rel={isExternal(o.link) ? 'noopener noreferrer' : undefined}>
+                          {o.title}
+                        </a>
+                      ) : (
+                        o.title
+                      )}
+                    </div>
+                    <div class="mt-1.5 text-sm text-muted">
+                      {o.venue && <span>{o.venue}. </span>}
+                      {o.date && <span>{o.date}. </span>}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {visibleCourses.length > 0 && (
+            <div class="mt-6">
+              <h3>Teaching</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Course</th>
+                    <th>Institution</th>
+                    <th>Term</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {visibleCourses.map((e) => (
+                    <tr>
+                      <td>{e.title}</td>
+                      <td class="text-muted">{e.institution ?? '—'}</td>
+                      <td class="text-muted">{e.term ?? '—'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </section>
+      )
+    }
+
+    <!-- Giving credit -->
+    <section id="acknowledgement">
+      <h2>Giving credit</h2>
+      <p>
+        If the infrastructure helped your work, please acknowledge it. Whatever sentence you use, keep one string intact
+        — the full name with the abbreviation: “Digital Humanities Infrastructure Austria (DHinfra)”.
+      </p>
+      <p>Depending on what you used, for example:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Use</th>
+            <th>Suggested wording</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GPU &amp; LLM cluster</td>
+            <td class="italic">
+              The computational results have been achieved using the Digital Humanities Infrastructure Austria (DHinfra).
+            </td>
+          </tr>
+          <tr>
+            <td>Digitization &amp; imaging</td>
+            <td class="italic">
+              The digitization was carried out using the Digital Humanities Infrastructure Austria (DHinfra).
+            </td>
+          </tr>
+          <tr>
+            <td>SaaS / IaaS &amp; storage</td>
+            <td class="italic">
+              This work was supported by services of the Digital Humanities Infrastructure Austria (DHinfra).
+            </td>
+          </tr>
+          <tr>
+            <td>Mixed or unsure</td>
+            <td class="italic">
+              This work was carried out using the Digital Humanities Infrastructure Austria (DHinfra).
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="text-sm text-muted">
+        If the infrastructure covered only part of the work, add “in part” — e.g. “achieved <em>in part</em> using the
+        Digital Humanities Infrastructure Austria (DHinfra)”.
+      </p>
+      <p class="text-sm text-muted">
+        This is not just for papers: please add the same acknowledgement to datasets, models and code you publish (for
+        example on Zenodo or Hugging Face).
+      </p>
+    </section>
+
+    <!-- Citing the cluster -->
+    <section>
+      <h2>Citing the GPU &amp; LLM cluster</h2>
+      <p>
+        If you used the GPU systems, we ask that you additionally cite the cluster. The paper describing the design and
+        operation of the federated GPU cluster (presented at ASHPC26, Vienna, April 2026) is being prepared for arXiv; a
+        citable reference with a DOI will be linked here as soon as it is available.
+      </p>
+    </section>
+
+    <!-- Collaboration & support -->
+    <section>
+      <h2>Collaboration &amp; support</h2>
+      <p>
+        When we collaborate, it often makes sense to budget for HPC / MLOps support within a project. In our own work,
+        and as we see at other universities and in industry, this is an efficient way to accelerate research. We
+        frequently provide code support anyway, so some form of collaboration usually exists already.
+      </p>
+      <p>
+        Where contributions are substantial, this can also be arranged so that the admins involved are credited as
+        co-authors on the resulting output. That keeps our work visible — which matters both to us and to funding
+        agencies. Where someone from DHinfra joins the author team, a contribution taxonomy such as
+        <a href="https://credit.niso.org/" target="_blank" rel="noopener noreferrer">CRediT</a> is a simple way to make
+        each person's role explicit.
+      </p>
+    </section>
+
+    <!-- Get listed -->
+    <section>
+      <h2>Want to be featured — or did we miss something?</h2>
+      <p>
+        If you use DHinfra and would like to appear here as a project, use case or output, or if we have overlooked your
+        work, please let us know. You can open a pull request adding an entry to
+        <a href="https://github.com/dhinfra-at" target="_blank" rel="noopener noreferrer">our repository</a>, or simply
+        <a href="/contact">write to us</a>.
+      </p>
+    </section>
+  </div>
+</Layout>
