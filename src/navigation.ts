@@ -13,6 +13,7 @@ export const headerData = {
       ],
     },
     { text: 'Use Cases & News', href: getBlogPermalink() },
+    { text: 'Impact', href: getPermalink('/impact') },
     { text: 'Partners', href: getPermalink('/partners') },
     { text: 'Governance', href: getPermalink('/governance') },
     { text: 'About', href: getPermalink('/about') },
