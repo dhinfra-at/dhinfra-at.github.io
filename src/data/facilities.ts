@@ -1,13 +1,5 @@
-// FACILITY REGISTRY — DHInfra.at's hardware and facilities as registered (or being
-// registered) in the national research-infrastructure database (FI DB) of the
-// BMBWF: https://forschungsinfrastruktur.bmfwf.gv.at/en
-//
-// This describes what the infrastructure *is*, so it belongs to Resources — not to
-// the Impact page, which shows what came out of using it.
-//
-// NOTE: links use host `forschungsinfrastruktur.bmfwf.gv.at` (verified 200; the
-// `bmbwf.gv.at` host 301-redirects here). `/en/` locale to match the site.
-// `fidbStatus: 'requested'` = FI DB entry applied for but not yet live (no link).
+// Hardware and facilities registered in the national research-infrastructure
+// database (FI DB, BMBWF), rendered on the Resources page.
 
 export type FacilityGroup = 'compute' | 'digitization';
 
@@ -15,13 +7,13 @@ export interface FacilityEntry {
   name: string;
   /** Institution abbreviation: KFUG, UWK, TUW, PLUS, UIBK. */
   institution: string;
-  /** Kept for internal use; not rendered — the FI DB entry lists the contact. */
+  /** Internal; not rendered. */
   contact?: string;
   group: FacilityGroup;
-  /** Short, plain description. */
   desc?: string;
   /** FI DB entry URL. Omit when the entry is only requested. */
   link?: string;
+  /** 'requested' = entry applied for but not yet live. */
   fidbStatus: 'listed' | 'requested';
 }
 

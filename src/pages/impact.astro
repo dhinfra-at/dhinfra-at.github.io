@@ -10,9 +10,7 @@ const metadata = {
 const prose =
   'mx-auto max-w-5xl px-4 py-12 sm:px-6 [&_h2]:scroll-mt-24 [&_h2]:text-2xl [&_h2]:font-bold [&_h3]:mt-6 [&_h3]:text-lg [&_h3]:font-semibold [&_p]:mt-3 [&_section]:border-t [&_section]:border-gray-100 [&_section]:py-10 dark:[&_section]:border-slate-800 [&_a]:text-primary [&_a]:hover:underline [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1 [&_table]:my-4 [&_table]:w-full [&_table]:text-sm [&_th]:border-b [&_th]:border-gray-200 [&_th]:py-2 [&_th]:pr-4 [&_th]:text-left [&_th]:align-top [&_td]:border-b [&_td]:border-gray-100 [&_td]:py-2 [&_td]:pr-4 [&_td]:align-top dark:[&_th]:border-slate-700 dark:[&_td]:border-slate-800';
 
-// Only confirmed rows are ever shown (see the disclosure rule in data/impact.ts).
-// For now the projects list is GPU & LLM cluster use only. Courses (kind
-// 'course') and workshops are shown under Events, not Projects or Outputs.
+// Projects list is GPU & LLM cluster use only; courses and workshops go to Events.
 const visibleProjects = projects.filter(
   (e) => e.listingConfirmed && e.kind !== 'course' && e.infrastructure === 'gpu-cluster'
 );
@@ -20,8 +18,6 @@ const visibleCourses = projects.filter((e) => e.listingConfirmed && e.kind === '
 const visibleOutputs = outputs.filter((e) => e.listingConfirmed);
 const visibleWorkshops = visibleOutputs.filter((o) => o.type === 'workshop');
 
-// Outputs are scholarly results produced with the cluster. Software lives under
-// Resources (funded, not built on the cluster); workshops/teaching are Events.
 const outputGroups: { type: OutputType; heading: string }[] = [
   { type: 'publication', heading: 'Publications' },
   { type: 'talk', heading: 'Talks & conference contributions' },
@@ -133,8 +129,6 @@ const isExternal = (href: string) => href.startsWith('http');
                           </span>
                         )}
                       </div>
-                      {/* `relatedProject` is captured but not shown — it needs a real
-                          link to the project row, which waits for the table view. */}
                       <div class="mt-1.5 text-sm text-muted">
                         {o.authors && <span>{o.authors}. </span>}
                         {o.venue && <span>{o.venue}. </span>}
