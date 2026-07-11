@@ -1,26 +1,10 @@
-// Impact registry — projects working with DHinfra, and the outputs that came
-// out of that use (publications, talks, workshops, courses, theses, software).
+// Data for the /impact page: projects that used the infrastructure and the
+// outputs produced with it. Plain data so entries can be added by pull request;
+// only `title` (and, for a project, `kind`) is required.
 //
-// This is the single, infrastructure-agnostic source for the /impact page.
-// It is intentionally a plain data file so partners can add an entry with a
-// small pull request (or by writing to us — see the page). Keep it simple:
-// only `title` (and, for a project, `kind`) is required; every other field is
-// optional and is simply omitted from the page when missing. Once we have a
-// scraper this gets populated more systematically — until then it is curated.
-//
-// Disclosure rule: a row appears on the public page ONLY when
-// `listingConfirmed: true`. Default is `false` — we do not publish a project,
-// PI name or output until listing was part of the agreement or we have
-// received confirmation. Rows left at `false` stay invisible on the site.
-//
-// Person names: author names inside a bibliographic reference are fine — a
-// citation is a citation. Standalone person-name fields (`pi`) are NOT rendered
-// on the public page unless we hold explicit consent, recorded in `consent`.
-// Course instructors are likewise not named without consent.
-//
-// The facility registry (FI DB entries) lives in `data/facilities.ts` and is
-// shown under Resources — it describes what the infrastructure *is*, not what
-// came out of using it.
+// A row is public only with `listingConfirmed: true`. Person names appear only
+// inside a citation, or via `pi` when `consent` is recorded — never otherwise,
+// including course instructors.
 
 export type Infrastructure =
   | 'gpu-cluster' // GPU & LLM cluster (Graz)
@@ -40,7 +24,7 @@ export interface FunderRef {
   agency: Funder;
   /** Co-funding agencies for joint grants, e.g. "DFG", "DFG/SNSF" (FWF Weave). */
   co?: string;
-  /** Programme / scheme, e.g. "ERC Advanced Grant", "Weave", "SFB". Captured; not all rendered. */
+  /** Programme / scheme, e.g. "ERC Advanced Grant", "Weave", "SFB". Not rendered. */
   programme?: string;
   /** Grant identifier as displayed, e.g. "P35783", "101019327". */
   grantId?: string;
@@ -87,8 +71,8 @@ export interface ProjectEntry {
   listingConfirmed: boolean;
 }
 
-// A thesis is just a publication; software lives under Resources; courses are
-// projects (kind 'course'). So the output types are these four.
+// A thesis is a publication; software lives under Resources; courses are
+// projects (kind 'course').
 export type OutputType = 'publication' | 'talk' | 'workshop' | 'dataset';
 
 export type OutputStatus = 'published' | 'accepted' | 'in-press' | 'under-review' | 'in-preparation' | 'planned';
@@ -110,11 +94,7 @@ export interface OutputEntry {
   listingConfirmed: boolean;
 }
 
-// PROJECTS — the "already in use" registry. Grant IDs / DOIs come from the FWF
-// research radar (10.55776/…) and CORDIS (EU). The `infrastructure` field is
-// our best assignment of which resource each project used; where a project used
-// more than one (e.g. imaging + compute), the primary one is recorded and the
-// detail lives in the linked use-case post. Better blank than guessed.
+// Grant IDs / DOIs come from the FWF research radar (10.55776/…) and CORDIS.
 export const projects: ProjectEntry[] = [
   {
     title: 'Historical Job Ads',
@@ -196,8 +176,7 @@ export const projects: ProjectEntry[] = [
     listingConfirmed: true,
   },
   {
-    // Digital edition of medieval Serbian royal charters. Multispectral imaging
-    // with TU Wien's MISHA (loaned) plus GPU/LLM processing on the cluster.
+    // Multispectral imaging with TU Wien's MISHA (loaned) plus cluster processing.
     title: 'Medieval Serbian Charters Action (MeSeCa)',
     kind: 'project',
     institution: 'University of Graz · MISHA imaging (TU Wien)',
@@ -280,10 +259,7 @@ export const projects: ProjectEntry[] = [
     },
     listingConfirmed: true,
   },
-  // Köppen's work is not a separate project row — it appears once, as his
-  // master's thesis under Outputs (his name there is a citation).
-  // Courses — teaching that ran on the infrastructure. Instructors are not named
-  // without consent (see the person-name rule above).
+  // Courses taught on the infrastructure. Instructors are not named without consent.
   {
     title: 'Course Project in Artificial Intelligence and Cybersecurity',
     kind: 'course',
@@ -302,9 +278,7 @@ export const projects: ProjectEntry[] = [
   },
 ];
 
-// OUTPUTS — publications, talks, workshops, courses, theses, software and
-// datasets produced with the infrastructure. Add status labels honestly; an
-// infrastructure project's outputs lag, so "in preparation" / "planned" are fine.
+// Outputs produced with the infrastructure.
 export const outputs: OutputEntry[] = [
   {
     type: 'publication',
@@ -325,8 +299,7 @@ export const outputs: OutputEntry[] = [
     listingConfirmed: true,
   },
   {
-    // Springer LNCS, in the official ICDAR 2026 workshop proceedings.
-    // Volume and pages follow once the proceedings appear.
+    // Volume and pages follow once the ICDAR 2026 proceedings appear.
     type: 'publication',
     title: 'Line Extraction on Medieval Charters with Mask R-CNN',
     authors: 'Renet, Nicolaou, Vogeler',
@@ -369,8 +342,5 @@ export const outputs: OutputEntry[] = [
     venue: "University of Klagenfurt (AAU), master's thesis",
     listingConfirmed: true,
   },
-  // Software is not listed here: the open-source tools were funded/maintained,
-  // not developed on the cluster, so they live under Resources → Software.
-  // Datasets and models produced with the cluster (Zenodo, Hugging Face, …) do
-  // belong here — none yet; add them as `type: 'dataset'` when they appear.
+  // Datasets/models (Zenodo, Hugging Face) go here as type 'dataset' — none yet.
 ];
