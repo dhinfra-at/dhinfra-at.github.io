@@ -3,7 +3,7 @@ title: 'Privacy Notice — Federated Login (REFEDS/GÉANT Codes of Conduct)'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: 3 July 2026 · _Version_: 0.3
+_Last updated_: 31 August 2026 · _Version_: 0.3.1
 
 This privacy notice describes how **DHInfra.at** (including `dhinfra.uni-graz.at`) processes personal
 data when you access the service via federated login (e.g. ACOnet/eduID, eduGAIN). It is intended to
@@ -31,10 +31,10 @@ DHInfra.at, as a federated Service Provider, commits to the **GÉANT Data Protec
 (v1)** and the **REFEDS Data Protection Code of Conduct (v2)**, and asserts the following entity
 categories in its SAML metadata:
 
-- **GÉANT Data Protection Code of Conduct v1** — `http://www.geant.net/uris/dataprotection-code-of-conduct/v1`
-- **REFEDS Data Protection Code of Conduct v2** — `https://refeds.org/category/code-of-conduct/v2`
-- **REFEDS Research & Scholarship (R&S)** — `http://refeds.org/category/research-and-scholarship`
-- **REFEDS Personalized Access** — `https://refeds.org/category/personalized`
+- **GÉANT Data Protection Code of Conduct v1** — [`http://www.geant.net/uri/dataprotection-code-of-conduct/v1`](http://www.geant.net/uri/dataprotection-code-of-conduct/v1)
+- **REFEDS Data Protection Code of Conduct v2** — [`https://refeds.org/category/code-of-conduct/v2`](https://refeds.org/category/code-of-conduct/v2)
+- **REFEDS Research & Scholarship (R&S)** — [`http://refeds.org/category/research-and-scholarship`](http://refeds.org/category/research-and-scholarship)
+- **REFEDS Personalized Access** — [`https://refeds.org/category/personalized`](https://refeds.org/category/personalized)
 
 By committing to these codes and categories, DHInfra.at:
 
