@@ -26,6 +26,7 @@ export const footerData = {
   secondaryLinks: [
     { text: 'Imprint', href: getPermalink('/imprint') },
     { text: 'Privacy', href: getPermalink('/privacy-notice') },
+    { text: 'Policies', href: getPermalink('/policy') },
   ],
   socialLinks: [
     { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/dhinfra-at' },

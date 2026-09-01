@@ -1,0 +1,32 @@
+---
+title: 'Policies'
+layout: '~/layouts/MarkdownLayout.astro'
+---
+
+The documents governing DHInfra.at. Each states at the top what it applies to.
+
+## The cluster
+
+These govern the DHInfra.at cluster and its platform services at `dhinfra.uni-graz.at` —
+GPU compute, LLM APIs, storage, notebooks, and the console.
+
+- **[Service and Acceptable Use Policy](/policy/service)** — what users of the cluster may
+  and must not do, and what they can expect from the service. This is the policy accepted
+  when a project is requested.
+- **[Privacy Notice — Federated Login](/federation-privacy-notice)** — what personal data is
+  processed when you sign in through ACOnet/eduID or eduGAIN, on what legal basis, who
+  receives it, and how long it is kept.
+- **[Technical Policy Appendix](/policy/technical)** — how the platform implements the rules
+  in the two documents above.
+
+## This website
+
+- **[Privacy Notice](/privacy-notice)** — how this public website handles your data. The
+  short version is that it does not collect any.
+- **[Imprint](/imprint)** — who is responsible for this site, and how the project is funded.
+
+## Not published here
+
+The **Governance Concept** describes how DHInfra.at is governed, who decides what, and how
+the participating sites divide responsibility. It is an internal document for the partner
+institutions. Ask at dhinfra@uni-graz.at if you need it.
