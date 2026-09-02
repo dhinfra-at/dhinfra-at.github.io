@@ -9,7 +9,7 @@ tags:
   - MHDBDB
   - databases
   - PLUS
-author: DHInfra.at
+author: DHinfra.at
 ---
 
 The Middle High German Conceptual Database (MHDBDB), one of the oldest DH projects, now manages over 6 billion data points. Katharina Zeppezauer-Wachauer describes their needs for modernizing the infrastructure while maintaining this large resource.

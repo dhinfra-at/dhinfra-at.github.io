@@ -1,7 +1,7 @@
 ---
 publishDate: 2026-06-08T12:00:00Z
-title: "Three and a half years of DHInfra.at: results, and the handover to regular operations"
-excerpt: On 8 June 2026 DHInfra.at presented the results of three and a half years of building shared DH infrastructure across Austria. As the project closes at the end of June, a CLARIAH-AT follow-up takes over the rollout into live operations.
+title: "Three and a half years of DHinfra.at: results, and the handover to regular operations"
+excerpt: On 8 June 2026 DHinfra.at presented the results of three and a half years of building shared DH infrastructure across Austria. As the project closes at the end of June, a CLARIAH-AT follow-up takes over the rollout into live operations.
 image: ~/assets/images/dhinfra-og.png
 category: News
 tags:
@@ -12,20 +12,20 @@ tags:
   - open source
   - governance
   - CLARIAH-AT
-author: DHInfra.at
+author: DHinfra.at
 ---
 
-Today, at our closing event, we presented the results of three and a half years of work. This post is a written summary of what we showed — a snapshot as DHInfra.at reaches the end of its funding this month and the work moves from a project into regular operations.
+Today, at our closing event, we presented the results of three and a half years of work. This post is a written summary of what we showed — a snapshot as DHinfra.at reaches the end of its funding this month and the work moves from a project into regular operations.
 
-## DHInfra.at by the numbers
+## DHinfra.at by the numbers
 
-DHInfra.at ran from **2023 to 2026** as an **infrastructure project — not a research project** — under the funding programme _"(Digital) Research Infrastructures"_, supported by the BMFWF and the ERC Recovery and Resilience Facility (NextGenerationEU). In that time it brought together:
+DHinfra.at ran from **2023 to 2026** as an **infrastructure project — not a research project** — under the funding programme _"(Digital) Research Infrastructures"_, supported by the BMFWF and the ERC Recovery and Resilience Facility (NextGenerationEU). In that time it brought together:
 
 - **9 institutions** across Austria, coordinated by the University of Graz
 - **4 working groups** and **8 work packages**, against **28 milestones**
 - **50+ members** and **100+ associates**
 
-The goal was to close gaps that individual institutions could not close alone: standard digitization in libraries, archives and museums; generic repositories and databases; and access to high-performance computing _outside_ the natural, technical and life sciences. DHInfra.at addressed this in four areas.
+The goal was to close gaps that individual institutions could not close alone: standard digitization in libraries, archives and museums; generic repositories and databases; and access to high-performance computing _outside_ the natural, technical and life sciences. DHinfra.at addressed this in four areas.
 
 ## What was built
 
@@ -57,7 +57,7 @@ Right now, **almost all of the planned infrastructure building blocks are alread
 
 ## What comes next
 
-The DHInfra.at project closes at the **end of June 2026**. From July, a CLARIAH-AT–funded follow-up — **DHInfra-Gov** — takes the work from "project" to "regular operations," focused on governance, rollout and **live deployment** of the infrastructure to partners. Further milestones on the horizon include a clariah.at relaunch later in 2026, national sustainability via CLARIAH-AT and dedicated service desks, and an international route via HORIZON.
+The DHinfra.at project closes at the **end of June 2026**. From July, a CLARIAH-AT–funded follow-up — **DHinfra-Gov** — takes the work from "project" to "regular operations," focused on governance, rollout and **live deployment** of the infrastructure to partners. Further milestones on the horizon include a clariah.at relaunch later in 2026, national sustainability via CLARIAH-AT and dedicated service desks, and an international route via HORIZON.
 
 There is no public platform link to share just yet — **stay tuned.** In the meantime, questions are welcome at [dhinfra@uni-graz.at](mailto:dhinfra@uni-graz.at).
 

@@ -1,7 +1,7 @@
 ---
 publishDate: 2025-09-09T09:00:00Z
 title: "GPU4U Pilot Project"
-excerpt: Student-focused GPU access piloted within the DHInfra.at infrastructure initiative.
+excerpt: Student-focused GPU access piloted within the DHinfra.at infrastructure initiative.
 category: Use Cases
 tags:
   - use-cases
@@ -10,10 +10,10 @@ tags:
   - students
   - machine-learning
   - VR
-author: DHInfra.at
+author: DHinfra.at
 ---
 
-The GPU4U project, originating from the University of Klagenfurt (AAU), is being launched as a pilot within the DHInfra.at infrastructure initiative. DHInfra.at is developing a national Machine Learning infrastructure primarily for Digital Humanities, with CLARIAH partners and DH research projects receiving priority access. GPU4U serves as an exploratory pilot to understand how computational resources might be utilized by a broader student community, while the infrastructure's core mission remains focused on Digital Humanities research.
+The GPU4U project, originating from the University of Klagenfurt (AAU), is being launched as a pilot within the DHinfra.at infrastructure initiative. DHinfra.at is developing a national Machine Learning infrastructure primarily for Digital Humanities, with CLARIAH partners and DH research projects receiving priority access. GPU4U serves as an exploratory pilot to understand how computational resources might be utilized by a broader student community, while the infrastructure's core mission remains focused on Digital Humanities research.
 
 ## Addressing the GPU Access Gap
 
@@ -21,7 +21,7 @@ As part of this pilot exploration, GPU4U will test limited access to computation
 
 ### Use Case 1: Supporting Resource-Intensive Student Projects
 
-One workshop per semester where students from various faculties can present project ideas and apply for limited resource allocation. Approximately five selected projects per semester may receive temporary access to the DHInfra cluster (featuring 12x H200 GPUs and multiple L40s) for tasks such as LLM fine-tuning, VR simulations, or other computational workloads.
+One workshop per semester where students from various faculties can present project ideas and apply for limited resource allocation. Approximately five selected projects per semester may receive temporary access to the DHinfra cluster (featuring 12x H200 GPUs and multiple L40s) for tasks such as LLM fine-tuning, VR simulations, or other computational workloads.
 
 ### Use Case 2: Limited LLM Inference Access for Educational Purposes
 
@@ -31,4 +31,4 @@ One GPU may be allocated to provide controlled access to LLM inference (via Olla
 
 This use case explores the potential for VR in teaching through streaming solutions, particularly in Game Studies and Engineering contexts, which could reduce dependency on individual high-performance workstations. Implementation would depend on local infrastructure availability, such as VR headset access, and remains subject to further evaluation.
 
-This exploratory pilot allows DHInfra.at to better understand potential use cases beyond its core Digital Humanities mission, while maintaining its primary commitment to CLARIAH partners and DH research projects. The insights gained will inform future decisions about resource allocation and access policies.
+This exploratory pilot allows DHinfra.at to better understand potential use cases beyond its core Digital Humanities mission, while maintaining its primary commitment to CLARIAH partners and DH research projects. The insights gained will inform future decisions about resource allocation and access policies.

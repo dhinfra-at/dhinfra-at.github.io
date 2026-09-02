@@ -9,7 +9,7 @@ tags:
   - archives
   - repositories
   - digitization
-author: DHInfra.at
+author: DHinfra.at
 ---
 
 The Literature Archive Salzburg, presented by Lina-Maria Zangerl, requires infrastructure for both digitized historical documents and born-digital materials. Their experience with the Stefan Zweig Digital project demonstrates specific needs for storage solutions and access management.

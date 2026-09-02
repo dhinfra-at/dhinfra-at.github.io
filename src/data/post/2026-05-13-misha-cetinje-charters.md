@@ -1,7 +1,7 @@
 ---
 publishDate: 2026-05-13T09:00:00Z
 title: "Reading the unreadable: multispectral imaging of medieval Serbian charters"
-excerpt: DHInfra coordinated a loan of TU Wien's portable MISHA system to recover faded Old Serbian text on damaged charters in Cetinje — here is how the process works.
+excerpt: DHinfra coordinated a loan of TU Wien's portable MISHA system to recover faded Old Serbian text on damaged charters in Cetinje — here is how the process works.
 image: /images/posts/misha-charter.jpg
 category: Use Cases
 tags:
@@ -9,8 +9,8 @@ tags:
   - multispectral imaging
   - MISHA
   - manuscripts
-  - DHInfra
-author: DHInfra.at
+  - DHinfra
+author: DHinfra.at
 ---
 
 Nine of the medieval charters held by the State Archives in Cetinje, the former Montenegrin capital, were buried in the ground in the 20th century. The surface of the parchment is heavily damaged and the ink badly faded. In normal photography, much of the text is unreadable. Under multispectral imaging, some lines come back.
@@ -19,9 +19,9 @@ These charters are part of the corpus addressed by **MeSeCA** (_Medieval Serbian
 
 ## Borrowing the equipment
 
-DHInfra coordinated a loan of the **MISHA system** from TU Wien's Computer Vision Lab. MISHA — the Multispectral Imaging System for Historical Artefacts — is an open-source, LED-based multispectral imaging rig from the Rochester Institute of Technology, built for flat archival material and portable enough to travel to the archive instead of the other way around.
+DHinfra coordinated a loan of the **MISHA system** from TU Wien's Computer Vision Lab. MISHA — the Multispectral Imaging System for Historical Artefacts — is an open-source, LED-based multispectral imaging rig from the Rochester Institute of Technology, built for flat archival material and portable enough to travel to the archive instead of the other way around.
 
-After contacting **Florian Kleber** at TU Wien CVL, the system was available within about two weeks. Handover included a training day: an introduction to MSI, hands-on capture training, a walkthrough of post-processing, and setup and packing instructions. Paperwork was a loan agreement and an insurance confirmation. For DHInfra partner institutions there is no loan fee — only training and insurance, which usually stay in the low three-digit range. For details, get in touch with TU Wien CVL.
+After contacting **Florian Kleber** at TU Wien CVL, the system was available within about two weeks. Handover included a training day: an introduction to MSI, hands-on capture training, a walkthrough of post-processing, and setup and packing instructions. Paperwork was a loan agreement and an insurance confirmation. For DHinfra partner institutions there is no loan fee — only training and insurance, which usually stay in the low three-digit range. For details, get in touch with TU Wien CVL.
 
 ## What multispectral imaging does
 
@@ -44,4 +44,4 @@ Processing is ongoing, but the first results are in. Text in Old Serbian that wa
 
 ---
 
-To borrow MISHA, contact **Florian Kleber** or **Robert Sablatnig** at TU Wien's Computer Vision Lab. See the [Resources page](/resources#digitization) for the full range of DHInfra digitization equipment.
+To borrow MISHA, contact **Florian Kleber** or **Robert Sablatnig** at TU Wien's Computer Vision Lab. See the [Resources page](/resources#digitization) for the full range of DHinfra digitization equipment.

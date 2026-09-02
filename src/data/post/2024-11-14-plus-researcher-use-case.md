@@ -9,7 +9,7 @@ tags:
   - PLUS
   - NLP
   - machine-learning
-author: DHInfra.at
+author: DHinfra.at
 ---
 
 Barbara Denicolò's research project "SiCPAS" at the University of Salzburg examines Sigmund of Tyrol's court using digital methods. The project requires infrastructure support for automated text processing, including transcription services and entity recognition tools.

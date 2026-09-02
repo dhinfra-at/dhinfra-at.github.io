@@ -9,7 +9,7 @@ tags:
   - IMAREAL
   - databases
   - AI
-author: DHInfra.at
+author: DHinfra.at
 ---
 
 The Institute for Medieval and Early Modern Material Culture (IMAREAL) manages extensive digital collections through their REALonline database and various research projects. Their infrastructure needs focus on graph database systems and AI-supported query capabilities to better connect and analyze their growing digital collections.
