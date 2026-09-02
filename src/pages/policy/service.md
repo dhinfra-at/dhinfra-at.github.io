@@ -5,7 +5,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 _Last updated_: 31 August 2026 · _Version_: 0.3
 
-**Applies to:** the DHInfra.at cluster and its platform services at `dhinfra.uni-graz.at` —
+**Applies to:** the DHinfra.at cluster and its platform services at `dhinfra.uni-graz.at` —
 GPU compute, LLM APIs, storage, notebooks, and the console. It does not cover the public
 website at `dhinfra.at`, which has its own [privacy notice](/privacy-notice).
 
@@ -35,11 +35,11 @@ of these is revised, check the others before treating a cross-reference as curre
 
 ## 1. Service Scope
 
-DHInfra.at provides shared infrastructure for digital humanities research and teaching,
+DHinfra.at provides shared infrastructure for digital humanities research and teaching,
 including:
 
 -   GPU compute through SLURM-managed resources.
--   LLM API access through DHInfra gateway services.
+-   LLM API access through DHinfra gateway services.
 -   Project and user storage where offered by participating sites.
 -   Jupyter, notebook, container, model-serving, or related research workflows where
     enabled.
@@ -50,7 +50,7 @@ as the platform develops.
 
 ## 2. Eligible Users and Projects
 
-DHInfra.at is primarily for academic and educational use. Users normally authenticate
+DHinfra.at is primarily for academic and educational use. Users normally authenticate
 through an institutional account, ACOnet/eduID federation, or another approved academic
 identity source.
 
@@ -66,7 +66,7 @@ the following:
 -   Courses, theses, grants, public-interest research, or institutional research
     infrastructure.
 
-Commercial, industry, or non-academic users may only use DHInfra.at when they act within an
+Commercial, industry, or non-academic users may only use DHinfra.at when they act within an
 academic collaboration and an academic institution remains responsible for the project.
 
 ## 3. Requesting Access
@@ -111,7 +111,7 @@ API keys, SSH keys, private-network devices, session cookies, or other credentia
 are responsible for activity performed under their credentials.
 
 **Never send a password, an API key, a private SSH key, or a recovery code to anyone,
-including the Operations Team, and least of all by mail.** Nobody operating DHInfra.at will
+including the Operations Team, and least of all by mail.** Nobody operating DHinfra.at will
 ask for one. Support does not need a credential to help, and a credential sent by mail
 should be treated as compromised and rotated. The same applies to personal data: send only
 what a request actually needs.
@@ -122,14 +122,14 @@ keys for that project.
 
 ## 5. Fair Use and Resource Limits
 
-DHInfra.at is a shared infrastructure. Users must not monopolize GPUs, storage, network, API
+DHinfra.at is a shared infrastructure. Users must not monopolize GPUs, storage, network, API
 capacity, model-serving capacity, or staff time in ways that materially harm other users.
 
 Base access is best-effort and governed by fair use. Requests beyond the base allocation
 require review and may be approved, limited, scheduled, charged, or rejected. Larger
 reservations need advance planning and operational approval.
 
-DHInfra.at may apply:
+DHinfra.at may apply:
 
 -   SLURM limits, quality of service, queue policies, and job time limits.
 -   Storage quotas, read-only states, archival states, and deletion after retention.
@@ -161,7 +161,7 @@ Users must not use the API to bypass resource allocation, overload models, evade
 or process data that is incompatible with this policy. Users are responsible for reviewing
 model outputs before scholarly, public, administrative, or operational reliance.
 
-Unless explicitly stated otherwise, DHInfra.at does not guarantee the availability,
+Unless explicitly stated otherwise, DHinfra.at does not guarantee the availability,
 accuracy, reproducibility, safety, or suitability of any model output.
 
 ## 7. Prohibited Use
@@ -178,24 +178,24 @@ Users must not:
 -   Deliberately deploy malware, exploit code, credential harvesting, spam,
     denial-of-service activity, or unauthorized scanning.
 -   Process data whose legal, contractual, ethical, or security requirements are
-    incompatible with DHInfra.at's baseline without prior approval.
+    incompatible with DHinfra.at's baseline without prior approval.
 -   Upload, generate, or distribute content that the user is not legally permitted to
     process.
 
 ## 8. Security and Sensitive Data
 
-DHInfra.at is a trusted multi-tenant academic HPC and LLM environment. It is not a
+DHinfra.at is a trusted multi-tenant academic HPC and LLM environment. It is not a
 zero-trust, isolated single-tenant, or confidential-computing environment.
 
 The service provides a standard security baseline: institutional SSO, group-based
 authorization, POSIX and SLURM isolation, storage permissions, project-scoped API keys,
-monitoring, logging, and administrative controls. DHInfra.at does not guarantee absolute
+monitoring, logging, and administrative controls. DHinfra.at does not guarantee absolute
 protection against malicious workloads, side channels, GPU memory attacks, hardware leakage,
 vulnerabilities in user software, or vulnerabilities in upstream infrastructure.
 
 Users who intend to process sensitive, confidential, personal, legally restricted,
 export-controlled, contractually restricted, or otherwise high-risk data must describe those
-requirements before using the service. DHInfra.at may reject, suspend, or require a separate
+requirements before using the service. DHinfra.at may reject, suspend, or require a separate
 arrangement for such projects.
 
 ## 9. Data, Storage, and Backups
@@ -203,7 +203,7 @@ arrangement for such projects.
 Users are responsible for their own research data, code, outputs, and backups unless a
 written arrangement says otherwise.
 
-DHInfra.at may provide project storage, home directories, scratch storage, model storage, or
+DHinfra.at may provide project storage, home directories, scratch storage, model storage, or
 archival storage depending on the site and service. Storage may be quota-managed, made
 read-only, archived, or deleted after the applicable retention period.
 
@@ -212,7 +212,7 @@ security compatibility.
 
 ## 10. AI Act and AI Governance
 
-DHInfra.at is research infrastructure. It has self-assessed its position under the EU AI
+DHinfra.at is research infrastructure. It has self-assessed its position under the EU AI
 Act and concluded that the services it operates are neither prohibited nor high-risk, and
 that they fall within the Act's exclusion for systems put into service for scientific
 research and development. Staff involved in operating or approving AI-enabled services
@@ -221,7 +221,7 @@ maintain a working level of AI literacy regardless.
 That assessment covers the infrastructure. It does not extend to what users build on it, and
 it is not a certification: none exists for a system that is not high-risk.
 
-DHInfra.at provides academic infrastructure and, where enabled, access to hosted AI models
+DHinfra.at provides academic infrastructure and, where enabled, access to hosted AI models
 and APIs. It does not by default certify that a user's project, model, dataset, downstream
 application, or publication workflow complies with the EU AI Act or other AI governance
 rules.
@@ -236,19 +236,19 @@ or rejection.
 
 For systems that interact directly with people or generate synthetic text, image, audio, or
 video content, users are responsible for appropriate disclosure, labelling, review, and
-downstream documentation where required. DHInfra.at may require projects to document
+downstream documentation where required. DHinfra.at may require projects to document
 intended purpose, model provenance, user-facing transparency measures, and risk controls
 before granting or continuing access.
 
 Where a project publishes synthetic text, image, audio or video, marking and disclosure are
-the responsibility of whoever publishes it. DHInfra.at does not mark model output: for text
+the responsibility of whoever publishes it. DHinfra.at does not mark model output: for text
 served through an API there is no robust or interoperable method at the current state of the
 art, which is the condition the Act itself attaches to that obligation. The position is
 revisited when a workable method exists.
 
 ## 11. Service Level and Warranty
 
-Standard access is provided on a best-effort basis. DHInfra.at does not guarantee:
+Standard access is provided on a best-effort basis. DHinfra.at does not guarantee:
 
 -   Continuous availability.
 -   Particular queue times or response times.
@@ -264,7 +264,7 @@ partnerships.
 
 ## 12. Monitoring, Logs, and Reporting
 
-DHInfra.at may monitor and log authentication, access, job execution, storage use, API use,
+DHinfra.at may monitor and log authentication, access, job execution, storage use, API use,
 quota use, security events, support requests, and administrative actions for service
 operation, security, accounting, reporting, and compliance.
 
@@ -283,7 +283,7 @@ the [Privacy Notice for Federated Login](/federation-privacy-notice).
 
 ## 13. Suspension and Revocation
 
-DHInfra.at may suspend or revoke access when:
+DHinfra.at may suspend or revoke access when:
 
 -   A user or project violates this policy.
 -   A project ends, expires, loses eligibility, or exceeds approved scope.
@@ -301,17 +301,22 @@ periods.
 
 ## 14. Acknowledgment
 
-Users should acknowledge **DHInfra.at** in publications, presentations, teaching material,
-datasets, software, or other outputs substantially supported by the infrastructure. Naming
-the infrastructure is what matters; a suggested wording is:
+Users should acknowledge the infrastructure in publications, presentations, teaching
+material, datasets, software, and other outputs it substantially supported. Whatever
+sentence you write, keep one string intact:
 
-> This work was supported by DHInfra.at.
+> Digital Humanities Infrastructure Austria (DHinfra.at)
 
-Where a citation is wanted, the infrastructure can be cited as:
+The full name together with the abbreviation is what makes the acknowledgment findable,
+which is what the acknowledgment is for. Suggested wordings for compute, digitization and
+storage, and the wording to use when the infrastructure covered only part of the work, are
+on <https://www.dhinfra.at/impact#acknowledgement> and in the console documentation.
+
+Where the GPU systems were used, please also cite:
 
 Atzenhofer-Baumgartner, Florian, David Fleischhacker, Max Resch, Lukas Waldhofer, and
 Michael Otto. 2026. "Design and Operation of a Federated GPU Cluster for Digital Humanities
-within DHInfra.at." In *Austrian-Slovenian HPC Meeting 2026 (ASHPC26) Booklet*, edited by
+within DHinfra.at." In *Austrian-Slovenian HPC Meeting 2026 (ASHPC26) Booklet*, edited by
 Ivan Vialov. Vienna: EuroCC Austria. <https://doi.org/10.25365/phaidra.765>
 
 ## 15. Contact and Communication
@@ -337,5 +342,5 @@ and users are asked to check them first.
 
 ## 16. Changes
 
-DHInfra.at may update this policy. Material changes are announced through the channels named
+DHinfra.at may update this policy. Material changes are announced through the channels named
 in section 15. Continued use after a policy change means acceptance of the updated policy.

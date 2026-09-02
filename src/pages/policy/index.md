@@ -3,11 +3,11 @@ title: 'Policies'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-The documents governing DHInfra.at. Each states at the top what it applies to.
+The documents governing DHinfra.at. Each states at the top what it applies to.
 
 ## The cluster
 
-These govern the DHInfra.at cluster and its platform services at `dhinfra.uni-graz.at` —
+These govern the DHinfra.at cluster and its platform services at `dhinfra.uni-graz.at` —
 GPU compute, LLM APIs, storage, notebooks, and the console.
 
 - **[Service and Acceptable Use Policy](/policy/service)** — what users of the cluster may
@@ -27,6 +27,6 @@ GPU compute, LLM APIs, storage, notebooks, and the console.
 
 ## Not published here
 
-The **Governance Concept** describes how DHInfra.at is governed, who decides what, and how
+The **Governance Concept** describes how DHinfra.at is governed, who decides what, and how
 the participating sites divide responsibility. It is an internal document for the partner
 institutions. Ask at dhinfra@uni-graz.at if you need it.

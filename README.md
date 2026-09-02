@@ -1,6 +1,6 @@
-# DHInfra.at — website
+# DHinfra.at — website
 
-The [DHInfra.at](https://www.dhinfra.at) website, built with [Astro](https://astro.build/)
+The [DHinfra.at](https://www.dhinfra.at) website, built with [Astro](https://astro.build/)
 (AstroWind template, Astro v6 + Tailwind CSS v4) and served via GitHub Pages.
 
 > [!NOTE]

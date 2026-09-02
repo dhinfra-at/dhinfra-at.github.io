@@ -9,7 +9,7 @@ tags:
   - mobile-scanning
   - cultural-heritage
   - requirements
-author: DHInfra.at
+author: DHinfra.at
 ---
 
 Through our survey with TU Wien's Computer Vision Lab, we identified a clear need for mobile scanning solutions in cultural heritage digitization. The lab's research in image science and collection studies requires specialized equipment that can be deployed directly in archives and collections.

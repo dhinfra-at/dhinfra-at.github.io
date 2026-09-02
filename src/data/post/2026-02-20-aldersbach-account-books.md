@@ -1,7 +1,7 @@
 ---
 publishDate: 2026-02-20T09:00:00Z
 title: "Information Extraction from Monastery Account Books"
-excerpt: Testing the DHInfra.at inference API on the account books of Aldersbach Abbey — open models, matched against commercial ones.
+excerpt: Testing the DHinfra.at inference API on the account books of Aldersbach Abbey — open models, matched against commercial ones.
 category: Use Cases
 tags:
   - use-cases
@@ -9,12 +9,12 @@ tags:
   - information-extraction
   - inference
   - API
-author: DHInfra.at
+author: DHinfra.at
 ---
 
 How well can a language model automatically classify and extract information from early-modern
 monastic account books? A team working on the **Rechnungsbücher of Aldersbach Abbey** put this to
-the test on the DHInfra.at infrastructure.
+the test on the DHinfra.at infrastructure.
 
 The pipeline is straightforward: prepare the data, send it to the inference API, receive structured
 output, and feed the results back into research and edition work. The GPU cluster processes the

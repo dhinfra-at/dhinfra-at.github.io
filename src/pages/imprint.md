@@ -19,7 +19,7 @@ dhinfra@uni-graz.at
 
 ## Funding
 
-DHInfra.at (2023–2026) was funded through the call **[„(Digitale) Forschungsinfrastruktur"](https://forschungsinfrastruktur.bmfwf.gv.at/de/monitoring/digitale-forschungs-infrastruktur_4)** of the Austrian **[Federal Ministry of Education, Science and Research (BMBWF)](https://www.bmbwf.gv.at)** — the science and research portfolio is now held by the **[Federal Ministry of Women, Science and Research (BMFWF)](https://www.bmfwf.gv.at)** — in cooperation with the **[European Union's Recovery and Resilience Facility (RRF)](https://commission.europa.eu/business-economy-euro/economic-recovery/recovery-and-resilience-facility_en)**, part of NextGenerationEU.
+DHinfra.at (2023–2026) was funded through the call **[„(Digitale) Forschungsinfrastruktur"](https://forschungsinfrastruktur.bmfwf.gv.at/de/monitoring/digitale-forschungs-infrastruktur_4)** of the Austrian **[Federal Ministry of Education, Science and Research (BMBWF)](https://www.bmbwf.gv.at)** — the science and research portfolio is now held by the **[Federal Ministry of Women, Science and Research (BMFWF)](https://www.bmfwf.gv.at)** — in cooperation with the **[European Union's Recovery and Resilience Facility (RRF)](https://commission.europa.eu/business-economy-euro/economic-recovery/recovery-and-resilience-facility_en)**, part of NextGenerationEU.
 
 A [CLARIAH-AT](https://clariah.at) initiative.
 
