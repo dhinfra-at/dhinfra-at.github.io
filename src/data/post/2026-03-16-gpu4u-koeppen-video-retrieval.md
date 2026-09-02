@@ -13,10 +13,10 @@ tags:
   - VLM
   - CLARIAH-AT
   - video-retrieval
-author: DHInfra.at
+author: DHinfra.at
 ---
 
-The [GPU4U pilot](/2025-09-09-gpu4u-pilot-use-case) set out to give students access to high-performance GPUs for their research. Ferdinand Köppen, a master's student at the University of Klagenfurt (AAU), was one of five students selected at the GPU4U First Selection Workshop to receive temporary access to the [DHInfra.at GPU cluster](/2025-08-28-graz-gpu-cluster-install). His project: building open-source tooling for video retrieval using image and text embeddings from Vision Language Models (VLMs). With a single H200 GPU, he analyzed **968,307 keyframes** extracted from roughly 7,100 videos (~1.3 TB).
+The [GPU4U pilot](/2025-09-09-gpu4u-pilot-use-case) set out to give students access to high-performance GPUs for their research. Ferdinand Köppen, a master's student at the University of Klagenfurt (AAU), was one of five students selected at the GPU4U First Selection Workshop to receive temporary access to the [DHinfra.at GPU cluster](/2025-08-28-graz-gpu-cluster-install). His project: building open-source tooling for video retrieval using image and text embeddings from Vision Language Models (VLMs). With a single H200 GPU, he analyzed **968,307 keyframes** extracted from roughly 7,100 videos (~1.3 TB).
 
 ## The Problem: Finding a Needle in a Video Haystack
 
@@ -48,7 +48,7 @@ Concise, yet capturing the most distinctive features — suitable for downstream
 
 ## Why the H200 Mattered
 
-Köppen was allocated one H200 GPU from the DHInfra.at cluster. Two things would not have been possible without it:
+Köppen was allocated one H200 GPU from the DHinfra.at cluster. Two things would not have been possible without it:
 
 1. **Testing the largest model**: Qwen2-VL-72B used 127 GB of the H200's 140 GB VRAM during inference. No consumer or typical academic GPU has that kind of memory.
 
@@ -56,4 +56,4 @@ Köppen was allocated one H200 GPU from the DHInfra.at cluster. Two things would
 
 ## Cross-Institutional Access via CLARIAH-AT
 
-The University of Klagenfurt is not a direct DHInfra.at partner — but it is part of the [CLARIAH-AT](https://clariah.at) consortium, which is responsible for the long-term integration and sustainability (_Verstetigung_) of digital research infrastructure in Austria. Through this connection, Köppen could access the DHInfra.at GPU cluster hosted at the University of Graz via direct SSH over a private VPN, with smooth support and collaboration between the teams.
+The University of Klagenfurt is not a direct DHinfra.at partner — but it is part of the [CLARIAH-AT](https://clariah.at) consortium, which is responsible for the long-term integration and sustainability (_Verstetigung_) of digital research infrastructure in Austria. Through this connection, Köppen could access the DHinfra.at GPU cluster hosted at the University of Graz via direct SSH over a private VPN, with smooth support and collaboration between the teams.

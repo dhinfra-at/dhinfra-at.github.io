@@ -328,7 +328,7 @@ export const outputs: OutputEntry[] = [
   },
   {
     type: 'workshop',
-    title: 'First DHInfra.at LLM Workshop — OCR post-correction with LLMs',
+    title: 'First DHinfra.at LLM Workshop — OCR post-correction with LLMs',
     venue: 'DHd2026, Universität Wien',
     date: '23 Feb 2026',
     link: '/2026-02-23-dhd-workshop-ocr-postcorrection',

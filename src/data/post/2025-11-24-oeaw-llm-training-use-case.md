@@ -10,7 +10,7 @@ tags:
   - LLM
   - fine-tuning
   - ÖAW
-author: DHInfra.at
+author: DHinfra.at
 ---
 
 A researcher from the Austrian Academy of Sciences (ÖAW) reached out with requirements for local LLM training and inference capabilities. After completing an AI study program and extensive hands-on experience with prompting, RAG systems, and local LLMs, they are now looking to scale beyond what is possible with consumer hardware.
@@ -27,7 +27,7 @@ The use case centers on three core needs:
 
 ## Infrastructure Approach
 
-The DHInfra GPU cluster could address these needs through several capabilities currently being developed:
+The DHinfra GPU cluster could address these needs through several capabilities currently being developed:
 
 **Multi-GPU Training**: The cluster's H200 and L40S GPUs with high-bandwidth InfiniBand interconnect can enable fine-tuning and continued pre-training of larger models that exceed single-GPU memory limits.
 
@@ -37,4 +37,4 @@ The DHInfra GPU cluster could address these needs through several capabilities c
 
 For production inference workloads, the security and deployment model is still being explored. Initial focus will be on supporting the training and development workflows that currently require external cloud services or are limited by local hardware constraints.
 
-The researcher's background as a "low-coder" with practical AI experience represents an important user profile for DHInfra infrastructure, i.e., they are almost always domain experts who are able to deeply understand their research needs but benefit from simplified access to computational resources.
+The researcher's background as a "low-coder" with practical AI experience represents an important user profile for DHinfra infrastructure, i.e., they are almost always domain experts who are able to deeply understand their research needs but benefit from simplified access to computational resources.

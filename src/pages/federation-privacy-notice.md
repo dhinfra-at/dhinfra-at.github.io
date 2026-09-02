@@ -5,7 +5,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 _Last updated_: 31 August 2026 · _Version_: 0.3.1
 
-This privacy notice describes how **DHInfra.at** (including `dhinfra.uni-graz.at`) processes personal
+This privacy notice describes how **DHinfra.at** (including `dhinfra.uni-graz.at`) processes personal
 data when you access the service via federated login (e.g. ACOnet/eduID, eduGAIN). It is intended to
 meet the requirements of the **GÉANT Data Protection Code of Conduct (v1)**, the **REFEDS Data
 Protection Code of Conduct (v2)**, and the entity categories **REFEDS Research & Scholarship** and
@@ -17,9 +17,9 @@ research workflows).
 
 ## 1. Name and Description of the Service
 
-**Name of the service:** DHInfra.at
+**Name of the service:** DHinfra.at
 
-**Description of the service:** DHInfra.at provides shared GPU, LLM, storage, and support
+**Description of the service:** DHinfra.at provides shared GPU, LLM, storage, and support
 infrastructure for digital humanities research and teaching. Users authenticate through institutional
 or federated identity providers and receive access to approved project resources such as GPU compute,
 LLM APIs, storage, notebooks, and related research workflows. Access is academic in scope and
@@ -27,7 +27,7 @@ typically granted through project or group membership.
 
 ## 1a. Commitments to Codes of Conduct and Entity Categories
 
-DHInfra.at, as a federated Service Provider, commits to the **GÉANT Data Protection Code of Conduct
+DHinfra.at, as a federated Service Provider, commits to the **GÉANT Data Protection Code of Conduct
 (v1)** and the **REFEDS Data Protection Code of Conduct (v2)**, and asserts the following entity
 categories in its SAML metadata:
 
@@ -36,21 +36,21 @@ categories in its SAML metadata:
 - **REFEDS Research & Scholarship (R&S)** — [`http://refeds.org/category/research-and-scholarship`](http://refeds.org/category/research-and-scholarship)
 - **REFEDS Personalized Access** — [`https://refeds.org/category/personalized`](https://refeds.org/category/personalized)
 
-By committing to these codes and categories, DHInfra.at:
+By committing to these codes and categories, DHinfra.at:
 
 - requests and processes **only the minimum attributes** necessary for authentication, account linking
   and provisioning, communication with users and project leads, authorisation based on
-  DHInfra‑internal project/group membership, and secure operation, monitoring, and reporting of the
+  DHinfra‑internal project/group membership, and secure operation, monitoring, and reporting of the
   infrastructure;
 - uses those attributes **solely** for the purposes described in this notice (purpose limitation) —
   not for unrelated profiling or marketing, and never sold;
 - protects personal data in accordance with the **GDPR** and applicable Austrian/EEA data‑protection
   law.
 
-DHInfra.at does **not** assert the REFEDS Anonymous or Pseudonymous Access categories; access is based
+DHinfra.at does **not** assert the REFEDS Anonymous or Pseudonymous Access categories; access is based
 on identified academic users.
 
-**Justification of need (Personalized Access):** DHInfra.at requires a stable, non‑reassignable
+**Justification of need (Personalized Access):** DHinfra.at requires a stable, non‑reassignable
 identifier, basic name and contact information, home organisation, scoped affiliation, and assurance
 information in order to operate personalized accounts and project memberships across sessions and
 institutions, provide support and incident handling, and meet accountability and reporting obligations
@@ -73,18 +73,18 @@ Institut für Digitale Geisteswissenschaften (Department of Digital Humanities),
 
 **Service contact (functional address):**
 
-DHInfra Operations – DHInfra.at
+DHinfra Operations – DHinfra.at
 E‑mail: [dhinfra@uni-graz.at](mailto:dhinfra@uni-graz.at)
 
-This functional address is monitored by the DHInfra operations team and is the contact point for
+This functional address is monitored by the DHinfra operations team and is the contact point for
 users, identity providers, and federation operators.
 
 **Contact person / data steward for this service:**
 
-Elisabeth Steiner, Data Steward, DHInfra.at / University of Graz (reachable via the functional
+Elisabeth Steiner, Data Steward, DHinfra.at / University of Graz (reachable via the functional
 address: [dhinfra@uni-graz.at](mailto:dhinfra@uni-graz.at))
 
-The University of Graz is the **sole data controller** for DHInfra.at. DHInfra.at intends to include
+The University of Graz is the **sole data controller** for DHinfra.at. DHinfra.at intends to include
 further operational sites, whose authorised staff would then process personal data as part of service
 operation under the governance and responsibility of the University of Graz as controller. **These
 arrangements are not yet in effect**, and this notice will be updated accordingly before they are.
@@ -98,16 +98,16 @@ Further contact details and information are available at
 
 ## 4. Personal Data Received from Your Home Organisation (via SAML/OIDC)
 
-DHInfra.at requests only attributes needed for authentication, account linking, communication,
+DHinfra.at requests only attributes needed for authentication, account linking, communication,
 assurance, and service operation. The service's SAML/OIDC metadata (`RequestedAttribute` elements)
 matches this list. Depending on your home organisation's configuration, the following attributes may
 be released.
 
 ### 4.1. Identifiers
 
-DHInfra.at maintains an internal, immutable account identifier (UUID) for each user in its identity
+DHinfra.at maintains an internal, immutable account identifier (UUID) for each user in its identity
 system (Authentik). Federated identifiers are **linked** to this internal account and are **not** used
-as the primary key. From your home organisation, DHInfra.at requests one stable identifier, in the
+as the primary key. From your home organisation, DHinfra.at requests one stable identifier, in the
 following order of preference — subject‑id → pairwise‑id → persistent NameID → eduPersonPrincipalName:
 
 - **SAML subject‑id** (`urn:oasis:names:tc:SAML:attribute:subject-id`) or **pairwise‑id**
@@ -119,7 +119,7 @@ following order of preference — subject‑id → pairwise‑id → persistent 
   form `user@organisation.example`; used only where none of the above are available, and stored as a
   linked login identifier to the internal UUID to handle possible reassignment.
 
-DHInfra.at does **not** use eduPersonTargetedID; this attribute is obsolete in modern SAML 2.0
+DHinfra.at does **not** use eduPersonTargetedID; this attribute is obsolete in modern SAML 2.0
 deployments and is not requested.
 
 ### 4.2. Contact and Name
@@ -127,7 +127,7 @@ deployments and is not requested.
 - **mail** (`urn:oid:0.9.2342.19200300.100.1.3`) — service notifications, support responses, and
   project‑related communication.
 - **displayName** (`urn:oid:2.16.840.1.113730.3.1.241`) — your name in the web interface, project
-  member lists, and support contexts. DHInfra.at uses displayName as the preferred presentation
+  member lists, and support contexts. DHinfra.at uses displayName as the preferred presentation
   attribute and does not rely on `cn` (commonName), as its semantics are inconsistent across
   organisations.
 - **givenName** (`urn:oid:2.5.4.42`) and **sn** (`urn:oid:2.5.4.4`) — optional; used where needed for
@@ -141,7 +141,7 @@ deployments and is not requested.
   institutions supported.
 - **eduPersonScopedAffiliation** (`urn:oid:1.3.6.1.4.1.5923.1.1.1.9`) — scoped affiliation values such
   as `student@edu.uni-graz.at` or `faculty@donau-uni.ac.at`; used to understand your role at your
-  institution for eligibility and reporting. DHInfra.at always uses the scoped form; unscoped
+  institution for eligibility and reporting. DHinfra.at always uses the scoped form; unscoped
   `eduPersonAffiliation` is not requested (where only the role part is needed, it is derived
   internally from the scoped value).
 
@@ -151,22 +151,22 @@ deployments and is not requested.
   of your identity and authentication, in line with the REFEDS Assurance Framework, where provided;
   used for security‑relevant decisions.
 
-DHInfra.at does **not** request `eduPersonEntitlement` or other authorisation attributes from home
-organisations. Authorisation to projects and resources is managed internally by DHInfra.at, based on
+DHinfra.at does **not** request `eduPersonEntitlement` or other authorisation attributes from home
+organisations. Authorisation to projects and resources is managed internally by DHinfra.at, based on
 project and group membership (see Section 5).
 
-DHInfra.at does not request attributes that are not relevant to service access, authorisation,
+DHinfra.at does not request attributes that are not relevant to service access, authorisation,
 support, security, or reporting. The attributes listed above are required for user support, project
-collaboration, accounting, and communication with users; DHInfra.at does not use them for other
+collaboration, accounting, and communication with users; DHinfra.at does not use them for other
 purposes such as marketing or unrelated profiling.
 
 ## 5. Personal Data Generated or Provided During Use of the Service
 
-In addition to attributes received from your home organisation, DHInfra.at may process:
+In addition to attributes received from your home organisation, DHinfra.at may process:
 
 - Service‑internal account identifier (UUID; Authentik account ID, used as the primary key for user
   records, with all federated identifiers stored as linked login identifiers)
-- Project and group memberships (DHInfra‑specific project IDs, group names, membership lists, roles
+- Project and group memberships (DHinfra‑specific project IDs, group names, membership lists, roles
   such as project lead or member)
 - Project applications and related data (e.g. project names, descriptions, participating institutions,
   project leads, member lists)
@@ -197,7 +197,7 @@ Personal data is processed for the following purposes:
 - To authenticate users via institutional or federated login
 - To link and maintain accounts across login sessions and, where applicable, across different identity
   providers
-- To authorise access to project resources based on DHInfra‑internal project/group membership
+- To authorise access to project resources based on DHinfra‑internal project/group membership
 - To provision and deprovision accounts, groups, API keys, storage, and compute access
 - To operate GPU, storage, LLM API, notebook, and support services
 - To enforce quotas, budgets, fair‑use limits, and security controls
@@ -211,7 +211,7 @@ Personal data is not used for profiling unrelated to service provision, and is n
 
 ## 7. Legal Basis
 
-Processing of personal data by DHInfra.at is based on the following legal grounds under the GDPR, as
+Processing of personal data by DHinfra.at is based on the following legal grounds under the GDPR, as
 applicable to the specific context:
 
 - **Art. 6(1)(e) GDPR – Task carried out in the public interest:** for the provision and operation of
@@ -233,8 +233,8 @@ service based on the legal grounds above.
 
 Personal data may be accessible to the following categories of recipients:
 
-- DHInfra.at operations, service desk, and system administrators
-- Authorised staff at further DHInfra.at operational sites, where required for service operation.
+- DHinfra.at operations, service desk, and system administrators
+- Authorised staff at further DHinfra.at operational sites, where required for service operation.
   **These arrangements are not yet in effect** (see Section 2)
 - Your home organisation or identity provider, as part of authentication and attribute release
 - ACOnet/eduID infrastructure and, if enabled, eduGAIN federation infrastructure, for federated
@@ -244,14 +244,14 @@ Personal data may be accessible to the following categories of recipients:
 - Technical service providers (e.g. hosting, monitoring, backup, or related services) engaged to
   operate the infrastructure, under appropriate contracts and data‑processing agreements where
   required
-- DHInfra.at intends to engage additional partner organisations as data processors acting on behalf of
+- DHinfra.at intends to engage additional partner organisations as data processors acting on behalf of
   the University of Graz (as controller) for specific aspects of service operation. **These
   arrangements are not yet in effect.** Once such processors are engaged, they will process personal
   data only under documented instructions and appropriate data‑processing agreements as per Art. 28
   GDPR, and this notice will be updated accordingly to reflect the relevant processors and processing
   activities.
 
-DHInfra.at does not sell personal data. Personal data is not made publicly available, except where:
+DHinfra.at does not sell personal data. Personal data is not made publicly available, except where:
 
 - you or your project have separately and explicitly chosen to publish certain information, or
 - minimal information is included in public project reporting that has been approved and appropriately
@@ -259,13 +259,13 @@ DHInfra.at does not sell personal data. Personal data is not made publicly avail
 
 ## 9. International Transfers
 
-Core DHInfra.at infrastructure is intended to be operated in Austria or within the European Economic
+Core DHinfra.at infrastructure is intended to be operated in Austria or within the European Economic
 Area (EEA). Federated authentication involves your home organisation and federation metadata services;
 these typically operate within the EEA or countries deemed to have adequate data‑protection
 safeguards.
 
 If transfers of personal data outside the EEA become necessary (for example, through specific
-technical service providers or eduGAIN participation), DHInfra.at will ensure appropriate safeguards
+technical service providers or eduGAIN participation), DHinfra.at will ensure appropriate safeguards
 (such as adequacy decisions or standard contractual clauses) and will update this notice where
 required.
 
@@ -310,12 +310,12 @@ personal data:
   interests or public interest)
 - Right to data portability, where applicable
 
-To exercise these rights in relation to DHInfra.at, contact the service at
+To exercise these rights in relation to DHinfra.at, contact the service at
 [dhinfra@uni-graz.at](mailto:dhinfra@uni-graz.at).
 
 Requests concerning the accuracy or release of attributes provided by your home organisation (e.g.
 your affiliation, e‑mail address, or name) should be addressed directly to your home organisation or
-identity provider, as DHInfra.at usually cannot change those attributes at the source.
+identity provider, as DHinfra.at usually cannot change those attributes at the source.
 
 You may also contact the Data Protection Officer of the University of Graz (see Section 3) for issues
 relating to the processing of personal data at the University.
@@ -325,7 +325,7 @@ relating to the processing of personal data at the University.
 If you believe that your personal data has been processed in breach of data‑protection law, you have
 the right to lodge a complaint with a supervisory authority.
 
-For DHInfra.at, the competent supervisory authority is:
+For DHinfra.at, the competent supervisory authority is:
 
 Österreichische Datenschutzbehörde
 Barichgasse 40‑42
@@ -337,13 +337,13 @@ You may also contact the supervisory authority in your country of residence or w
 
 ## 13. Identity Provider Discovery (SeamlessAccess)
 
-For selecting your home institution at login, DHInfra.at uses the **SeamlessAccess** discovery service.
+For selecting your home institution at login, DHinfra.at uses the **SeamlessAccess** discovery service.
 The discovery component helps you select your home institution and may store your selected institution
 in your browser (local storage) and load resources from `seamlessaccess.org`.
 
 ## 14. Changes to this Privacy Notice
 
-DHInfra.at may update this privacy notice when:
+DHinfra.at may update this privacy notice when:
 
 - services, components, or infrastructure change,
 - federated identity or attribute requirements change,
@@ -351,7 +351,7 @@ DHInfra.at may update this privacy notice when:
 - legal or institutional requirements change.
 
 The current version of this notice is published at a stable HTTPS URL
-(`https://www.dhinfra.at/federation-privacy-notice/`) linked from the DHInfra.at service website and
+(`https://www.dhinfra.at/federation-privacy-notice/`) linked from the DHinfra.at service website and
 referenced from the SAML/OIDC service metadata used in ACOnet/eduID (and, if applicable, eduGAIN) via
 `mdui:PrivacyStatementURL`. Substantial changes will be communicated through appropriate channels
 (e.g. service website, project contacts, or institutional announcements) where feasible.

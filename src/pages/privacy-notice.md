@@ -5,7 +5,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 _Last updated_: 3 June 2026
 
-This page describes how the **DHInfra.at** website (this public, informational site) handles your
+This page describes how the **DHinfra.at** website (this public, informational site) handles your
 data. The short version: this website does not collect personal data about you.
 
 ## What we collect
@@ -31,9 +31,9 @@ This site links out to third-party services (for example video conferencing, sof
 and partner institutions). When you follow such a link, that service's own privacy policy applies.
 We have no control over, and take no responsibility for, the data practices of external sites.
 
-## The DHInfra.at platform is separate
+## The DHinfra.at platform is separate
 
-This website is **not** the operational DHInfra.at platform (the compute cluster, login, and
+This website is **not** the operational DHinfra.at platform (the compute cluster, login, and
 console). Access to the platform requires federated authentication and is governed by its own
 [Privacy Notice for Federated Login](/federation-privacy-notice), which describes how personal data
 is processed when you sign in via ACOnet/eduID or eduGAIN.

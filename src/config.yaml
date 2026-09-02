@@ -1,5 +1,5 @@
 site:
-  name: DHInfra.at
+  name: DHinfra.at
   site: 'https://www.dhinfra.at'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: DHInfra.at — Digital Humanities Infrastructure in Austria
-    template: '%s — DHInfra.at'
-  description: 'DHInfra.at is a CLARIAH-AT initiative providing shared Digital Humanities infrastructure across Austria: GPU/LLM compute, digitization, development services, and open-source software.'
+    default: DHinfra.at — Digital Humanities Infrastructure in Austria
+    template: '%s — DHinfra.at'
+  description: 'DHinfra.at is a CLARIAH-AT initiative providing shared Digital Humanities infrastructure across Austria: GPU/LLM compute, digitization, development services, and open-source software.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: DHInfra.at
+    site_name: DHinfra.at
     images:
       - url: '~/assets/images/dhinfra-og.png'
         width: 1200

@@ -5,12 +5,12 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 _Last updated_: 31 August 2026 · _Version_: 0.3
 
-**Applies to:** the DHInfra.at cluster and its platform services at `dhinfra.uni-graz.at` --
+**Applies to:** the DHinfra.at cluster and its platform services at `dhinfra.uni-graz.at` --
 GPU compute, LLM APIs, storage, notebooks, and the console. It does not cover the public
 website at `dhinfra.at`, which has its own [privacy notice](/privacy-notice).
 
-This appendix maps the claims made in the **DHInfra.at Governance Concept** and the
-**DHInfra.at Service and Acceptable Use Policy** onto the platform that implements them. It
+This appendix maps the claims made in the **DHinfra.at Governance Concept** and the
+**DHinfra.at Service and Acceptable Use Policy** onto the platform that implements them. It
 exists so that a policy statement can be traced to a mechanism, and so that a change to the
 platform shows up as a change to policy where one is needed.
 
@@ -47,7 +47,7 @@ Implementation:
 Policy implication:
 
 -   ACOnet/eduID proves identity and home-organisation attributes.
--   DHInfra project membership proves authorization.
+-   DHinfra project membership proves authorization.
 -   Users without active project membership remain limited to the portal and documentation.
 
 ## 2. Project and Group Authorization
@@ -172,7 +172,7 @@ Policy implication:
 
 ## 7. Logs, Usage, and Reporting
 
-Policy claim: DHInfra processes operational data for access control, security, accounting,
+Policy claim: DHinfra processes operational data for access control, security, accounting,
 reporting, and support.
 
 Implementation:
@@ -218,7 +218,7 @@ Policy implication:
 
 ## 9. Security Boundary
 
-Policy claim: DHInfra is a trusted multi-tenant academic environment. It does not implement
+Policy claim: DHinfra is a trusted multi-tenant academic environment. It does not implement
 zero-trust or confidential computing.
 
 Implementation:
@@ -243,7 +243,7 @@ Policy implication:
 -   The service is appropriate for ordinary academic workloads and most DH research
     workflows.
 -   Sensitive or regulated workloads require prior review.
--   DHInfra does not promise protection against all side channels, GPU-memory attacks,
+-   DHinfra does not promise protection against all side channels, GPU-memory attacks,
     malicious user code, or upstream vulnerabilities.
 -   Compromise of a user account does not yield administrative reach, and administrative
     access to data during an incident is attributable after the fact.
