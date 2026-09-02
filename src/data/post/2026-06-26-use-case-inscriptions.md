@@ -10,7 +10,7 @@ tags:
   - machine-learning
   - OCR
   - HTR
-author: DHInfra.at
+author: DHinfra.at
 ---
 
 Reading Latin stone inscriptions by machine is hard: weathered surfaces, ligatures, capitals with no spaces between words (*scriptio continua*), lots of abbreviations and gaps. A standard handwritten text recognition (HTR) model essentially can't read inscriptions like these without any further training. In our case the baseline character error rate (CER) started out at 56 %.
@@ -20,7 +20,7 @@ To improve on that, we fine-tuned an existing model (CATMuS-Print Large, Kraken)
 
 ## What we used the cluster for
 
-The compute-heavy part is training and evaluation. This is exactly what we used the DHInfra GPU nodes for. Concretely:
+The compute-heavy part is training and evaluation. This is exactly what we used the DHinfra GPU nodes for. Concretely:
 
 - **Training runs as GPU jobs.** Each fine-tuning run runs as a SLURM job on a GPU node, controlled by a simple batch script.
 - **A systematic search rather than a single attempt.** The interesting question wasn't "does it work," but how much synthetic data and which weighting of the real data is optimal. Comparisons like that consist of many independent runs. Especially this task is well suited to being dispatched as parallel jobs on the cluster.

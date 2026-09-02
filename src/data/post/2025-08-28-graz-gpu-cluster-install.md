@@ -1,6 +1,6 @@
 ---
 publishDate: 2025-08-28T09:00:00Z
-title: "New DHInfra.at GPU Cluster Installed in Graz"
+title: "New DHinfra.at GPU Cluster Installed in Graz"
 excerpt: A new GPU cluster at the University of Graz brings much-needed computational resources to the Austrian DH community.
 image: /images/posts/2025-08-28-graz-gpu-cluster-install/dhinfra-gpu-wide.jpg
 category: News
@@ -10,10 +10,10 @@ tags:
   - HPC
   - GPU
   - CLARIAH-AT
-author: DHInfra.at
+author: DHinfra.at
 ---
 
-We are pleased to announce a significant step forward for the DHInfra.at project: a new GPU cluster has been successfully installed at the University of Graz. This is an important addition to the shared infrastructure available to the Austrian DH community and will provide much-needed computational resources for cultural heritage research.
+We are pleased to announce a significant step forward for the DHinfra.at project: a new GPU cluster has been successfully installed at the University of Graz. This is an important addition to the shared infrastructure available to the Austrian DH community and will provide much-needed computational resources for cultural heritage research.
 
 ### A Collaborative Effort
 
@@ -33,7 +33,7 @@ The arrival and setup of the hardware were a collaborative effort. A special tha
 
 ### Technical Focus
 
-This new cluster, located in Graz, is one of several key components of the DHInfra.at initiative. It is primarily designed to fill a specific niche for DH researchers, providing resources for medium-to-large-scale model training and inference that is not easily available on local workstations or general-purpose HPC systems. It features SOTA CPUs, modern NVIDIA H200 GPUs and a high-speed InfiniBand network.
+This new cluster, located in Graz, is one of several key components of the DHinfra.at initiative. It is primarily designed to fill a specific niche for DH researchers, providing resources for medium-to-large-scale model training and inference that is not easily available on local workstations or general-purpose HPC systems. It features SOTA CPUs, modern NVIDIA H200 GPUs and a high-speed InfiniBand network.
 
 We are currently in the final stages of network configuration. Based on previous research and testing, our goal is to implement both classic batch scheduling and interactive sessions. We will draw on the expertise of existing HPC initiatives at the University of Graz and national partners like [Austrian Scientific Computing (ASC)](https://asc.ac.at/).
 
@@ -41,7 +41,7 @@ We are currently in the final stages of network configuration. Based on previous
 
 The cluster is currently in a closed testing phase. Access will be rolled out in stages:
 
-1. **DHInfra.at partners**
+1. **DHinfra.at partners**
 2. **CLARIAH-AT Consortium members**
 3. **The broader Austrian DH community**
 

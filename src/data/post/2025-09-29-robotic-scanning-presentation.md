@@ -10,7 +10,7 @@ tags:
   - preservation
   - archives
   - robotics
-author: DHInfra.at
+author: DHinfra.at
 ---
 
 At the ["Digitise.Transform.Inspire"](https://www.icar-us.eu/en/english-digitise-transform-inspire-event-in-vienna-1-2-9-2025/) event on September 1st, 2025, Günter Mühlberger from the University of Innsbruck's Digital Humanities Research Centre presented his work on automated robotic scanning systems for fragile historical documents.
