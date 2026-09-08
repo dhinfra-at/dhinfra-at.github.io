@@ -21,6 +21,12 @@ const hardware = [
     tagline="GPU & LLM Cluster"
     title='High-performance compute,<br class="hidden sm:inline" /> built for Digital Humanities'
     subtitle="Scale up what already runs on your laptop. Train and fine-tune models, run interactive GPU notebooks, and call a hosted OpenAI-compatible LLM and embedding API — without leaving the academic network."
+    callToAction={{
+      variant: 'primary',
+      text: 'Log in with eduID',
+      href: 'https://login.dhinfra.uni-graz.at',
+      icon: 'tabler:login',
+    }}
   />
 
   <!-- What you can do & how you get in -->
@@ -205,10 +211,16 @@ const hardware = [
 
   <Content
     title="Getting access"
+    callToAction={{
+      text: 'Log in with eduID',
+      href: 'https://login.dhinfra.uni-graz.at',
+      icon: 'tabler:login',
+    }}
     items={[
       {
         title: '1. Authenticate',
-        description: 'Log in with your university credentials over the academic network (ACOnet single sign-on).',
+        description:
+          'Log in at login.dhinfra.uni-graz.at with the eduID account of your home institution (ACOnet single sign-on). The documentation sits behind the login.',
       },
       {
         title: '2. Apply for a project',
@@ -223,6 +235,6 @@ const hardware = [
 
   <Note
     title="Access:"
-    description="Rolling out to DHinfra.at and CLARIAH-AT partners, with wider access following. The self-service application portal opens later — for now, get in touch and we will help you get started. See Governance for the full roadmap."
+    description="Open to DHinfra.at and CLARIAH-AT partners: log in with eduID and apply for a project in the console. Wider access follows from October. Not a partner yet? Get in touch. See Governance for the full roadmap."
   />
 </Layout>
