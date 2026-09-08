@@ -2,7 +2,7 @@
 publishDate: 2026-06-08T12:00:00Z
 title: "Three and a half years of DHinfra.at: results, and the handover to regular operations"
 excerpt: On 8 June 2026 DHinfra.at presented the results of three and a half years of building shared DH infrastructure across Austria. As the project closes at the end of June, a CLARIAH-AT follow-up takes over the rollout into live operations.
-image: ~/assets/images/dhinfra-og.png
+image: ~/assets/images/dhinfra-card-centered.png
 category: News
 tags:
   - report
