@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Inter, 'DejaVu Sans', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#004567" />
+      <stop offset="1" stop-color="#003854" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="14" fill="#60a5e0" />
+  <text x="600" y="292" text-anchor="middle" font-size="108" font-weight="700" fill="#ffffff">DHinfra.at</text>
+  <text x="600" y="388" text-anchor="middle" font-size="42" fill="#d6e6f4">
+    <tspan x="600">Shared infrastructure for</tspan>
+    <tspan x="600" dy="56">Digital Humanities in Austria</tspan>
+  </text>
+  <text x="600" y="556" text-anchor="middle" font-size="30" fill="#9ec4e3">A CLARIAH-AT initiative</text>
+</svg>
