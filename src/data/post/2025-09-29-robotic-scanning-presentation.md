@@ -1,6 +1,6 @@
 ---
 publishDate: 2025-09-29T09:00:00Z
-title: "Robotic Scanning as a Future Solution for Archives?"
+title: 'Robotic Scanning as a Future Solution for Archives?'
 excerpt: Innovative automation for digitizing fragile historical documents, presented at "Digitise.Transform.Inspire".
 image: /images/posts/2025-09-29-robotic-scanning-presentation/scan-robot.png
 category: Use Cases
@@ -48,7 +48,7 @@ Mühlberger outlined plans for improving the system:
 - **Remote control capabilities** allowing human operators to solve complex cases via web interface
 - **Offshore service integration** for round-the-clock problem resolution
 
-The presentation included a video demonstration of the robotic system in action.
+The presentation included a [video demonstration of the robotic system in action](https://av-portal.uibk.ac.at/!v/GFhNew5Zzgo) (University of Innsbruck AV portal).
 
 ## Implications for Digital Heritage
 
