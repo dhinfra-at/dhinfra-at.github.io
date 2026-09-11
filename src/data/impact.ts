@@ -312,6 +312,16 @@ export const outputs: OutputEntry[] = [
     listingConfirmed: true,
   },
   {
+    type: 'publication',
+    title: 'A Domain-Aware Controller for Managed LLM Inference on Shared HPC Infrastructure in Digital Humanities',
+    authors: 'Otto, Waldhofer, Fleischhacker, Resch, Atzenhofer-Baumgartner',
+    venue: 'ASHPC26 (Austrian–Slovenian HPC Meeting), Vienna, poster',
+    date: 'April 2026',
+    link: 'https://doi.org/10.25365/phaidra.765',
+    status: 'published',
+    listingConfirmed: true,
+  },
+  {
     // Extended version of the ASHPC26 contribution above; the one to cite.
     type: 'publication',
     title: 'Design and Operation of a Federated GPU Cluster for Digital Humanities within DHinfra.at',
