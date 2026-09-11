@@ -1,0 +1,22 @@
+---
+// Stand-in for posts that have no image: the brand gradient of the social card
+// (dhinfra-og.svg) with the wordmark and category, drawn in CSS so no file is needed.
+import type { Post } from '~/types';
+
+export interface Props {
+  post: Post;
+  class?: string;
+}
+
+const { post, class: className = '' } = Astro.props;
+---
+
+<div
+  class={`flex h-full w-full flex-col justify-between overflow-hidden rounded bg-gradient-to-b from-[#004567] to-[#003854] p-5 text-white shadow-lg border-t-[6px] border-[#60a5e0] ${className}`}
+  aria-hidden="true"
+>
+  <div class="font-heading text-2xl font-bold tracking-tight">DHinfra.at</div>
+  <div class="text-xs font-semibold uppercase tracking-wider text-[#9ec4e3]">
+    {post.category?.title ?? 'News'}
+  </div>
+</div>
