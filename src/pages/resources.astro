@@ -95,11 +95,28 @@ const mark = (c: string) => (c === '*' ? '★' : c === '+' ? '✓' : '');
                       <td class="py-3 pr-4 align-top">
                         {f.name}
                         {f.desc && <div class="text-xs text-muted">{f.desc}</div>}
+                        {f.video && (
+                          <div class="text-xs">
+                            <a
+                              class="text-primary hover:underline"
+                              href={f.video}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Video demonstration &rarr;
+                            </a>
+                          </div>
+                        )}
                       </td>
                       <td class="py-3 pr-4 align-top">{f.institution}</td>
                       <td class="py-3 pr-4 align-top">
                         {f.link ? (
-                          <a class="text-primary hover:underline" href={f.link} target="_blank" rel="noopener noreferrer">
+                          <a
+                            class="text-primary hover:underline"
+                            href={f.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             Entry
                           </a>
                         ) : (

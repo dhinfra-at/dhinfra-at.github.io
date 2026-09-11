@@ -15,6 +15,8 @@ export interface FacilityEntry {
   link?: string;
   /** 'requested' = entry applied for but not yet live. */
   fidbStatus: 'listed' | 'requested';
+  /** Optional demonstration video (external). */
+  video?: string;
 }
 
 export const facilityGroups: { group: FacilityGroup; heading: string }[] = [
@@ -29,7 +31,7 @@ export const facilities: FacilityEntry[] = [
     institution: 'KFUG',
     contact: 'Florian Atzenhofer-Baumgartner',
     group: 'compute',
-    link: 'https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/gpu-cluster-fur-digital-humanities_6267',
+    link: 'https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/gpu-cluster-for-digital-humanities_6267',
     fidbStatus: 'listed',
   },
   {
@@ -37,7 +39,7 @@ export const facilities: FacilityEntry[] = [
     institution: 'UWK',
     contact: 'Max Resch',
     group: 'compute',
-    link: 'https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/gpu-cluster-fur-digital-humanities_6591',
+    link: 'https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/gpu-cluster-for-digital-humanities_6591',
     fidbStatus: 'listed',
   },
   {
@@ -66,22 +68,25 @@ export const facilities: FacilityEntry[] = [
     desc: 'Prototype robotic scanner for loose sheets up to A4; optimised for early-20th-century registration forms.',
     link: 'https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/scanrobot-fur-lose-blattsammlungen_6269',
     fidbStatus: 'listed',
+    video: 'https://av-portal.uibk.ac.at/!v/GFhNew5Zzgo',
   },
   {
     name: 'Canon imageFORMULA DR-G2090 production scanner',
     institution: 'UIBK',
     contact: 'Günter Mühlberger',
     group: 'digitization',
-    desc: 'Production document scanner; currently digitising a 1.5M index-card catalogue (Univ. Wien Numismatics × Univ. Innsbruck).',
-    fidbStatus: 'requested',
+    desc: 'A3 production document scanner, up to 100 sheets per minute; currently digitising a 1.5M index-card catalogue (Univ. Wien Numismatics × Univ. Innsbruck).',
+    link: 'https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/canon-imageformula-dr-g2090-scanner_6643',
+    fidbStatus: 'listed',
   },
   {
     name: '5 repro stands with Sony ILX-LR1 cameras',
     institution: 'UIBK',
     contact: 'Günter Mühlberger',
     group: 'digitization',
-    desc: '61 MP repro camera rigs for fast, high-quality archival document capture.',
-    fidbStatus: 'requested',
+    desc: '61 MP repro camera rigs for fast, high-quality archival document capture (about 2,500–3,000 shots per day).',
+    link: 'https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/repostationen-fur-archivdigitalisierung-5-stuck_6644',
+    fidbStatus: 'listed',
   },
   {
     name: '2 NVIDIA DGX Spark',
@@ -89,7 +94,8 @@ export const facilities: FacilityEntry[] = [
     contact: 'Günter Mühlberger',
     group: 'digitization',
     desc: 'On-prem inference for small/medium models — for privacy-sensitive archive digitization.',
-    fidbStatus: 'requested',
+    link: 'https://forschungsinfrastruktur.bmfwf.gv.at/en/fi/nvidia-dgx-spark-2-workstations_6645',
+    fidbStatus: 'listed',
   },
   {
     name: 'XpeCAM multispectral imaging system',
