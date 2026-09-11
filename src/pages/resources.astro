@@ -73,6 +73,13 @@ const mark = (c: string) => (c === '*' ? '★' : c === '+' ? '✓' : '');
       DB) of the BMBWF, across the participating institutions. Each entry names its contact person. Some entries are
       still being applied for.
     </p>
+    <p class="mt-3 text-muted">
+      The database covers far more than DHinfra.at. Institutions across Austria list compute, imaging and lab
+      infrastructure there and mark it as open for collaboration, so if what you need is not on this page, <a
+        class="text-primary hover:underline"
+        href="https://forschungsinfrastruktur.bmfwf.gv.at/en/fi">search the FI DB</a
+      > and contact the facility directly.
+    </p>
     {
       facilityGroups.map(({ group, heading }) => {
         const items = facilities.filter((f) => f.group === group);
