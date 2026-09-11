@@ -316,8 +316,7 @@ Where the GPU systems were used, please also cite:
 
 Atzenhofer-Baumgartner, Florian, David Fleischhacker, Max Resch, Lukas Waldhofer, and
 Michael Otto. 2026. "Design and Operation of a Federated GPU Cluster for Digital Humanities
-within DHinfra.at." In *Austrian-Slovenian HPC Meeting 2026 (ASHPC26) Booklet*, edited by
-Ivan Vialov. Vienna: EuroCC Austria. <https://doi.org/10.25365/phaidra.765>
+within DHinfra.at." arXiv:2609.10552 [cs.DC]. <https://doi.org/10.48550/arXiv.2609.10552>
 
 ## 15. Contact and Communication
 
