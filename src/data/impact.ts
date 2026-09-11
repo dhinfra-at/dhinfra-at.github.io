@@ -295,6 +295,7 @@ export const outputs: OutputEntry[] = [
     authors: 'Atzenhofer-Baumgartner, Fleischhacker, Resch, Waldhofer, Otto',
     venue: 'ASHPC26 (Austrian–Slovenian HPC Meeting), Vienna',
     date: 'April 2026',
+    link: 'https://doi.org/10.25365/phaidra.765',
     status: 'published',
     listingConfirmed: true,
   },
@@ -311,11 +312,14 @@ export const outputs: OutputEntry[] = [
     listingConfirmed: true,
   },
   {
+    // Extended version of the ASHPC26 contribution above; the one to cite.
     type: 'publication',
-    title: 'Design and Operation of a Federated GPU Cluster for Digital Humanities within DHinfra.at — extended version',
+    title: 'Design and Operation of a Federated GPU Cluster for Digital Humanities within DHinfra.at',
     authors: 'Atzenhofer-Baumgartner, Fleischhacker, Resch, Waldhofer, Otto',
-    venue: 'in preparation (arXiv)',
-    status: 'in-preparation',
+    venue: 'arXiv:2609.10552 [cs.DC], extended version',
+    date: 'September 2026',
+    link: 'https://doi.org/10.48550/arXiv.2609.10552',
+    status: 'published',
     listingConfirmed: true,
   },
   {
