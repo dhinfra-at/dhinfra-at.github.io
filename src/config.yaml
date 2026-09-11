@@ -69,4 +69,4 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'light' # Default to light (matches the old site's blue look); toggle still available. Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'dark' # Default to dark; toggle still available. Values: "system" | "light" | "dark" | "light:only" | "dark:only"
