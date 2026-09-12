@@ -357,4 +357,17 @@ export const outputs: OutputEntry[] = [
     listingConfirmed: true,
   },
   // Datasets/models (Zenodo, Hugging Face) go here as type 'dataset' — none yet.
+  {
+    // Names DHinfra in its funding acknowledgment; what the infrastructure contributed is not recorded.
+    type: 'publication',
+    title:
+      'Chasing Meaning and/or Insight? A Survey on Evaluation Practices at the Intersection of Visualization and the Humanities',
+    authors: 'Benito-Santos, Windhager, Horaniet Ibañez, Kleymann, Abdul-Rahman, Mayr',
+    venue:
+      "CHI '26 — Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems, Barcelona · ACM, pp. 1–23",
+    date: 'April 2026',
+    link: 'https://doi.org/10.1145/3772318.3793150',
+    status: 'published',
+    listingConfirmed: true,
+  },
 ];
