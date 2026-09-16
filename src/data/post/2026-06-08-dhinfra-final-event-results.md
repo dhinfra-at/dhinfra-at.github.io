@@ -19,7 +19,7 @@ Today, at our closing event, we presented the results of three and a half years 
 
 ## DHinfra.at by the numbers
 
-DHinfra.at ran from **2023 to 2026** as an **infrastructure project — not a research project** — under the funding programme _"(Digital) Research Infrastructures"_, supported by the BMFWF and the ERC Recovery and Resilience Facility (NextGenerationEU). In that time it brought together:
+DHinfra.at ran from **2023 to 2026** as an **infrastructure project — not a research project** — under the funding programme _"(Digital) Research Infrastructures"_, supported by the BMFWF and the EU Recovery and Resilience Facility (NextGenerationEU). In that time it brought together:
 
 - **9 institutions** across Austria, coordinated by the University of Graz
 - **4 working groups** and **8 work packages**, against **28 milestones**
@@ -61,4 +61,4 @@ The DHinfra.at project closes at the **end of June 2026**. From July, a CLARIAH-
 
 There is no public platform link to share just yet — **stay tuned.** In the meantime, questions are welcome at [dhinfra@uni-graz.at](mailto:dhinfra@uni-graz.at).
 
-_With thanks to the IT services of all partner institutions, the wider ASHPC and DHd communities, and the BMFWF and ERC-RRF for making the project possible._
+_With thanks to the IT services of all partner institutions, the wider ASHPC and DHd communities, and the BMFWF and EU-RRF for making the project possible._
