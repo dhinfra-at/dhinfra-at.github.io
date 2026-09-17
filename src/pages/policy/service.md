@@ -354,4 +354,5 @@ and users are asked to check them first.
 DHinfra.at may update this policy. Changes are decided as set out in the Governance Concept,
 section 12, including its transitional provision. Material changes are announced through the
 channels named in section 15 with an effective date. Continued use after a policy change
-means acceptance of the updated policy. Earlier versions stay available.
+means acceptance of the updated policy. From version 1.0 on, earlier versions stay
+available.
