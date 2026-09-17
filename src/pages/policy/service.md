@@ -3,7 +3,7 @@ title: 'Service and Acceptable Use Policy'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: 31 August 2026 · _Version_: 0.3
+_Last updated_: 17 September 2026 · _Version_: 0.4
 
 **Applies to:** the DHinfra.at cluster and its platform services at `dhinfra.uni-graz.at` —
 GPU compute, LLM APIs, storage, notebooks, and the console. It does not cover the public
@@ -29,8 +29,8 @@ Related documents:
 -   **[Privacy Notice for Federated Login](/federation-privacy-notice)** (v0.3.1) -- what
     personal data is processed, on what basis, and for how long.
 
-**This version refers to:** Governance Concept v0.8 · Service and Acceptable Use Policy
-v0.3 · Technical Policy Appendix v0.3 · Privacy Notice for Federated Login v0.3.1. When one
+**This version refers to:** Governance Concept v0.9 · Service and Acceptable Use Policy
+v0.4 · Technical Policy Appendix v0.4 · Privacy Notice for Federated Login v0.3.1. When one
 of these is revised, check the others before treating a cross-reference as current.
 
 ## 1. Service Scope
@@ -86,8 +86,10 @@ The request is made by that person.
 
 A project request records what the project is and what it needs: a description, the project
 type and its funding situation, the grant or funding reference where there is one, the
-services and hardware it expects to use, and the number of members and the storage it
-expects. A supporting document can be attached. Do not include credentials, and do not
+services and hardware it expects to use, the number of members and the storage it expects,
+and the compute it expects, as compute tokens over the project's duration and how that use
+is spread over time. A request that names no compute volume receives the base allocation.
+A supporting document can be attached. Do not include credentials, and do not
 include personal data beyond what the request needs. Requests are reviewed on this basis, so a
 description that does not let a reviewer judge the work will be sent back.
 
@@ -128,6 +130,13 @@ capacity, model-serving capacity, or staff time in ways that materially harm oth
 Base access is best-effort and governed by fair use. Requests beyond the base allocation
 require review and may be approved, limited, scheduled, charged, or rejected. Larger
 reservations need advance planning and operational approval.
+
+A single project is expected to stay within a share of the cluster that leaves it usable
+for the other partners. The current share, and the arrangement for short larger bursts, are
+stated in the platform documentation. Sustained use above that share is agreed in advance,
+bounded in time, reviewed, and may be limited or charged. Work whose scale exceeds what the
+cluster can carry is referred to national and European HPC providers; DHinfra.at can host a
+pilot that produces the measurements such a proposal needs.
 
 DHinfra.at may apply:
 
@@ -316,7 +325,8 @@ Where the GPU systems were used, please also cite:
 
 Atzenhofer-Baumgartner, Florian, David Fleischhacker, Max Resch, Lukas Waldhofer, and
 Michael Otto. 2026. "Design and Operation of a Federated GPU Cluster for Digital Humanities
-within DHinfra.at." arXiv:2609.10552 [cs.DC]. <https://doi.org/10.48550/arXiv.2609.10552>
+within DHinfra.at." In *Austrian-Slovenian HPC Meeting 2026 (ASHPC26) Booklet*, edited by
+Ivan Vialov. Vienna: EuroCC Austria. <https://doi.org/10.25365/phaidra.765>
 
 ## 15. Contact and Communication
 
@@ -341,5 +351,7 @@ and users are asked to check them first.
 
 ## 16. Changes
 
-DHinfra.at may update this policy. Material changes are announced through the channels named
-in section 15. Continued use after a policy change means acceptance of the updated policy.
+DHinfra.at may update this policy. Changes are decided as set out in the Governance Concept,
+section 12, including its transitional provision. Material changes are announced through the
+channels named in section 15 with an effective date. Continued use after a policy change
+means acceptance of the updated policy. Earlier versions stay available.
