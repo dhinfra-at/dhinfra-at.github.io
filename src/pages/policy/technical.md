@@ -3,7 +3,7 @@ title: 'Technical Policy Appendix'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: 31 August 2026 · _Version_: 0.3
+_Last updated_: 17 September 2026 · _Version_: 0.4
 
 **Applies to:** the DHinfra.at cluster and its platform services at `dhinfra.uni-graz.at` --
 GPU compute, LLM APIs, storage, notebooks, and the console. It does not cover the public
@@ -21,8 +21,8 @@ Related documents:
 -   **[Privacy Notice for Federated Login](/federation-privacy-notice)** (v0.3.1) --
     personal data and retention periods.
 
-**This version refers to:** Governance Concept v0.8 · Service and Acceptable Use Policy
-v0.3 · Technical Policy Appendix v0.3 · Privacy Notice for Federated Login v0.3.1. When one
+**This version refers to:** Governance Concept v0.9 · Service and Acceptable Use Policy
+v0.4 · Technical Policy Appendix v0.4 · Privacy Notice for Federated Login v0.3.1. When one
 of these is revised, check the others before treating a cross-reference as current.
 
 It is not a user manual and not a developer specification. Operating detail that changes
@@ -207,7 +207,9 @@ Implementation:
 -   Gateway budgets are attached to groups rather than individual users.
 -   Token budgets can scale with member count and can be overridden by administrators.
 -   SLURM accounts and associations enforce compute-side limits; ZFS quotas enforce
-    storage-side limits.
+    storage-side limits. A project's compute budget is held as an association limit on
+    billing minutes, so the scheduler enforces the ceiling. A sustained rate agreed for a
+    period is granted as the budget for that period, with an end date.
 -   Budget and quota changes are auditable administrative actions.
 
 Policy implication:
