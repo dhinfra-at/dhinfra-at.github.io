@@ -3,7 +3,7 @@ title: 'Technical Policy Appendix'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: 17 September 2026 · _Version_: 0.4
+_Last updated_: 18 September 2026 · _Version_: 0.4.1
 
 **Applies to:** the DHinfra.at cluster and its platform services at `dhinfra.uni-graz.at` --
 GPU compute, LLM APIs, storage, notebooks, and the console. It does not cover the public
@@ -14,21 +14,17 @@ This appendix maps the claims made in the **DHinfra.at Governance Concept** and 
 exists so that a policy statement can be traced to a mechanism, and so that a change to the
 platform shows up as a change to policy where one is needed.
 
-Related documents:
-
--   **Governance Concept** (v0.8) -- who decides what. Not public.
--   **[Service and Acceptable Use Policy](/policy/service)** (v0.3) -- the rules this appendix maps.
--   **[Privacy Notice for Federated Login](/federation-privacy-notice)** (v0.3.1) --
-    personal data and retention periods.
-
-**This version refers to:** Governance Concept v0.9 · Service and Acceptable Use Policy
-v0.4 · Technical Policy Appendix v0.4 · Privacy Notice for Federated Login v0.3.1. When one
-of these is revised, check the others before treating a cross-reference as current.
-
 It is not a user manual and not a developer specification. Operating detail that changes
 from week to week -- exact limits, tiers, model lists, interface layout -- lives in the
 platform documentation on the cluster. This appendix names the mechanism and its policy
-consequence. Current parameter values belong in the platform documentation.
+consequence.
+
+Related documents, in the versions this document was written against:
+
+-   **Governance Concept** (v0.9.1) -- who decides what. Not public.
+-   **[Service and Acceptable Use Policy](/policy/service)** (v0.4.1) -- the rules this appendix maps.
+-   **[Privacy Notice for Federated Login](/federation-privacy-notice)** (v0.3.1) --
+    personal data and retention periods.
 
 ## 1. Identity and Login
 
