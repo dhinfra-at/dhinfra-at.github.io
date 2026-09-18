@@ -10,13 +10,13 @@ The documents governing DHinfra.at. Each states at the top what it applies to.
 These govern the DHinfra.at cluster and its platform services at `dhinfra.uni-graz.at` —
 GPU compute, LLM APIs, storage, notebooks, and the console.
 
-- **[Service and Acceptable Use Policy](/policy/service)** (0.4, 2026-09-17) — what users
+- **[Service and Acceptable Use Policy](/policy/service)** (0.4.1, 2026-09-18) — what users
   of the cluster may and must not do, and what they can expect from the service. This is
   the policy accepted when a project is requested.
 - **[Privacy Notice — Federated Login](/federation-privacy-notice)** (0.3.1, 2026-08-31) —
   what personal data is processed when you sign in through ACOnet/eduID or eduGAIN, on
   what legal basis, who receives it, and how long it is kept.
-- **[Technical Policy Appendix](/policy/technical)** (0.4, 2026-09-17) — how the platform
+- **[Technical Policy Appendix](/policy/technical)** (0.4.1, 2026-09-18) — how the platform
   implements the rules in the two documents above.
 
 ## This website
@@ -27,7 +27,7 @@ GPU compute, LLM APIs, storage, notebooks, and the console.
 
 ## Not published here
 
-The **Governance Concept** (0.9, 2026-09-17) describes how DHinfra.at is governed, who
+The **Governance Concept** (0.9.1, 2026-09-18) describes how DHinfra.at is governed, who
 decides what, and how the participating sites divide responsibility. It is an internal
 document for the partner institutions. Ask at dhinfra@uni-graz.at if you need it.
 

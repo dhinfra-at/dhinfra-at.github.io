@@ -3,7 +3,7 @@ title: 'Service and Acceptable Use Policy'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: 17 September 2026 · _Version_: 0.4
+_Last updated_: 18 September 2026 · _Version_: 0.4.1
 
 **Applies to:** the DHinfra.at cluster and its platform services at `dhinfra.uni-graz.at` —
 GPU compute, LLM APIs, storage, notebooks, and the console. It does not cover the public
@@ -20,18 +20,14 @@ How the cluster is governed and who decides what is in the **Governance Concept*
 platform implements these rules is in the **Technical Policy Appendix**. Operating detail
 that changes often lives in the documentation on the cluster itself.
 
-Related documents:
+Related documents, in the versions this document was written against:
 
--   **Governance Concept** (v0.8) -- who decides what, and how the sites divide
+-   **Governance Concept** (v0.9.1) -- who decides what, and how the sites divide
     responsibility. Not public.
--   **[Technical Policy Appendix](/policy/technical)** (v0.3) -- how the platform
+-   **[Technical Policy Appendix](/policy/technical)** (v0.4.1) -- how the platform
     implements the rules below.
 -   **[Privacy Notice for Federated Login](/federation-privacy-notice)** (v0.3.1) -- what
     personal data is processed, on what basis, and for how long.
-
-**This version refers to:** Governance Concept v0.9 · Service and Acceptable Use Policy
-v0.4 · Technical Policy Appendix v0.4 · Privacy Notice for Federated Login v0.3.1. When one
-of these is revised, check the others before treating a cross-reference as current.
 
 ## 1. Service Scope
 
