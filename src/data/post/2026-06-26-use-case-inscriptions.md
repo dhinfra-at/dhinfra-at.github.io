@@ -10,6 +10,7 @@ tags:
   - machine-learning
   - OCR
   - HTR
+  - students
 author: Florian Wachter, DHinfra.at
 ---
 
@@ -50,6 +51,8 @@ Florian evaluated each strategy with 5-fold cross-validation. The parameter sear
 
 Two side observations: more synthetic data isn't automatically better. In this use-case the few real inscriptions had to be weighted up a little, otherwise they get drowned out. And a single train/test split looked too good at first; only the grouped cross-validation showed what actually generalizes. Both observations could only be settled in a reasonably quick time because the necessary runs ran in parallel on the cluster.
 This was about feasibility, not a finished project: testing whether synthetic data can compensate for scarce annotations, not delivering a usable inscription-reading model. The ~15 % CER won't transcribe stones for you yet, but it's a promising starting point.
+
+Students can use the cluster for work like this. A bachelor's, master's or doctoral student asks their supervisor to create a project and add them as a member. The [service policy](/policy/service) sets the rules. The exact steps and conditions are in the cluster documentation. Anyone can read it after logging in at [login.dhinfra.uni-graz.at](https://login.dhinfra.uni-graz.at) with the eduID account of their home institution.
 
 ---
 *Image: public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).*
