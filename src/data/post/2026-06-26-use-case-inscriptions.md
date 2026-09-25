@@ -1,7 +1,7 @@
 ---
 publishDate: 2026-06-26T16:00:00Z
 title: "HTR for Latin stone inscriptions: a use-case on the cluster"
-excerpt: A digital epigraphy project as an example of what the cluster's GPU nodes can be used for — from a single training run to a systematic parameter search.
+excerpt: A student project in digital epigraphy as an example of what the cluster's GPU nodes can be used for, from a single training run to a systematic parameter search.
 image: /images/posts/inscription_use-case.jpg
 category: Use Cases
 tags:
@@ -10,17 +10,20 @@ tags:
   - machine-learning
   - OCR
   - HTR
-author: DHinfra.at
+  - students
+author: Florian Wachter, DHinfra.at
 ---
 
-Reading Latin stone inscriptions by machine is hard: weathered surfaces, ligatures, capitals with no spaces between words (*scriptio continua*), lots of abbreviations and gaps. A standard handwritten text recognition (HTR) model essentially can't read inscriptions like these without any further training. In our case the baseline character error rate (CER) started out at 56 %.
+Florian Wachter ran this experiment as a student assistant at DHinfra.at, as part of his project seminar. David Fleischhacker supported him with the MLOps.
 
-To improve on that, we fine-tuned an existing model (CATMuS-Print Large, Kraken) on real inscriptions from the *Epigraphic Database Heidelberg*. The catch: only ~150 annotated examples. So we additionally generated synthetic training images. For this we rendered "stones" built from real transcriptions, with relief lighting, stone surfaces, erosion and camera effects. These images then served as extra training material.
+Reading Latin stone inscriptions by machine is hard: weathered surfaces, ligatures, capitals with no spaces between words (*scriptio continua*), lots of abbreviations and gaps. A standard handwritten text recognition (HTR) model essentially can't read inscriptions like these without any further training. Here the baseline character error rate (CER) started out at 56 %.
+
+To improve on that, Florian fine-tuned an existing model (CATMuS-Print Large, Kraken) on real inscriptions from the *Epigraphic Database Heidelberg*. The catch: only ~150 annotated examples. So he additionally generated synthetic training images. For this he rendered "stones" built from real transcriptions, with relief lighting, stone surfaces, erosion and camera effects. These images then served as extra training material.
 
 
-## What we used the cluster for
+## What the cluster was used for
 
-The compute-heavy part is training and evaluation. This is exactly what we used the DHinfra GPU nodes for. Concretely:
+The compute-heavy part, training and evaluation, ran on the DHinfra GPU nodes. Concretely:
 
 - **Training runs as GPU jobs.** Each fine-tuning run runs as a SLURM job on a GPU node, controlled by a simple batch script.
 - **A systematic search rather than a single attempt.** The interesting question wasn't "does it work," but how much synthetic data and which weighting of the real data is optimal. Comparisons like that consist of many independent runs. Especially this task is well suited to being dispatched as parallel jobs on the cluster.
@@ -30,7 +33,7 @@ So it's a fairly typical machine-learning use-case: individual jobs are moderate
 
 ## Results
 
-We evaluated each strategy with 5-fold cross-validation. The parameter search varied two things: **n**, the number of synthetic images added, and **r**, how strongly the real inscriptions are weighted against them.
+Florian evaluated each strategy with 5-fold cross-validation. The parameter search varied two things: **n**, the number of synthetic images added, and **r**, how strongly the real inscriptions are weighted against them.
 
 | Strategy | CER (%) |
 |---|---|
@@ -46,8 +49,10 @@ We evaluated each strategy with 5-fold cross-validation. The parameter search va
 
 *n = number of synthetic images, r = weighting of the real data; pretrain = pre-trained on synthetic first, then fine-tuned on real. ⭐ best run, † large spread across folds. Lower CER is better; values are mean ± standard deviation over the 5 folds.*
 
-Two side observations: more synthetic data isn't automatically better. In this use-case we had to weight the few real inscriptions up a little, otherwise they get drowned out. And a single train/test split looked too good at first; only the grouped cross-validation showed what actually generalizes. Both observations could only be settled in a reasonably quick time because the necessary runs ran in parallel on the cluster.
+Two side observations: more synthetic data isn't automatically better. In this use-case the few real inscriptions had to be weighted up a little, otherwise they get drowned out. And a single train/test split looked too good at first; only the grouped cross-validation showed what actually generalizes. Both observations could only be settled in a reasonably quick time because the necessary runs ran in parallel on the cluster.
 This was about feasibility, not a finished project: testing whether synthetic data can compensate for scarce annotations, not delivering a usable inscription-reading model. The ~15 % CER won't transcribe stones for you yet, but it's a promising starting point.
+
+Students can use the cluster for work like this. A bachelor's, master's or doctoral student asks their supervisor to create a project and add them as a member. The [service policy](/policy/service) sets the rules. The exact steps and conditions are in the cluster documentation. Anyone can read it after logging in at [login.dhinfra.uni-graz.at](https://login.dhinfra.uni-graz.at) with the eduID account of their home institution.
 
 ---
 *Image: public domain, via [Wikimedia Commons](https://commons.wikimedia.org/).*
