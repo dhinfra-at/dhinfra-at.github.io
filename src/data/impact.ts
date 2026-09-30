@@ -10,7 +10,7 @@ export type Infrastructure =
   | 'gpu-cluster' // GPU & LLM cluster (Graz)
   | 'digitization' // scanning / digitization
   | 'saas' // SaaS / IaaS & storage
-  | 'software'; // open-source software (QLever, liiive.now, Zellij)
+  | 'software'; // open-source software (QLever, liiive.now, Pletka)
 
 export type Kind =
   | 'project' // a funded research project / group
