@@ -34,6 +34,9 @@ const {
 
 const posts = APP_BLOG.isEnabled ? await findLatestPosts({ count }) : [];
 
+const itemClass =
+  'w-[85%] shrink-0 snap-start sm:w-[calc((100%-1.5rem)/1.4)] md:w-[calc((100%-3rem)/2.3)] lg:w-[calc((100%-6rem)/4.25)] [&_p]:line-clamp-3';
+
 const arrowClass =
   'grid h-10 w-10 place-items-center rounded-full border border-gray-300 text-default transition hover:border-primary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:pointer-events-none disabled:opacity-30 dark:border-slate-600';
 ---
@@ -76,10 +79,21 @@ const arrowClass =
           data-carousel-track
         >
           {posts.map((post) => (
-            <li class="w-[85%] shrink-0 snap-start sm:w-[calc((100%-1.5rem)/1.4)] md:w-[calc((100%-3rem)/2.3)] lg:w-[calc((100%-6rem)/4.25)] [&_p]:line-clamp-3">
+            <li class={itemClass}>
               <GridItem post={post} animate={false} />
             </li>
           ))}
+          {APP_BLOG.list.isEnabled && linkText && linkUrl && (
+            <li class={itemClass}>
+              <a
+                href={linkUrl}
+                class="flex aspect-video items-center justify-center gap-1 rounded border border-gray-300 text-xl font-bold font-heading transition hover:border-primary hover:text-primary md:aspect-auto md:h-64 dark:border-slate-600 dark:text-slate-300"
+              >
+                {linkText}
+                <Icon name="tabler:chevron-right" class="h-5 w-5" />
+              </a>
+            </li>
+          )}
         </ul>
       </div>
     </WidgetWrapper>
