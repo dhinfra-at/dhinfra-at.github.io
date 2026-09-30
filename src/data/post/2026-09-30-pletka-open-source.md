@@ -1,6 +1,7 @@
 ---
 publishDate: 2026-09-30T09:00:00Z
 title: 'Pletka, formerly Zellij, is now open source'
+image: /images/posts/2026-09-30-pletka-open-source/pletka-logo.png
 excerpt: The core of Pletka, a platform for building semantic data models together, is released under the Apache 2.0 licence. DHinfra.at funded its storage backend, admin dashboard and generators. With it, the last of the three open-source tools we invested in is released, after QLever and liiive.now.
 category: News
 tags:
