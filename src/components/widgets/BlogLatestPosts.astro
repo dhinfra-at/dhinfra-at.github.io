@@ -1,7 +1,9 @@
 ---
 import { APP_BLOG } from 'astrowind:config';
 
-import Grid from '~/components/blog/Grid.astro';
+import { Icon } from 'astro-icon/components';
+
+import GridItem from '~/components/blog/GridItem.astro';
 
 import { getBlogPermalink } from '~/utils/permalinks';
 import { findLatestPosts } from '~/utils/blog';
@@ -22,7 +24,7 @@ const {
   linkText = 'View all posts',
   linkUrl = getBlogPermalink(),
   information = await Astro.slots.render('information'),
-  count = 4,
+  count = 8,
 
   id,
   isDark = false,
@@ -31,31 +33,95 @@ const {
 } = Astro.props;
 
 const posts = APP_BLOG.isEnabled ? await findLatestPosts({ count }) : [];
+
+const arrowClass =
+  'grid h-10 w-10 place-items-center rounded-full border border-gray-300 text-default transition hover:border-primary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:pointer-events-none disabled:opacity-30 dark:border-slate-600';
 ---
 
 {
   APP_BLOG.isEnabled ? (
     <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
-      <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-        <div class="max-w-xl">
-          {title && (
-            <h2
-              class="text-3xl font-bold leading-tighter tracking-tighter sm:text-4xl group font-heading mb-2"
-              set:html={title}
-            />
-          )}
-          {information && <p class="text-muted dark:text-slate-400" set:html={information} />}
+      <div data-carousel>
+        <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-xl">
+            {title && (
+              <h2
+                class="text-3xl font-bold leading-tighter tracking-tighter sm:text-4xl group font-heading mb-2"
+                set:html={title}
+              />
+            )}
+            {information && <p class="text-muted dark:text-slate-400" set:html={information} />}
+          </div>
+          <div class="flex shrink-0 items-center gap-6">
+            {APP_BLOG.list.isEnabled && linkText && linkUrl && (
+              <Button variant="link" href={linkUrl}>
+                {linkText} »
+              </Button>
+            )}
+            <div class="hidden gap-2 sm:flex" data-carousel-controls hidden>
+              <button type="button" class={arrowClass} aria-label="Previous posts" data-carousel-previous>
+                <Icon name="tabler:chevron-left" class="h-5 w-5" />
+              </button>
+              <button type="button" class={arrowClass} aria-label="Next posts" data-carousel-next>
+                <Icon name="tabler:chevron-right" class="h-5 w-5" />
+              </button>
+            </div>
+          </div>
         </div>
-        {APP_BLOG.list.isEnabled && linkText && linkUrl && (
-          <Button variant="link" href={linkUrl} class="shrink-0">
-            {linkText} »
-          </Button>
-        )}
-      </div>
 
-      <Grid posts={posts} />
+        <ul
+          class="-mx-4 flex snap-x snap-mandatory scroll-px-4 gap-6 overflow-x-auto px-4 pt-1 md:-mx-6 md:scroll-px-6 md:px-6 data-ready:[scrollbar-width:none] data-ready:[&::-webkit-scrollbar]:hidden"
+          aria-label="Latest posts"
+          tabindex="0"
+          data-carousel-track
+        >
+          {posts.map((post) => (
+            <li class="w-[85%] shrink-0 snap-start sm:w-[calc((100%-1.5rem)/1.4)] md:w-[calc((100%-3rem)/2.3)] lg:w-[calc((100%-6rem)/4.25)] [&_p]:line-clamp-3">
+              <GridItem post={post} animate={false} />
+            </li>
+          ))}
+        </ul>
+      </div>
     </WidgetWrapper>
   ) : (
     <Fragment />
   )
 }
+
+<script>
+  function initCarousels() {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((carousel) => {
+      const track = carousel.querySelector<HTMLElement>('[data-carousel-track]');
+      const controls = carousel.querySelector<HTMLElement>('[data-carousel-controls]');
+      const previous = carousel.querySelector<HTMLButtonElement>('[data-carousel-previous]');
+      const next = carousel.querySelector<HTMLButtonElement>('[data-carousel-next]');
+      if (!track || !controls || !previous || !next || !track.firstElementChild) return;
+
+      const pageWidth = () => {
+        const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+        const cardStep = track.firstElementChild!.getBoundingClientRect().width + gap;
+        const cardsPerPage = Math.max(1, Math.floor((track.clientWidth + gap) / cardStep));
+        return cardsPerPage * cardStep;
+      };
+      const scroll = (direction: number) =>
+        track.scrollBy({ left: direction * pageWidth(), behavior: reducedMotion ? 'auto' : 'smooth' });
+      const update = () => {
+        previous.disabled = track.scrollLeft <= 1;
+        next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+      };
+
+      previous.addEventListener('click', () => scroll(-1));
+      next.addEventListener('click', () => scroll(1));
+      track.addEventListener('scroll', update, { passive: true });
+      new ResizeObserver(update).observe(track);
+
+      track.dataset.ready = '';
+      controls.hidden = false;
+      update();
+    });
+  }
+
+  document.addEventListener('astro:page-load', initCarousels);
+</script>
