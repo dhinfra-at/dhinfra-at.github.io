@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import { projects, outputs, type OutputType } from '~/data/impact';
+import { projects, outputs, press, type OutputType } from '~/data/impact';
 
 const metadata = {
   title: 'Impact',
@@ -203,6 +203,30 @@ const isExternal = (href: string) => href.startsWith('http');
               </table>
             </div>
           )}
+        </section>
+      )
+    }
+
+    <!-- Press coverage -->
+    {
+      press.length > 0 && (
+        <section id="press">
+          <h2>In the press</h2>
+          <ul class="!list-none !pl-0 divide-y divide-gray-100 dark:divide-slate-800">
+            {press.map((p) => (
+              <li class="py-5">
+                <div class="font-medium">
+                  <a href={p.link} target="_blank" rel="noopener noreferrer">
+                    {p.title}
+                  </a>
+                </div>
+                <div class="mt-1.5 text-sm text-muted">
+                  <span>{p.outlet}. </span>
+                  <span>{p.date}. </span>
+                </div>
+              </li>
+            ))}
+          </ul>
         </section>
       )
     }
