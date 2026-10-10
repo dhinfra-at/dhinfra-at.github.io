@@ -94,6 +94,16 @@ export interface OutputEntry {
   listingConfirmed: boolean;
 }
 
+/** Press coverage of DHinfra. */
+export interface PressEntry {
+  outlet: string;
+  /** Headline as published, in the original language. */
+  title: string;
+  /** Human-readable date, e.g. "7 October 2026". */
+  date: string;
+  link: string;
+}
+
 // Grant IDs / DOIs come from the FWF research radar (10.55776/…) and CORDIS.
 export const projects: ProjectEntry[] = [
   {
@@ -369,5 +379,57 @@ export const outputs: OutputEntry[] = [
     link: 'https://doi.org/10.1145/3772318.3793150',
     status: 'published',
     listingConfirmed: true,
+  },
+];
+
+// Press coverage, newest first.
+export const press: PressEntry[] = [
+  {
+    outlet: 'news.at',
+    title: 'Geistes- und Kulturwissenschaften bekommen KI-Supercomputer-Infrastruktur',
+    date: '9 October 2026',
+    link: 'https://www.news.at/technik/geistes-und-kulturwissenschaften-bekommen-ki-supercomputer-infrastruktur',
+  },
+  {
+    outlet: 'MeinBezirk Steiermark',
+    title: 'KI revolutioniert Forschung: Forscher erschaffen Österreichs erste KI-Infrastruktur',
+    date: '8 October 2026',
+    link: 'https://www.meinbezirk.at/steiermark/c-wirtschaft/forscher-erschaffen-oesterreichs-erste-ki-infrastruktur_a8941938',
+  },
+  {
+    outlet: 'ORF Steiermark',
+    title: 'Millionen Zeitungsartikel in fünf Tagen erforschen',
+    date: '7 October 2026',
+    link: 'https://steiermark.orf.at/stories/3374244/',
+  },
+  {
+    outlet: '5 Minuten',
+    title: 'Neuer Super-Computer für Österreichs Forschung startet',
+    date: '7 October 2026',
+    link: 'https://www.5min.at/graz/5202610071332/neuer-super-computer-fuer-oesterreichs-forschung-startet/',
+  },
+  {
+    outlet: 'MSN',
+    title: 'Neuer Super-Computer für Österreichs Forschung startet',
+    date: '7 October 2026',
+    link: 'https://www.msn.com/de-at/nachrichten/other/neuer-super-computer-f%C3%BCr-%C3%B6sterreichs-forschung-startet/ar-AA2dJWrr',
+  },
+  {
+    outlet: 'UNI.at',
+    title: 'Super-Computer: einzigartige KI-Infrastruktur für Geistes- und Kulturwissenschaften',
+    date: '7 October 2026',
+    link: 'https://www.uni.at/uni-fh/super-computer-einzigartige-ki-infrastruktur-fuer-geistes-und-kulturwissenschaften/',
+  },
+  {
+    outlet: 'University of Graz',
+    title: 'Super-Computer: einzigartige KI-Infrastruktur für Geistes- und Kulturwissenschaften',
+    date: '7 October 2026',
+    link: 'https://www.uni-graz.at/de/neuigkeiten/super-computer-einzigartige-ki-infrastruktur-fuer-geistes-und-kulturwissenschaften/',
+  },
+  {
+    outlet: 'top.tirol',
+    title: 'Roboter im Archiv',
+    date: '11 March 2026',
+    link: 'https://www.top.tirol/news/roboter-im-archiv-2',
   },
 ];
