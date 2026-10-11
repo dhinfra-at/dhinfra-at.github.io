@@ -17,6 +17,8 @@ author: DHinfra.at
 
 Today, at our closing event, we presented the results of three and a half years of work. This post is a written summary of what we showed — a snapshot as DHinfra.at reaches the end of its funding this month and the work moves from a project into regular operations.
 
+The slides of the event are available as a [PDF download](/files/posts/2026-06-08-dhinfra-final-event-results/dhinfra-final-event-2026-06-08-slides.pdf) (in German, 104 slides, 8.5 MB). They are licensed under CC BY-SA unless marked otherwise.
+
 ## DHinfra.at by the numbers
 
 DHinfra.at ran from **2023 to 2026** as an **infrastructure project — not a research project** — under the funding programme _"(Digital) Research Infrastructures"_, supported by the BMFWF and the EU Recovery and Resilience Facility (NextGenerationEU). In that time it brought together:
