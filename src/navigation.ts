@@ -27,6 +27,7 @@ export const footerData = {
     { text: 'Imprint', href: getPermalink('/imprint') },
     { text: 'Privacy', href: getPermalink('/privacy-notice') },
     { text: 'Policies', href: getPermalink('/policy') },
+    { text: 'Compute login', href: 'https://login.dhinfra.uni-graz.at' },
   ],
   socialLinks: [
     { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/dhinfra-at' },
