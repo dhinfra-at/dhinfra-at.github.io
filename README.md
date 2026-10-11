@@ -52,6 +52,7 @@ publishes `dist/` to GitHub Pages. Pull requests build too (to validate) but onl
 - Old Jekyll URLs are forwarded in `astro.config.ts` (`redirects`): `/infrastructure`→`/resources`,
   `/ml`→`/gpu-cluster`, `/capture`→`/digitization`, `/iaas`→`/saas`, `/repos`→`/saas`,
   `/foss`→`/software`, `/blog`→`/use-cases`. Dated post URLs (`/YYYY-MM-DD-slug`) are unchanged.
+  `/login` forwards to the compute login at `login.dhinfra.uni-graz.at`.
 
 ## Where things live
 

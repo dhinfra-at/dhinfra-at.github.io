@@ -26,7 +26,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 export default defineConfig({
   output: 'static',
 
-  // Forward old Beautiful-Jekyll URLs to their AstroWind equivalents.
+  // Forward old Beautiful-Jekyll URLs to their AstroWind equivalents, and /login to the compute login.
   redirects: {
     // The website's own notice moved /privacy -> /privacy-notice; the federated-login
     // notice moved /privacy-notice -> /federation-privacy-notice.
@@ -38,6 +38,7 @@ export default defineConfig({
     '/repos': '/saas',
     '/foss': '/software',
     '/blog': '/use-cases',
+    '/login': 'https://login.dhinfra.uni-graz.at',
   },
 
   integrations: [
