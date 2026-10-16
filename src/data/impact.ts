@@ -360,6 +360,15 @@ export const outputs: OutputEntry[] = [
     listingConfirmed: true,
   },
   {
+    type: 'workshop',
+    title: 'CRASH: Cultural Heritage Advanced Search Hackathon',
+    venue: 'UNICORN Startup & Innovation Hub, Graz',
+    date: '30 Nov and 1 Dec 2026',
+    link: 'https://crash-this.github.io/',
+    status: 'planned',
+    listingConfirmed: true,
+  },
+  {
     type: 'publication',
     title: 'Open-source tooling for video retrieval with Vision Language Models',
     authors: 'Ferdinand Köppen',
