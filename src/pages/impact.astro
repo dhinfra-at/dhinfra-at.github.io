@@ -153,11 +153,11 @@ const isExternal = (href: string) => href.startsWith('http');
       (visibleWorkshops.length > 0 || visibleCourses.length > 0) && (
         <section>
           <h2>Events</h2>
-          <p class="text-sm text-muted">Workshops and university teaching that made use of the GPU &amp; LLM cluster.</p>
+          <p class="text-sm text-muted">Workshops, hackathons and university teaching that make use of the GPU &amp; LLM cluster.</p>
 
           {visibleWorkshops.length > 0 && (
             <div class="mt-6">
-              <h3>Workshops</h3>
+              <h3>Workshops and hackathons</h3>
               <ul class="!list-none !pl-0 divide-y divide-gray-100 dark:divide-slate-800">
                 {visibleWorkshops.map((o) => (
                   <li class="py-5">
