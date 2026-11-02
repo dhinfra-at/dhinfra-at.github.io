@@ -223,6 +223,7 @@ const isExternal = (href: string) => href.startsWith('http');
                 <div class="mt-1.5 text-sm text-muted">
                   <span>{p.outlet}. </span>
                   <span>{p.date}. </span>
+                  {p.note && <span>{p.note}</span>}
                 </div>
               </li>
             ))}
