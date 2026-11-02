@@ -102,6 +102,8 @@ export interface PressEntry {
   /** Human-readable date, e.g. "7 October 2026". */
   date: string;
   link: string;
+  /** One line on the content, where the title does not say it. */
+  note?: string;
 }
 
 // Grant IDs / DOIs come from the FWF research radar (10.55776/…) and CORDIS.
@@ -361,6 +363,14 @@ export const outputs: OutputEntry[] = [
   },
   {
     type: 'workshop',
+    title: 'Hack the Pool 2026',
+    venue: 'Austrian Academy of Sciences (ÖAW), Vienna. Used the DHinfra API',
+    date: '27 and 28 Oct 2026',
+    link: 'https://info.kulturpool.at/hack-the-pool-2026/',
+    listingConfirmed: true,
+  },
+  {
+    type: 'workshop',
     title: 'CRASH: Cultural Heritage Advanced Search Hackathon',
     venue: 'UNICORN Startup & Innovation Hub, Graz',
     date: '30 Nov and 1 Dec 2026',
@@ -393,6 +403,20 @@ export const outputs: OutputEntry[] = [
 
 // Press coverage, newest first.
 export const press: PressEntry[] = [
+  {
+    outlet: 'ORF 2',
+    title: 'Mayrs Magazin',
+    date: '30 October 2026',
+    link: 'https://on.orf.at/video/14345311/mayrs-magazin-wissen-fuer-alle-vom-30102026',
+    note: 'TV feature: interviews, the cluster, and how digital humanists use it on medieval sources.',
+  },
+  {
+    outlet: 'Ö1',
+    title: 'Wissen aktuell',
+    date: '28 October 2026',
+    link: 'https://oe1.orf.at/programm/20261028/846774/Mittelalter-Lebensfunke',
+    note: 'Radio feature: interviews on the cluster and its use on manuscripts, newspapers and charters.',
+  },
   {
     outlet: 'news.at',
     title: 'Geistes- und Kulturwissenschaften bekommen KI-Supercomputer-Infrastruktur',
