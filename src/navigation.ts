@@ -35,6 +35,6 @@ export const footerData = {
   ],
   footNote: `
     A CLARIAH-AT initiative &middot; Funded 2023&ndash;2026 by the Austrian Federal Ministry (BMBWF) under
-    &bdquo;(Digitale) Forschungsinfrastruktur&ldquo;, in cooperation with the EU Recovery and Resilience Facility (RRF) &ndash; NextGenerationEU.
+    &bdquo;(Digitale) Forschungsinfrastruktur&ldquo;, in cooperation with the EU Recovery and Resilience Facility (RRF) &ndash; NextGenerationEU, and 2024&ndash;2026 by CLARIAH-AT.
   `,
 };
