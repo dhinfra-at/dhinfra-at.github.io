@@ -361,6 +361,14 @@ export const outputs: OutputEntry[] = [
   },
   {
     type: 'workshop',
+    title: 'Hack the Pool 2026',
+    venue: 'Austrian Academy of Sciences (ÖAW), Vienna. Used the DHinfra API',
+    date: '27 and 28 Oct 2026',
+    link: 'https://info.kulturpool.at/hack-the-pool-2026/',
+    listingConfirmed: true,
+  },
+  {
+    type: 'workshop',
     title: 'CRASH: Cultural Heritage Advanced Search Hackathon',
     venue: 'UNICORN Startup & Innovation Hub, Graz',
     date: '30 Nov and 1 Dec 2026',
