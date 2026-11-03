@@ -1,7 +1,7 @@
 ---
 publishDate: 2026-10-16T09:00:00Z
 title: 'CRASH: a hackathon on search in cultural heritage data, on the DHinfra cluster'
-excerpt: On 30 November and 1 December 2026, teams build and test search prototypes on cultural heritage data in Graz. They work with the large open-weight language models and the GPUs of the DHinfra cluster. Participation is free, and registration is open until 8 November.
+excerpt: On 30 November and 1 December 2026, teams build and test search prototypes on cultural heritage data in Graz. They work with the large open-weight language models and the GPUs of the DHinfra cluster. Participation is free, and registration is open until 10 November.
 image: /images/posts/2026-10-16-crash-hackathon/crash-card.png
 category: News
 tags:
@@ -12,7 +12,7 @@ tags:
 author: DHinfra.at
 ---
 
-CRASH, the Cultural Heritage Advanced Search Hackathon, takes place in Graz on 30 November and 1 December 2026. For two days, teams build search prototypes on cultural heritage data and test them. Participation is free, and registration is open until 8 November at [crash-this.github.io](https://crash-this.github.io/).
+CRASH, the Cultural Heritage Advanced Search Hackathon, takes place in Graz on 30 November and 1 December 2026. For two days, teams build search prototypes on cultural heritage data and test them. Participation is free, and registration is open until 10 November at [crash-this.github.io](https://crash-this.github.io/).
 
 ## Built on the DHinfra cluster
 
