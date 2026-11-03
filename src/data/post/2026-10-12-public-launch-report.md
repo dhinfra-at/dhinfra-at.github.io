@@ -45,4 +45,4 @@ Log in at [dhinfra.at/login](/login) with the eduID account of your home institu
 
 - **9 November:** CLARIAH-AT Roadshow 2026 in Vienna (ACDH-ÖAW), see [clariah.at](https://clariah.at)
 - **24 November:** design and operation of DHinfra.at at the DHd-AGKI, remote, see [agki-dh.github.io](https://agki-dh.github.io)
-- **30 November to 1 December:** CRASH, the Cultural Heritage Advanced Search Hackathon, in Graz; registration until 8 November, see [crash-this.github.io](https://crash-this.github.io)
+- **30 November to 1 December:** CRASH, the Cultural Heritage Advanced Search Hackathon, in Graz; registration until 10 November, see [crash-this.github.io](https://crash-this.github.io)
