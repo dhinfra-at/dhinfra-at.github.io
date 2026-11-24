@@ -14,4 +14,6 @@ ORF interviewed DHinfra.at and looked at the cluster and how digital humanists u
 - [Wissen aktuell](https://oe1.orf.at/programm/20261028/846774/Mittelalter-Lebensfunke), Ö1, 28 October 2026
 - [Mayrs Magazin](https://on.orf.at/video/14345311/mayrs-magazin-wissen-fuer-alle-vom-30102026), ORF 2, 30 October 2026
 
+3sat showed the TV feature again in [nano](https://www.3sat.de/wissen/nano/261110-sendung-korallen-am-limit-kippt-jetzt-der-ozean-nano-100.html) on 10 November 2026.
+
 All coverage is listed on the [impact page](/impact#press).
