@@ -404,6 +404,13 @@ export const outputs: OutputEntry[] = [
 // Press coverage, newest first.
 export const press: PressEntry[] = [
   {
+    outlet: '3sat',
+    title: 'nano',
+    date: '10 November 2026',
+    link: 'https://www.3sat.de/wissen/nano/261110-sendung-korallen-am-limit-kippt-jetzt-der-ozean-nano-100.html',
+    note: 'The Mayrs Magazin feature, shown again in nano.',
+  },
+  {
     outlet: 'ORF 2',
     title: 'Mayrs Magazin',
     date: '30 October 2026',
