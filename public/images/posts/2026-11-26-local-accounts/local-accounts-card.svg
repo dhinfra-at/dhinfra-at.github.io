@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Inter, 'DejaVu Sans', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#004567" />
+      <stop offset="1" stop-color="#003854" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="14" fill="#60a5e0" />
+
+  <text x="90" y="150" font-size="40" font-weight="700" fill="#9ec4e3">DHinfra.at</text>
+  <text x="90" y="268" font-size="88" font-weight="700" fill="#ffffff">Sign in</text>
+  <text x="90" y="368" font-size="80" font-weight="700" fill="#ffffff">without eduID</text>
+  <rect x="90" y="412" width="500" height="70" rx="35" fill="#60a5e0" />
+  <text x="340" y="458" text-anchor="middle" font-size="31" font-weight="600" fill="#003854">Local accounts by invitation</text>
+  <text x="90" y="566" font-size="30" fill="#9ec4e3">A CLARIAH-AT initiative</text>
+
+  <!-- login panel -->
+  <rect x="770" y="110" width="330" height="410" rx="28" fill="#ffffff" fill-opacity="0.07" stroke="#60a5e0" stroke-width="3" />
+  <circle cx="935" cy="182" r="30" fill="none" stroke="#d6e6f4" stroke-width="5" />
+  <path d="M885 252 a50 42 0 0 1 100 0" fill="none" stroke="#d6e6f4" stroke-width="5" stroke-linecap="round" />
+  <rect x="808" y="282" width="254" height="44" rx="10" fill="none" stroke="#9ec4e3" stroke-width="2.5" />
+  <text x="826" y="312" font-size="20" fill="#9ec4e3">name@institution</text>
+  <rect x="808" y="340" width="254" height="44" rx="10" fill="none" stroke="#9ec4e3" stroke-width="2.5" />
+  <text x="826" y="370" font-size="22" letter-spacing="4" fill="#9ec4e3">••••••••</text>
+  <g font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <rect x="808" y="404" width="34" height="46" rx="7" fill="#60a5e0" fill-opacity="0.25" stroke="#60a5e0" stroke-width="2" />
+    <rect x="852" y="404" width="34" height="46" rx="7" fill="#60a5e0" fill-opacity="0.25" stroke="#60a5e0" stroke-width="2" />
+    <rect x="896" y="404" width="34" height="46" rx="7" fill="#60a5e0" fill-opacity="0.25" stroke="#60a5e0" stroke-width="2" />
+    <rect x="940" y="404" width="34" height="46" rx="7" fill="#60a5e0" fill-opacity="0.25" stroke="#60a5e0" stroke-width="2" />
+    <rect x="984" y="404" width="34" height="46" rx="7" fill="#60a5e0" fill-opacity="0.25" stroke="#60a5e0" stroke-width="2" />
+    <rect x="1028" y="404" width="34" height="46" rx="7" fill="#60a5e0" fill-opacity="0.25" stroke="#60a5e0" stroke-width="2" />
+    <text x="825" y="437">4</text><text x="869" y="437">8</text><text x="913" y="437">2</text>
+    <text x="957" y="437">9</text><text x="1001" y="437">1</text><text x="1045" y="437">3</text>
+  </g>
+
+  <!-- lock badge -->
+  <circle cx="1092" cy="512" r="56" fill="#60a5e0" />
+  <path d="M1074 506 v-14 a18 18 0 0 1 36 0 v14" fill="none" stroke="#003854" stroke-width="7" stroke-linecap="round" />
+  <rect x="1064" y="504" width="56" height="40" rx="8" fill="#003854" />
+  <circle cx="1092" cy="521" r="5" fill="#60a5e0" />
+  <rect x="1089.5" y="522" width="5" height="11" rx="2" fill="#60a5e0" />
+</svg>
