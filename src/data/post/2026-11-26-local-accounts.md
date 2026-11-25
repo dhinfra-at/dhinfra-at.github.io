@@ -1,6 +1,6 @@
 ---
 publishDate: 2026-11-26T09:00:00Z
-title: "Sign in without eduID: local accounts on DHinfra.at"
+title: 'Sign in without eduID: local accounts on DHinfra.at'
 excerpt: People without an institutional account through eduID.at can now get a local account on the DHinfra cluster by invitation.
 image: /images/posts/2026-11-26-local-accounts/local-accounts-card.png
 category: News
